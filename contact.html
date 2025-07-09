@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak Kami - TemuGuna</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header before-login">
+      <div class="container">
+        <div class="header-primary-row">
+          <a href="index.html" class="logo">TemuGuna</a>
+
+          <div class="category-and-search">
+            <a href="#" class="header-category-link">Kategori</a>
+            <div class="search-bar-before">
+              <input
+                type="text"
+                placeholder="Cari barang, jasa perbaikan, dan lainnya..."
+              />
+              <i class="fas fa-search search-icon"></i>
+            </div>
+          </div>
+
+          <div class="auth-buttons">
+            <a href="login.html" class="btn btn-secondary-outline">Masuk</a>
+            <a href="register.html" class="btn btn-primary">Daftar</a>
+          </div>
+        </div>
+
+        <nav class="nav-main-links">
+          <ul>
+            <li><a href="#">Semua Kategori</a></li>
+            <li><a href="upload-item.html">Donasi Barang</a></li>
+            <li><a href="products.html">Barang Dijual</a></li>
+            <li><a href="services.html">Jasa Perbaikan</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-form-section">
+      <div class="container">
+        <h2>Hubungi Kami</h2>
+        <p class="form-description">
+          Kami siap membantu! Isi formulir di bawah ini atau hubungi kami
+          melalui informasi kontak.
+        </p>
+        <form class="general-form">
+          <div class="form-group">
+            <label for="full-name">Nama Lengkap</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              placeholder="Masukkan nama lengkap Anda"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email-contact">Email</label>
+            <input
+              type="email"
+              id="email-contact"
+              name="email-contact"
+              placeholder="Masukkan email Anda"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subjek</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Contoh: Pertanyaan Donasi, Masalah Akun"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Pesan Anda</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="8"
+              placeholder="Tulis pesan Anda di sini..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            Kirim Pesan
+          </button>
+        </form>
+
+        <div class="contact-info-section">
+          <h3>Informasi Kontak Kami</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Alamat: Jl. Contoh Raya No.
+            123, Jakarta, Indonesia
+          </p>
+          <p><i class="fas fa-phone"></i> Telepon: (021) 1234 5678</p>
+          <p><i class="fas fa-envelope"></i> Email: info@temuguna.id</p>
+          <p>
+            <i class="fas fa-clock"></i> Jam Kerja: Senin - Jumat, 09:00 - 17:00
+            WIB
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-section">
+          <h3>TemuGuna</h3>
+          <p>
+            Platform sosial yang berdedikasi membantu anak-anak berkebutuhan
+            khusus mendapatkan fasilitas dan dukungan yang mereka perlukan.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Tautan Cepat</h3>
+          <ul>
+            <li><a href="upload-item.html">Unggah Barang</a></li>
+            <li><a href="services.html">Jasa Perbaikan</a></li>
+            <li><a href="#">Daftarkan Jasa</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Hubungi Kami</h3>
+          <p><i class="fas fa-envelope"></i> info@temuguna.id</p>
+          <p><i class="fab fa-instagram"></i> @TemuGunaID</p>
+          <p><i class="fab fa-facebook-f"></i> TemuGuna Official</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TemuGuna. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .querySelector(".general-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Pesan Anda berhasil terkirim! Kami akan segera merespons.");
+          this.reset(); // Mengosongkan form
+        });
+    </script>
+  </body>
+</html>

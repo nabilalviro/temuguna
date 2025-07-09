@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TemuGuna: Berbagi Kebaikan, Perpanjang Manfaat</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header after-login">
+      <div class="container header-top-row">
+        <a href="index-after-login.html" class="logo">TemuGuna</a>
+        <div class="header-center-group">
+          <div class="category-dropdown">
+            <button class="category-dropbtn">
+              Kategori <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="category-dropdown-content">
+              <a href="#">Semua Kategori</a>
+
+              <a href="#">Pakaian</a>
+              <a href="#">Elektronik</a>
+              <a href="#">Peralatan Rumah</a>
+              <a href="#">Buku & Edukasi</a>
+              <a href="#">Mainan & Hobi</a>
+              <a href="#">Perlengkapan Bayi</a>
+              <a href="#">Lainnya</a>
+            </div>
+          </div>
+
+          <div class="search-bar-after">
+            <input
+              type="text"
+              placeholder="Cari barang, jasa perbaikan, dan lainnya..."
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </div>
+        <div class="user-actions">
+            <a href="cart.html" class="icon-link"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+            <a href="notifications.html" class="icon-link"
+              ><i class="fas fa-bell"></i
+            ></a>
+            <a href="chat.html" class="icon-link"
+              ><i class="fas fa-comment-dots"></i
+            ></a>
+        
+            <div class="user-avatar-dropdown">
+              <img
+                src="https://via.placeholder.com/30"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <span class="user-name">Nabil Alviro</span>
+              <div class="dropdown-content user-dropdown-content">
+                <a href="#">Profil</a>
+                <a href="#">Unggah Barang</a>
+                <a href="#">Donasi Barang</a>
+                <a href="#">Keluar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="secondary-nav-bar">
+        <div class="container">
+          <ul>
+            <li><a href="upload-item.html" class="active">Donasi Barang</a></li>
+            <li><a href="#">Barang Dijual</a></li>
+            <li><a href="#">Jasa Perbaikan</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="donasi-page">
+        <section class="page-header-section">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Beranda</a> <span class="separator">></span> Donasi Barang
+                </div>
+                <h1>Donasi Barang</h1>
+                <p>Menampilkan 4 barang donasi tersedia</p>
+                <div class="donasi-options-bar">
+                    <div class="donasi-sort-filter">
+                        <select class="sort-by">
+                            <option value="terbaru">Terbaru</option>
+                            <option value="terlama">Terlama</option>
+                        </select>
+                        <div class="display-mode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donasi-items-section">
+            <div class="container">
+                <div class="donasi-grid">
+                    <div class="donasi-card">
+                        <div class="donasi-info-tags">
+                            <span class="donasi-tag type-donasi">DONASI</span>
+                            <span class="donasi-tag type-organisasi">Organisasi</span>
+                        </div>
+                        <img src="assets/pakaian-anak.jpg" alt="Pakaian Anak Branded">
+                        <div class="donasi-card-content">
+                            <h3>Pakaian Anak Branded</h3>
+                            <span class="donasi-status gratis">Donasi</span>
+                            <p class="donasi-condition">Kondisi: Baik</p>
+                            <p class="donasi-location">Pasar Minggu</p>
+                            <p class="donasi-time">5 jam yang lalu</p>
+                            <div class="donasi-meta">
+                                <span class="donatur-name">Donatur: Yayasan Amal Peduli Kasih</span>
+                                <span class="donasi-likes"><i class="far fa-heart"></i></span>
+                            </div>
+                            <span class="donasi-verification verified">Terverifikasi</span>
+                            <button class="btn-ambil-donasi">Ambil Donasi</button>
+                        </div>
+                    </div>
+
+                    <div class="donasi-card">
+                        <div class="donasi-info-tags">
+                            <span class="donasi-tag type-donasi">DONASI</span>
+                            <span class="donasi-tag type-individu">Individu</span>
+                        </div>
+                        <img src="assets/timbangan-digital.jpg" alt="Timbangan Digital">
+                        <div class="donasi-card-content">
+                            <h3>Timbangan Digital</h3>
+                            <span class="donasi-status gratis">Donasi</span>
+                            <p class="donasi-condition">Kondisi: Baik</p>
+                            <p class="donasi-location">Jakarta Timur</p>
+                            <p class="donasi-time">8 jam yang lalu</p>
+                            <div class="donasi-meta">
+                                <span class="donatur-name">Donatur: Mario Bros</span>
+                                <span class="donasi-likes"><i class="far fa-heart"></i></span>
+                            </div>
+                            <span class="donasi-verification">Verifikasi</span>
+                            <button class="btn-ambil-donasi">Ambil Donasi</button>
+                        </div>
+                    </div>
+
+                    <div class="donasi-card">
+                        <div class="donasi-info-tags">
+                            <span class="donasi-tag type-donasi">DONASI</span>
+                            <span class="donasi-tag type-organisasi">Organisasi</span>
+                        </div>
+                        <img src="assets/pakaian-anak-2.jpg" alt="Pakaian Anak Branded">
+                        <div class="donasi-card-content">
+                            <h3>Pakaian Anak Branded</h3>
+                            <span class="donasi-status gratis">Donasi</span>
+                            <p class="donasi-condition">Kondisi: Baik</p>
+                            <p class="donasi-location">Bekasi, Jawa Barat</p>
+                            <p class="donasi-time">5 jam yang lalu</p>
+                            <div class="donasi-meta">
+                                <span class="donatur-name">Donatur: Yayasan Amal Peduli Kasih</span>
+                                <span class="donasi-likes"><i class="far fa-heart"></i></span>
+                            </div>
+                            <span class="donasi-verification verified">Terverifikasi</span>
+                            <button class="btn-ambil-donasi">Ambil Donasi</button>
+                        </div>
+                    </div>
+
+                    <div class="donasi-card">
+                        <div class="donasi-info-tags">
+                            <span class="donasi-tag type-donasi">DONASI</span>
+                            <span class="donasi-tag type-individu">Individu</span>
+                        </div>
+                        <img src="assets/timbangan-digital-2.jpg" alt="Timbangan Digital">
+                        <div class="donasi-card-content">
+                            <h3>Timbangan Digital</h3>
+                            <span class="donasi-status gratis">Donasi</span>
+                            <p class="donasi-condition">Kondisi: Baik</p>
+                            <p class="donasi-location">Jakarta Timur</p>
+                            <p class="donasi-time">8 jam yang lalu</p>
+                            <div class="donasi-meta">
+                                <span class="donatur-name">Donatur: Mario Bros</span>
+                                <span class="donasi-likes"><i class="far fa-heart"></i></span>
+                            </div>
+                            <span class="donasi-verification">Verifikasi</span>
+                            <button class="btn-ambil-donasi">Ambil Donasi</button>
+                        </div>
+                    </div>
+
+                    </div>
+                <div class="load-more-container">
+                    <button class="btn-load-more">Muat Lebih Banyak</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-col">
+                <h3>TemuGuna</h3>
+                <p>Platform inovatif untuk menyumbangkan barang tak terpakai, menemukan barang berguna, dan menghubungkan Anda dengan penyedia jasa perbaikan profesional. Berbagi kebaikan, perbaiki kehidupan.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Tautan Cepat</h3>
+                <ul>
+                    <li><a href="#">Unggah Barang</a></li>
+                    <li><a href="#">Jasa Perbaikan</a></li>
+                    <li><a href="#">Daftarkan Jasa</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hubungi Kami</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@temuguna.id</li>
+                    <li><i class="fab fa-instagram"></i> @TemuGunaID</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025, PT. TemuGuna. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dropdown Kategori
+            const categoryDropdown = document.querySelector('.primary-nav-links .dropdown');
+            const categoryDropbtn = document.querySelector('.primary-nav-links .dropbtn');
+
+            if (categoryDropbtn) {
+                categoryDropbtn.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    categoryDropdown.classList.toggle('active');
+                });
+            }
+
+            // Dropdown User Profile
+            const userAvatarDropdown = document.querySelector('.user-avatar-dropdown');
+            if (userAvatarDropdown) {
+                userAvatarDropdown.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    this.classList.toggle('active');
+                });
+            }
+
+            // Tutup semua dropdown jika klik di luar
+            window.addEventListener('click', function(event) {
+                if (categoryDropdown && categoryDropdown.classList.contains('active') && !event.target.closest('.primary-nav-links .dropdown')) {
+                    categoryDropdown.classList.remove('active');
+                }
+                if (userAvatarDropdown && userAvatarDropdown.classList.contains('active') && !event.target.closest('.user-avatar-dropdown')) {
+                    userAvatarDropdown.classList.remove('active');
+                }
+            });
+
+            // Display mode buttons for donasi page
+            const gridViewBtn = document.querySelector('.grid-view');
+            const listViewBtn = document.querySelector('.list-view');
+            const donasiGrid = document.querySelector('.donasi-grid');
+
+            if (gridViewBtn && listViewBtn && donasiGrid) {
+                gridViewBtn.addEventListener('click', function() {
+                    donasiGrid.classList.remove('list-layout');
+                    gridViewBtn.classList.add('active');
+                    listViewBtn.classList.remove('active');
+                });
+
+                listViewBtn.addEventListener('click', function() {
+                    donasiGrid.classList.add('list-layout');
+                    listViewBtn.classList.add('active');
+                    gridViewBtn.classList.remove('active');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

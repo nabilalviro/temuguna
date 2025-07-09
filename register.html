@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar - TemuGuna</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/register.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="register-container">
+      <div class="register-illustration">
+        <img src="css/img/masuk-illustration.png" alt="Ilustrasi Donasi" />
+      </div>
+      <div class="register-form-section">
+        <div class="register-header">
+          <h2>Daftar Akun <span class="text-green">TemuGuna</span></h2>
+          <p>
+            Sudah punya akun TemuGuna?
+            <a href="login.html" class="text-green">Masuk</a>
+          </p>
+        </div>
+        <form class="register-form" id="registerForm">
+          <div class="form-group">
+            <label for="email">Email atau Nomor HP</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Masukkan email atau nomor telepon Anda"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-input-group">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Masukkan password Anda"
+                required
+              />
+              <i class="fas fa-eye password-toggle"></i>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Daftar</button>
+        </form>
+        <div class="social-register-separator">
+          <span>atau daftar dengan</span>
+        </div>
+        <div class="social-register-icons">
+          <a href="#" class="social-icon google"
+            ><i class="fab fa-google"></i
+          ></a>
+          <a href="#" class="social-icon apple"><i class="fab fa-apple"></i></a>
+          <a href="#" class="social-icon facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+        </div>
+        <div class="terms-privacy-link">
+          <p>
+            Dengan mendaftar, saya menyetujui
+            <a href="#" class="text-green">Syarat & Ketentuan</a> serta
+            <a href="#" class="text-green">Kebijakan Privasi TemuGuna</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Password toggle functionality
+        const passwordToggle = document.querySelector(".password-toggle");
+        const passwordInput = document.getElementById("password");
+
+        if (passwordToggle && passwordInput) {
+          passwordToggle.addEventListener("click", function () {
+            const type =
+              passwordInput.getAttribute("type") === "password"
+                ? "text"
+                : "password";
+            passwordInput.setAttribute("type", type);
+            this.classList.toggle("fa-eye");
+            this.classList.toggle("fa-eye-slash");
+          });
+        }
+
+        // Register form submission functionality
+        const registerForm = document.getElementById("registerForm");
+        if (registerForm) {
+          registerForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Mencegah submit form secara default
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Simulasi validasi: Cukup cek apakah field tidak kosong
+            if (email && password) {
+              alert("Pendaftaran berhasil! Silakan masuk dengan akun Anda.");
+              window.location.href = "login.html"; // Redirect ke halaman login
+            } else {
+              alert("Email dan password tidak boleh kosong.");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

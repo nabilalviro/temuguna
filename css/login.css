@@ -1,0 +1,254 @@
+/* Pastikan warna primer (hijau) dan warna lainnya sudah didefinisikan,
+   jika belum, tambahkan ini di style.css atau di bagian paling atas login.css */
+:root {
+  --primary-color: #4caf50; /* Hijau yang cocok dengan Figma */
+  --dark-color: #212529;
+  --text-muted: #6c757d;
+  --light-bg: #e0f7fa; /* Warna latar ilustrasi */
+  --white-color: #fff;
+  --border-color: #ced4da;
+  --link-color: #007bff; /* Biru default untuk tautan */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--dark-color); /* Menggunakan variabel */
+}
+
+.login-container {
+  display: flex;
+  max-width: 1000px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 90%;
+}
+
+.login-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-illustration img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.login-form-section {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Pusatkan konten form secara horizontal */
+  text-align: center; /* Pusatkan teks di header form */
+}
+
+.login-header {
+  margin-bottom: 30px;
+  width: 100%; /* Agar bisa diatur teks-align-nya */
+}
+
+.login-header h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 5px; /* Kurangi margin bawah */
+  font-size: 2em;
+}
+
+.login-header .tagline {
+  color: var(--text-muted);
+  font-size: 0.9em; /* Ukuran font lebih kecil */
+  margin-bottom: 0;
+}
+
+.text-green {
+  color: var(
+    --primary-color
+  ); /* Warna hijau untuk "TemuGuna" dan "Klik disini untuk daftar" */
+}
+
+.login-form {
+  width: 100%;
+  max-width: 350px; /* Batasi lebar form agar tidak terlalu lebar */
+  text-align: left; /* Teks di dalam form rata kiri */
+}
+
+.login-form .form-group {
+  margin-bottom: 20px;
+  position: relative; /* Untuk ikon mata password */
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: var(--link-color);
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.password-input-group {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.forgot-password {
+  display: block; /* Agar pindah baris */
+  text-align: right;
+  margin-top: 5px;
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Beri jarak dari form fields */
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--primary-color), 10%); /* Contoh: #3e8e41 */
+}
+
+.social-login-separator {
+  margin: 25px 0;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.social-login-separator span {
+  background-color: var(--white-color);
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.social-login-separator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--border-color);
+  z-index: 0;
+}
+
+.social-login-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: var(--dark-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon.google:hover {
+  color: #db4437; /* Google red */
+  border-color: #db4437;
+}
+.social-icon.apple:hover {
+  color: #000; /* Apple black */
+  border-color: #000;
+}
+.social-icon.facebook:hover {
+  color: #4267b2; /* Facebook blue */
+  border-color: #4267b2;
+}
+
+.register-link {
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+.register-link a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a.text-green:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .login-illustration {
+    padding: 30px 20px;
+    order: -1;
+  }
+
+  .login-form-section {
+    padding: 30px;
+  }
+}

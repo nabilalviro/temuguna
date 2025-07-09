@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembayaran QRIS - TemuGuna</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header after-login">
+      <div class="container">
+        <a href="index-after-login.html" class="logo">TemuGuna</a>
+        <div class="search-bar-after">
+          <input type="text" placeholder="Cari barang atau jasa..." />
+          <i class="fas fa-search search-icon"></i>
+        </div>
+        <div class="user-actions">
+          <a href="cart.html" class="icon-button active" title="Keranjang"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <a href="#" class="icon-button" title="Notifikasi"
+            ><i class="fas fa-bell"></i
+          ></a>
+          <div class="user-menu">
+            <button class="avatar-button">
+              <img src="img/user-avatar.png" alt="User Avatar" />
+            </button>
+            <div class="dropdown-menu">
+              <a href="#">Profil Saya</a>
+              <a href="upload-item.html">Unggah Barang</a>
+              <a href="#">Riwayat Transaksi</a>
+              <a href="#">Pengaturan</a>
+              <a href="index.html">Keluar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-payment-section">
+      <div class="container">
+        <div class="payment-card">
+          <h2>Selesaikan Pembayaran via QRIS</h2>
+          <div class="payment-summary">
+            <p>Total Pembayaran:</p>
+            <span class="total-amount">Rp 1.850.000</span>
+          </div>
+          <p class="payment-instruction-intro">
+            Scan QR Code di bawah menggunakan aplikasi e-wallet atau mobile
+            banking Anda:
+          </p>
+
+          <div class="qris-code">
+            <img src="img/Selesaikan Pembayaran QRIS.png" alt="QRIS Code" />
+          </div>
+
+          <p class="payment-deadline">
+            Batas Waktu Pembayaran: <span class="countdown">23:59:59</span>
+          </p>
+
+          <div class="important-notes">
+            <p><strong>Catatan Penting:</strong></p>
+            <ul>
+              <li>Pastikan jumlah yang dibayarkan sesuai.</li>
+              <li>
+                Konfirmasi pembayaran akan otomatis setelah scan berhasil.
+              </li>
+              <li>
+                Pesanan Anda akan diproses setelah pembayaran terverifikasi.
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="btn btn-primary btn-block"
+            onclick="location.href='confirmation-donation.html'"
+          >
+            Konfirmasi Pembayaran QRIS
+          </button>
+          <a href="cart.html" class="btn btn-secondary-outline btn-block"
+            >Kembali ke Keranjang</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-section">
+          <h3>TemuGuna</h3>
+          <p>
+            Platform sosial yang berdedikasi membantu anak-anak berkebutuhan
+            khusus mendapatkan fasilitas dan dukungan yang mereka perlukan.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Tautan Cepat</h3>
+          <ul>
+            <li><a href="upload-item.html">Unggah Barang</a></li>
+            <li><a href="services.html">Jasa Perbaikan</a></li>
+            <li><a href="#">Daftarkan Jasa</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Hubungi Kami</h3>
+          <p><i class="fas fa-envelope"></i> info@temuguna.id</p>
+          <p><i class="fab fa-instagram"></i> @TemuGunaID</p>
+          <p><i class="fab fa-facebook-f"></i> TemuGuna Official</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TemuGuna. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Simulasi hitung mundur (contoh sederhana)
+      let timeLeftQris = 86399; // 23 jam 59 menit 59 detik
+      const countdownElementQris = document.querySelector(".countdown");
+
+      function updateCountdownQris() {
+        const hours = Math.floor(timeLeftQris / 3600);
+        const minutes = Math.floor((timeLeftQris % 3600) / 60);
+        const seconds = timeLeftQris % 60;
+
+        countdownElementQris.textContent = `${String(hours).padStart(
+          2,
+          "0"
+        )}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
+          2,
+          "0"
+        )}`;
+
+        if (timeLeftQris > 0) {
+          timeLeftQris--;
+          setTimeout(updateCountdownQris, 1000);
+        } else {
+          countdownElementQris.textContent = "Waktu Habis";
+          alert("Waktu pembayaran telah habis.");
+        }
+      }
+
+      updateCountdownQris(); // Mulai hitung mundur saat halaman dimuat
+    </script>
+  </body>
+</html>

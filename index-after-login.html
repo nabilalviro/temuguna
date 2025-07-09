@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - TemuGuna: Berbagi Kebaikan</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header after-login">
+      <div class="container header-top-row">
+        <a href="index-after-login.html" class="logo">TemuGuna</a>
+        <div class="header-center-group">
+          <div class="category-dropdown">
+            <button class="category-dropbtn">Kategori <i class="fas fa-chevron-down"></i></button>
+            <div class="category-dropdown-content">
+              <a href="#">Semua Kategori</a>
+        
+              <a href="#">Pakaian</a>
+              <a href="#">Elektronik</a>
+              <a href="#">Peralatan Rumah</a>
+              <a href="#">Buku & Edukasi</a>
+              <a href="#">Mainan & Hobi</a>
+              <a href="#">Perlengkapan Bayi</a>
+              <a href="#">Lainnya</a>
+
+            </div>
+          </div>
+          <div class="search-bar-after">
+            <input type="text" placeholder="Cari barang, jasa perbaikan, dan lainnya..." />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </div>
+
+        <div class="user-actions">
+          <a href="cart.html" class="icon-link"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <a href="notifications.html" class="icon-link"
+            ><i class="fas fa-bell"></i
+          ></a>
+          <a href="chat.html" class="icon-link"
+            ><i class="fas fa-comment-dots"></i
+          ></a>
+          <div class="user-avatar-dropdown">
+            <div class="user-avatar">
+              <img src="img/Group.png" alt="User Avatar" />
+              <span>Nabil Alviro</span>
+            </div>
+            <div class="dropdown-menu">
+              <span class="dropdown-username">Nabil Alviro</span>
+              <span class="dropdown-useremail">nabilalviro@gmail.com</span>
+              <div class="dropdown-divider"></div>
+              <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+              <a href="upload-item.html"
+                ><i class="fas fa-upload"></i> Unggah Barang</a
+              >
+              <a href="index.html" class="logout"
+                ><i class="fas fa-sign-out-alt"></i> Keluar</a
+              >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="secondary-nav-bar">
+        <div class="container">
+            <ul>
+               <li><a href="#">Donasi Barang</a></li>
+                <li><a href="#">Barang Dijual</a></li>
+                <li><a href="#">Jasa Perbaikan</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>TemuGuna: Berbagi Kebaikan, Perpanjang Manfaat.</h1>
+          <p>
+            Temukan barang layak pakai dan jasa perbaikan berkualitas atau
+            sumbangkan barang Anda untuk mereka yang membutuhkan.
+          </p>
+          <div class="hero-buttons">
+            <a href="upload-item.html" class="btn btn-primary btn-large"
+              >Donasi Barang Sekarang</a
+            >
+            <a href="products.html" class="btn btn-secondary-outline btn-large"
+              >Telusuri Barang</a
+            >
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-items recommendation-section">
+        <div class="container">
+          <h2>Rekomendasi Terbaru</h2>
+          <div class="search-filter-row">
+            <div class="location-search">
+              <i class="fas fa-map-marker-alt"></i>
+              <input type="text" placeholder="Cari lokasi (contoh: Makassar)" />
+            </div>
+            <div class="sort-by">
+              <select>
+                <option value="">Semua Referensi</option>
+                <option value="terbaru">Terbaru</option>
+                <option value="harga-rendah">Harga Terendah</option>
+              </select>
+            </div>
+          </div>
+          <div class="items-grid">
+            <a href="product-info.html" class="item-card">
+              <img src="css/img/Frame 1465.png" alt="Baju Anak Layak Pakai" />
+              <div class="item-info">
+                <h3>Baju Anak Layak Pakai</h3>
+                <p class="description">
+                  Setelan baju anak-anak usia 5-7 tahun, kondisi baik.
+                </p>
+                <p class="location">
+                  <i class="fas fa-map-marker-alt"></i> Jakarta Selatan
+                </p>
+                <p class="uploaded-time">Hari ini</p>
+                <p class="price-badge free">Gratis</p>
+              </div>
+            </a>
+            <a href="product-info.html" class="item-card">
+              <img src="css/img/image 4.png" alt="Meja Belajar Kayu" />
+              <div class="item-info">
+                <h3>Meja Belajar Kayu</h3>
+                <p class="description">Kondisi 9/10, kokoh dan minimalis.</p>
+                <p class="rating">
+                  <i class="fas fa-star"></i> 5.0 (170 terjual)
+                </p>
+                <p class="location">
+                  <i class="fas fa-map-marker-alt"></i> Jakarta Selatan
+                </p>
+                <p class="uploaded-time">Hari ini</p>
+                <p class="price-badge">Rp 19.000</p>
+              </div>
+            </a>
+            <a href="#" class="item-card placeholder-card">
+              <i class="fas fa-image placeholder-icon"></i>
+            </a>
+            <a href="#" class="item-card placeholder-card">
+              <i class="fas fa-image placeholder-icon"></i>
+            </a>
+            <a href="#" class="item-card placeholder-card">
+              <i class="fas fa-image placeholder-icon"></i>
+            </a>
+            <a href="#" class="item-card placeholder-card">
+              <i class="fas fa-image placeholder-icon"></i>
+            </a>
+            <a href="#" class="item-card placeholder-card">
+              <i class="fas fa-image placeholder-icon"></i>
+            </a>
+            <a href="#" class="item-card placeholder-card">
+              <i class="fas fa-image placeholder-icon"></i>
+            </a>
+          </div>
+          <div class="text-center" style="margin-top: 40px">
+            <a href="products.html" class="btn btn-secondary-outline"
+              >Lihat Semua Referensi</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section content-section">
+        <div class="container">
+          <h2>Fitur Unggulan TemuGuna</h2>
+          <div class="features-grid">
+            <div class="feature-item">
+              <i class="fas fa-hand-holding-heart icon-large"></i>
+              <h3>Berbagi & Menemukan Barang</h3>
+              <p>
+                Dapatkan barang layak pakai atau sumbangkan barang Anda yang
+                tidak terpakai.
+              </p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-tools icon-large"></i>
+              <h3>Jasa Perbaikan Profesional</h3>
+              <p>
+                Hubungkan dengan penyedia jasa perbaikan profesional untuk
+                perbaiki kebutuhan Anda.
+              </p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-leaf icon-large"></i>
+              <h3>Komunitas Keberlanjutan</h3>
+              <p>
+                Bergabung dengan komunitas yang menginspirasi untuk
+                keberlanjutan dan dampak sosial.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section">
+        <div class="container">
+          <h2>Apa Kata Mereka?</h2>
+          <div class="testimonial-carousel">
+            <div class="testimonial-card">
+              <img
+                src="img/testimonial-avatar-placeholder.png"
+                alt="Rina Wijaya"
+                class="testimonial-avatar"
+              />
+              <p class="testimonial-quote">
+                ""Sangat mudah menyumbangkan barang di TemuGuna. Prosesnya cepat
+                dan saya tahu barang saya akan bermanfaat!""
+              </p>
+              <p class="testimonial-author">- Rina Wijaya</p>
+              <p class="testimonial-role">Donatur</p>
+            </div>
+            <div class="testimonial-card">
+              <img
+                src="img/testimonial-avatar-placeholder.png"
+                alt="Ryan Wijaya"
+                class="testimonial-avatar"
+              />
+              <p class="testimonial-quote">
+                ""Saya menemukan meja belajar yang sempurna untuk anak saya,
+                gratis! Terima kasih TemuGuna.""
+              </p>
+              <p class="testimonial-author">- Ryan Wijaya</p>
+              <p class="testimonial-role">Pencari Barang</p>
+            </div>
+            <div class="testimonial-card">
+              <img
+                src="img/testimonial-avatar-placeholder.png"
+                alt="Budi Santoso"
+                class="testimonial-avatar"
+              />
+              <p class="testimonial-quote">
+                ""Laptop saya kembali berfungsi berkat rekomendasi teknisi dari
+                TemuGuna. Sangat membantu!""
+              </p>
+              <p class="testimonial-author">- Risa Wijaya</p>
+              <p class="testimonial-role">Pengguna Jasa Perbaikan Laptop</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners-section content-section">
+        <div class="container">
+          <h2>Jaringan Kami</h2>
+          <p class="section-description">
+            Bekerja sama dengan organisasi dan lembaga terkemuka untuk dampak
+            yang lebih luas.
+          </p>
+          <div class="partners-map">
+            <img src="img/maps.png" alt="Peta Jaringan Kami" />
+            <div class="map-overlay-text">
+              Bittersweet by <br />
+              <strong>Najla Kemang</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-community section-padded bg-light">
+        <div class="container">
+          <h2>Temui Komunitas Kami</h2>
+          <div class="community-person-grid">
+            <div class="community-person-card">
+              <div class="person-avatar">RW</div>
+              <h3 class="person-name">Rina Wijaya</h3>
+              <p class="person-status">Donatur Aktif</p>
+            </div>
+            <div class="community-person-card">
+              <div class="person-avatar">RW</div>
+              <h3 class="person-name">Rina Wijaya</h3>
+              <p class="person-status">Donatur Aktif</p>
+            </div>
+            <div class="community-person-card">
+              <div class="person-avatar">RW</div>
+              <h3 class="person-name">Rina Wijaya</h3>
+              <p class="person-status">Donatur Aktif</p>
+            </div>
+            <div class="community-person-card">
+              <div class="person-avatar">RW</div>
+              <h3 class="person-name">Rina Wijaya</h3>
+              <p class="person-status">Donatur Aktif</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-section footer-about">
+          <h3 class="logo-footer">TemuGuna</h3>
+          <p>
+            Platform inovatif untuk menyumbangkan barang tak terpakai, menemukan
+            barang berguna, dan menghubungkan Anda dengan penyedia jasa
+            perbaikan profesional. Berbagi kebaikan, perbaiki kehidupan.
+          </p>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Tautan Cepat</h3>
+          <ul>
+            <li><a href="upload-item.html">Unggah Barang</a></li>
+            <li><a href="services.html">Jasa Perbaikan</a></li>
+            <li><a href="#">Daftarkan Jasa</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-contact">
+          <h3>Hubungi Kami</h3>
+          <p><i class="fas fa-envelope"></i> info@temuguna.id</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025, PT. TemuGuna. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
+    <script>
+      // Dropdown untuk User Avatar
+      document.addEventListener("DOMContentLoaded", function () {
+        const userAvatarDropdown = document.querySelector(
+          ".user-avatar-dropdown"
+        );
+        if (userAvatarDropdown) {
+          userAvatarDropdown.addEventListener("click", function (event) {
+            // Menghentikan propagasi event agar tidak langsung menutup jika klik di dalam dropdown
+            event.stopPropagation();
+            this.querySelector(".dropdown-menu").classList.toggle("show");
+          });
+  // Script untuk Kategori Dropdown
+  const categoryDropdown = document.querySelector('.category-dropdown');
+        if (categoryDropdown) {
+          const categoryDropbtn = categoryDropdown.querySelector('.category-dropbtn');
+          const categoryDropdownContent = categoryDropdown.querySelector('.category-dropdown-content');
+
+          categoryDropbtn.addEventListener('click', function(event) {
+            event.stopPropagation();
+            categoryDropdownContent.classList.toggle('show');
+          });
+
+          window.addEventListener('click', function(e) {
+            if (categoryDropdown && !categoryDropdown.contains(e.target)) {
+              categoryDropdownContent.classList.remove('show');
+            }
+          });
+        }
+          // Tutup dropdown jika klik di luar
+          window.addEventListener("click", function (e) {
+            if (userAvatarDropdown && !userAvatarDropdown.contains(e.target)) {
+              userAvatarDropdown
+                .querySelector(".dropdown-menu")
+                .classList.remove("show");
+            }
+          });
+        }
+
+        // Script untuk mengambil dan menampilkan nama pengguna (contoh sederhana)
+        // Di aplikasi nyata, nama pengguna akan diambil dari sesi atau API
+        const usernameDisplayElement =
+          document.getElementById("username-display");
+        const dropdownUsername = document.querySelector(".dropdown-username");
+        if (usernameDisplayElement) {
+          const storedUserName = "Nabil Alviro"; // Contoh: Anda bisa ambil dari localStorage atau API
+          usernameDisplayElement.textContent = storedUserName;
+          if (dropdownUsername) {
+            dropdownUsername.textContent = storedUserName;
+          }
+        }
+      });
+      
+    </script>
+  </body>
+</html>

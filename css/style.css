@@ -1,0 +1,5849 @@
+/* Universal Styles */
+:root {
+  --primary-color: #28af60; /* Hijau utama */
+  --secondary-color: #007bff; /* Biru sekunder */
+  --dark-color: #333333;
+  --medium-color: #666666;
+  --light-color: #f8f9fa;
+  --white-color: #ffffff;
+  --border-color: #dddddd;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #45a049; /* Slightly darker green */
+  border-color: #45a049;
+}
+
+.btn-secondary-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: var(--white-color);
+  border: 1px solid var(--danger-color);
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: var(--white-color);
+  border: 1px solid var(--success-color);
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-large {
+  padding: 15px 30px;
+  font-size: 18px;
+}
+
+.btn-sm {
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
+
+/* Header - General */
+.main-header {
+  background-color: var(--white-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.main-header .logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Header - Before Login Specific */
+.main-header.before-login .header-primary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Take full width for primary row */
+  margin-bottom: 10px; /* Space between primary row and nav links */
+}
+
+.main-header.before-login .category-and-search {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow to take available space */
+  margin: 0 20px;
+}
+
+.main-header.before-login .header-category-link {
+  font-weight: 600;
+  margin-right: 20px;
+  color: var(--dark-color);
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.main-header.before-login .search-bar-before {
+  position: relative;
+  flex-grow: 1; /* Allow search bar to grow */
+  max-width: 500px; /* Limit max width */
+}
+
+.main-header.before-login .search-bar-before input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.main-header.before-login .search-bar-before .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--medium-color);
+}
+
+.main-header.before-login .auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.main-header .nav-main-links {
+  width: 100%; /* Full width for the second row of navigation */
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+}
+
+.main-header .nav-main-links ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.main-header .nav-main-links ul li a {
+  color: var(--dark-color);
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.main-header .nav-main-links ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Header - After Login Specific */
+.main-header.after-login .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header.after-login .search-bar-after {
+  position: relative;
+  flex-grow: 1;
+  margin: 0 30px;
+  max-width: 600px;
+}
+
+.main-header.after-login .search-bar-after input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.main-header.after-login .search-bar-after .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--medium-color);
+}
+
+.main-header.after-login .user-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-header.after-login .icon-button {
+  color: var(--dark-color);
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.main-header.after-login .icon-button:hover {
+  color: var(--primary-color);
+}
+
+.main-header.after-login .profile-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.main-header.after-login .profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
+}
+
+.main-header.after-login .profile-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--white-color);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10px; /* Space below avatar */
+}
+
+.main-header.after-login .profile-dropdown .dropdown-content a {
+  color: var(--dark-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+}
+
+.main-header.after-login .profile-dropdown .dropdown-content a:hover {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+}
+
+.main-header.after-login .profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  background: url("img/home.jpg") no-repeat center center/cover;
+  color: var(--white-color);
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* After Login Hero Specific */
+.hero.after-login-hero {
+  background: url("../img/hero-after-login-background.jpg") no-repeat center
+    center/cover;
+}
+
+.hero.after-login-hero h1 {
+  font-size: 44px;
+}
+
+.hero.after-login-hero .latest-activity-banner {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--dark-color);
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin-top: 50px;
+  display: inline-block;
+  font-size: 17px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero.after-login-hero .latest-activity-banner strong {
+  color: var(--primary-color);
+}
+
+.hero.after-login-hero .latest-activity-banner .link-dark-underline {
+  color: var(--dark-color);
+  text-decoration: underline;
+}
+
+.hero.after-login-hero .latest-activity-banner .link-dark-underline:hover {
+  color: var(--primary-color);
+}
+
+/* General Section Styling */
+.content-section {
+  padding: 60px 0;
+  background-color: var(--light-color);
+  text-align: center;
+}
+
+.content-section h2 {
+  font-size: 36px;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.content-section .section-description {
+  font-size: 18px;
+  color: var(--medium-color);
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Rekomendasi Terbaru (using .featured-items styling from before) */
+.recommendation-section {
+  padding: 60px 0;
+  background-color: var(--white-color);
+  text-align: center;
+}
+
+.recommendation-section h2 {
+  font-size: 36px;
+  color: var(--dark-color);
+  margin-bottom: 40px;
+}
+
+.recommendation-section .search-filter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.recommendation-section .location-search {
+  position: relative;
+  flex-grow: 1;
+  margin-right: 20px;
+  max-width: 400px;
+}
+
+.recommendation-section .location-search i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--medium-color);
+}
+
+.recommendation-section .location-search input {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.recommendation-section .sort-by select {
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: var(--white-color);
+  cursor: pointer;
+}
+
+.recommendation-section .items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recommendation-section .item-card {
+  background-color: var(--white-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendation-section .item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.recommendation-section .item-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.recommendation-section .item-info {
+  padding: 20px;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recommendation-section .item-info h3 {
+  font-size: 22px;
+  color: var(--dark-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.recommendation-section .item-info .description {
+  font-size: 14px;
+  color: var(--medium-color);
+  margin-bottom: 10px;
+}
+
+.recommendation-section .item-info .location,
+.recommendation-section .item-info .uploaded-time {
+  font-size: 14px;
+  color: var(--medium-color);
+  margin-bottom: 5px;
+}
+
+.recommendation-section .item-info .location i {
+  margin-right: 5px;
+  color: var(--primary-color);
+}
+
+.recommendation-section .item-info .rating {
+  font-size: 15px;
+  color: #f39c12; /* Star color */
+  margin-bottom: 10px;
+}
+
+.recommendation-section .item-info .price-badge {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.recommendation-section .item-info .price-badge.free {
+  background-color: var(--secondary-color);
+}
+
+.recommendation-section .placeholder-card {
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px; /* Match height of actual cards */
+  color: #ccc;
+}
+
+.recommendation-section .placeholder-card .placeholder-icon {
+  font-size: 60px;
+}
+
+/* Fitur Unggulan TemuGuna */
+.features-section {
+  background-color: #e6f7ff; /* Light blue background, slightly different from light-color */
+  padding: 80px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  background-color: var(--white-color);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item .icon-large {
+  font-size: 50px;
+  color: var(--primary-color); /* Primary brand color */
+  margin-bottom: 20px;
+}
+
+.feature-item h3 {
+  font-size: 24px;
+  color: var(--dark-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-item p {
+  font-size: 16px;
+  color: var(--medium-color);
+  line-height: 1.6;
+}
+
+/* Apa Kata Mereka (Testimonial) */
+.testimonials-section {
+  padding: 80px 0;
+  background-color: var(--white-color);
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 38px;
+  color: var(--dark-color);
+  margin-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.testimonial-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.testimonial-card {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  max-width: 380px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-card .testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--primary-color);
+}
+
+.testimonial-card .testimonial-quote {
+  font-size: 17px;
+  color: var(--dark-color);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+.testimonial-card .testimonial-author {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.testimonial-card .testimonial-role {
+  font-size: 14px;
+  color: var(--medium-color);
+}
+
+/* Jaringan Kami (Partners/Organizations) */
+.partners-section {
+  background-color: #f0f8ff; /* Consistent light blue background */
+  padding: 80px 0;
+}
+
+.partners-section h2 {
+  margin-bottom: 20px;
+}
+
+.partners-section .section-description {
+  margin-bottom: 50px;
+}
+
+.partners-map {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.partners-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.partners-map .map-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark-color);
+  text-align: center;
+  line-height: 1.4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk bagian "Temui Komunitas Kami" yang baru */
+.section-community h2 {
+  font-size: 2.2em; /* Ukuran judul */
+  font-weight: 700;
+  margin-bottom: 40px; /* Jarak bawah dari judul */
+  text-align: center;
+}
+
+.community-person-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* 4 kolom atau sesuai lebar */
+  gap: 25px; /* Jarak antar kartu */
+  justify-content: center;
+  max-width: 1000px; /* Batas lebar grid */
+  margin: 0 auto 50px auto; /* Tengahkankan grid, jarak bawah dari tombol */
+}
+
+.community-person-card {
+  background-color: var(--white-color);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.community-person-card:hover {
+  transform: translateY(-5px);
+}
+
+.person-avatar {
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-color); /* Warna hijau untuk avatar */
+  color: var(--white-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 0 auto 20px auto; /* Tengahkankan avatar */
+}
+
+.person-name {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 8px;
+}
+
+.person-status {
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+/* Penyesuaian untuk tombol "Gabung Sekarang" */
+.section-community .btn-large {
+  min-width: 220px; /* Lebar minimum tombol */
+  padding: 15px 30px;
+  font-size: 1.2em;
+}
+/* Responsive Design */
+@media (max-width: 992px) {
+  .main-header.before-login .header-primary-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-header.before-login .category-and-search {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .main-header.before-login .search-bar-before {
+    flex-grow: 1;
+    max-width: none;
+  }
+
+  .main-header.before-login .auth-buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .main-header .nav-main-links ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .main-header.after-login .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-header.after-login .search-bar-after {
+    order: 3; /* Move search bar to new line */
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .main-header.after-login .user-actions {
+    order: 2;
+    margin-left: auto; /* Push to right if space allows */
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .recommendation-section .search-filter-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .recommendation-section .location-search {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .features-grid,
+  .testimonial-carousel,
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    max-width: 90%;
+  }
+
+  .community-members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header .nav-main-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .main-header.before-login .category-and-search {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-header.before-login .header-category-link {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .content-section,
+  .testimonials-section,
+  .partners-section,
+  .community-section {
+    padding: 40px 0;
+  }
+
+  .content-section h2 {
+    font-size: 30px;
+  }
+
+  .recommendation-section .items-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-section ul {
+    padding-left: 0;
+  }
+
+  .footer-section .social-icons {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header .logo {
+    font-size: 24px;
+  }
+
+  .main-header.before-login .auth-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .recommendation-section .items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid .feature-item {
+    padding: 20px;
+  }
+  .feature-item h3 {
+    font-size: 20px;
+  }
+  .feature-item .icon-large {
+    font-size: 40px;
+  }
+}
+/* Gaya untuk Footer */
+/* --- Gaya untuk Footer --- */
+.main-footer {
+  background-color: #1f2937; /* Ini adalah contoh warna biru. Anda bisa ganti dengan kode warna biru lain (misal: #3498db, #28a745 untuk hijau seperti logo) */
+  color: var(
+    --white-color
+  ); /* Pastikan teks tetap terlihat jelas di atas latar belakang biru */
+  padding: 40px 0;
+  font-size: 0.9em;
+}
+
+/* Pastikan juga gaya untuk tautan di footer agar tetap terbaca */
+.main-footer a {
+  color: var(--white-color); /* Warna teks tautan putih */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main-footer a:hover {
+  color: #cce5ff; /* Warna sedikit lebih terang saat di-hover */
+}
+
+.main-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Kolom pertama lebih lebar */
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Garis pemisah */
+}
+
+.footer-section h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 25px; /* Jarak bawah judul section */
+  color: var(--white-color);
+}
+
+.footer-section p {
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 15px;
+}
+
+.footer-section ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color); /* Hover hijau */
+}
+
+.footer-section .social-icons {
+  display: flex;
+  gap: 15px; /* Jarak antar ikon */
+  margin-top: 15px;
+}
+
+.footer-section .social-icons a {
+  color: var(--white-color);
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+}
+
+.footer-section .social-icons a:hover {
+  color: var(--primary-color); /* Hover hijau */
+}
+
+.footer-section .fa-envelope {
+  margin-right: 8px;
+}
+
+/* Gaya khusus untuk logo di footer */
+.logo-footer {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2em; /* Ukuran font lebih besar untuk logo footer */
+  color: var(--primary-color); /* Warna hijau untuk logo */
+  margin-bottom: 20px; /* Jarak bawah logo */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsif untuk footer */
+@media (max-width: 768px) {
+  .main-footer .footer-grid {
+    grid-template-columns: 1fr 1fr; /* 2 kolom di tablet */
+    gap: 30px;
+    text-align: center; /* Tengahkan teks */
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+  }
+
+  .footer-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-section ul {
+    display: inline-block; /* Agar daftar tetap di tengah */
+    text-align: left;
+  }
+
+  .footer-section .social-icons {
+    justify-content: center; /* Tengahkan ikon sosial */
+  }
+
+  .logo-footer {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-footer .footer-grid {
+    grid-template-columns: 1fr; /* 1 kolom di mobile */
+    gap: 20px;
+  }
+}
+/* --- Gaya untuk Header After Login (Diperbarui) --- */
+.main-header.after-login {
+  background-color: var(--white-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-header.after-login .header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0; /* Padding vertikal untuk baris atas */
+  gap: 20px;
+}
+
+.main-header.after-login .logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+  color: var(--primary-color);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.header-center-group {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Jarak antara Kategori dan Search Bar */
+  flex-grow: 1; /* Agar mengambil ruang tengah */
+}
+
+.nav-main-category ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-main-category ul li a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 500;
+  font-size: 1em; /* Ukuran font untuk 'Kategori' */
+  transition: color 0.3s ease;
+}
+
+.nav-main-category ul li a:hover {
+  color: var(--primary-color);
+}
+
+.search-bar-after {
+  position: relative;
+  width: 100%; /* Agar search bar bisa melebar di tengah */
+  max-width: 450px; /* Batasi lebar maksimal */
+}
+
+.search-bar-after input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px; /* Ruang untuk ikon */
+  border: 1px solid var(--border-color);
+  border-radius: 25px; /* Lebih bulat */
+  font-size: 0.9em;
+  box-sizing: border-box;
+}
+
+.search-bar-after .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.user-actions .icon-link {
+  color: var(--dark-color);
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+}
+
+.user-actions .icon-link:hover {
+  color: var(--primary-color);
+}
+
+.user-avatar-dropdown {
+  position: relative;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-avatar img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.user-avatar span {
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 0.95em;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+  padding: 10px 0;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: flex; /* Untuk ikon di samping teks */
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-menu a i {
+  color: var(--text-muted); /* Warna ikon di dropdown */
+}
+
+.dropdown-menu a.logout {
+  color: #dc3545; /* Warna merah untuk logout */
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+  padding-top: 10px;
+}
+.dropdown-menu a.logout:hover {
+  background-color: #ffebe6;
+  color: #c82333;
+}
+
+.dropdown-username {
+  display: block;
+  font-weight: 600;
+  color: var(--dark-color);
+  padding: 8px 20px 2px;
+  font-size: 1em;
+}
+
+.dropdown-useremail {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.85em;
+  padding: 0 20px 10px;
+}
+
+.dropdown-divider {
+  border-top: 1px solid #eee;
+  margin: 5px 0;
+}
+/* --- Gaya untuk Sub-Navigation di bawah Header --- */
+.nav-sub-category {
+  background-color: #e9ecef; /* Warna latar belakang abu-abu muda */
+  padding: 12px 0;
+  border-top: 1px solid #dee2e6; /* Garis tipis di atasnya */
+}
+
+.nav-sub-category .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* Sejajarkan ke kiri */
+  gap: 30px; /* Jarak antar item */
+}
+
+.nav-sub-category ul li a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Mencegah teks pecah baris */
+}
+
+.nav-sub-category ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* --- Media Queries untuk responsivitas Header After Login --- */
+@media (max-width: 992px) {
+  .main-header.after-login .header-top-row {
+    flex-wrap: wrap; /* Izinkan wrap pada item */
+    justify-content: center;
+  }
+
+  .main-header.after-login .logo {
+    flex-basis: 100%; /* Logo ambil satu baris penuh */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .header-center-group {
+    flex-basis: 100%; /* Kategori dan Search Bar ambil satu baris penuh */
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-main-category ul li a {
+    padding-right: 0; /* Hapus padding kanan jika ada */
+  }
+
+  .search-bar-after {
+    max-width: 80%; /* Batasi lebar search bar */
+  }
+
+  .user-actions {
+    flex-basis: 100%; /* Aksi pengguna ambil satu baris penuh */
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .user-avatar span {
+    display: none; /* Sembunyikan nama di samping avatar di mobile */
+  }
+
+  .nav-sub-category .container ul {
+    flex-wrap: wrap; /* Izinkan tab wrap */
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Umumnya sudah dihandle oleh 992px, tapi bisa disesuaikan lebih lanjut jika perlu */
+  .search-bar-after {
+    max-width: 100%; /* Search bar bisa lebih lebar lagi di layar sangat kecil */
+  }
+}
+
+/* --- Gaya untuk Hero Section After Login --- */
+.section-hero-after-login {
+  background-color: #e9ecef; /* Warna abu-abu muda */
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-content-after-login h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.8em;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+}
+
+.hero-content-after-login p {
+  font-size: 1.1em;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+.hero-content-after-login .hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* Agar tombol bisa wrap */
+}
+
+.hero-content-after-login .hero-actions .btn {
+  padding: 14px 28px;
+  font-size: 1em;
+  border-radius: 8px;
+}
+
+.latest-activity-card {
+  background-color: var(--white-color);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.95em;
+  flex-wrap: wrap; /* Agar bisa wrap di mobile */
+}
+
+.latest-activity-card p {
+  margin: 0;
+  color: var(--dark-color);
+}
+
+.latest-activity-card a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap; /* Pastikan "Lihat Keranjang" tidak pecah */
+}
+
+.latest-activity-card a:hover {
+  text-decoration: underline;
+}
+
+/* --- Gaya untuk Filter Bar Rekomendasi Terbaru --- */
+.section-featured-items .filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Agar bisa wrap di mobile */
+  gap: 15px; /* Jarak antar elemen filter */
+}
+
+.search-product-small {
+  position: relative;
+  flex-grow: 1; /* Ambil ruang sebanyak mungkin */
+  max-width: 300px; /* Batasi lebar */
+}
+
+.search-product-small input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 0.9em;
+  box-sizing: border-box;
+}
+
+.search-product-small .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.select-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.select-wrapper select {
+  appearance: none; /* Hapus gaya default browser */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px 15px;
+  padding-right: 35px; /* Ruang untuk ikon kustom */
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--white-color);
+  cursor: pointer;
+  font-size: 0.9em;
+  color: var(--dark-color);
+}
+
+/* Tambahkan ikon panah kustom untuk select */
+.select-wrapper::after {
+  content: "\f078"; /* Kode Font Awesome untuk panah ke bawah */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900; /* Penting untuk ikon solid */
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none; /* Pastikan tidak mengganggu klik select */
+}
+
+/* --- Gaya untuk Apa Kata Mereka? (Testimonials) --- */
+.section-testimonials {
+  background-color: var(--white-color);
+}
+
+.section-testimonials h2 {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #f8f9fa; /* Latar belakang kartu testimonial */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-person-avatar {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary-color); /* Hijau */
+  color: var(--white-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.testimonial-text {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: var(--dark-color);
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.testimonial-name {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 5px;
+}
+
+.testimonial-role {
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+/* --- Gaya untuk Jaringan Kami (Map) --- */
+.section-map {
+  background-color: var(
+    --light-gray-bg
+  ); /* Menggunakan variabel yang sudah ada atau definisikan baru */
+  text-align: center;
+}
+
+.section-map h2 {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--dark-color);
+}
+
+.map-content {
+  display: flex;
+  flex-direction: column; /* Default: stack vertikal */
+  align-items: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+.map-image {
+  width: 100%;
+  max-width: 450px; /* Batasi lebar gambar peta */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.map-info {
+  text-align: center;
+}
+
+.map-info h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--dark-color);
+  margin-bottom: 10px;
+}
+
+.map-info p {
+  color: var(--text-muted);
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.map-contact {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.map-icon-link {
+  width: 45px;
+  height: 45px;
+  background-color: #e9ecef; /* Warna latar belakang ikon */
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.map-icon-link:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* Media Queries untuk responsivitas */
+@media (min-width: 769px) {
+  .map-content {
+    flex-direction: row; /* Horizontal di layar besar */
+    text-align: left;
+    align-items: center;
+    padding: 40px;
+  }
+
+  .map-info {
+    text-align: left;
+  }
+
+  .map-info h3 {
+    margin-top: 0;
+  }
+
+  .map-contact {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header After Login */
+  .main-header.after-login .nav-category ul {
+    display: none; /* Sembunyikan kategori di mobile, mungkin nanti pakai toggle menu */
+  }
+
+  .main-header.after-login .nav-category {
+    justify-content: flex-end; /* Dorong search bar ke kanan */
+  }
+
+  .search-bar-after {
+    width: 100%;
+    max-width: 250px; /* Batasi lebar search bar di mobile */
+  }
+
+  .user-actions {
+    gap: 15px;
+  }
+
+  .user-avatar span {
+    display: none; /* Sembunyikan nama di samping avatar */
+  }
+
+  /* Hero After Login */
+  .hero-content-after-login h1 {
+    font-size: 2em;
+  }
+  .hero-content-after-login p {
+    font-size: 1em;
+  }
+  .hero-content-after-login .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .latest-activity-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Filter Bar Rekomendasi Terbaru */
+  .section-featured-items .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-product-small {
+    width: 100%;
+    max-width: unset;
+  }
+  .select-wrapper {
+    width: 100%;
+  }
+  .select-wrapper select {
+    width: 100%;
+  }
+
+  /* Testimonials */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Jaringan Kami */
+  .section-map h2 {
+    font-size: 1.8em;
+  }
+  .map-content {
+    padding: 20px;
+  }
+  .map-image {
+    max-width: 100%;
+  }
+  .map-info h3 {
+    font-size: 1.3em;
+  }
+}
+
+/* --- Gaya untuk Kategori Dropdown di Header --- */
+.category-dropdown {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0; /* Agar tidak menyusut */
+}
+
+.category-dropbtn {
+  background-color: transparent;
+  color: var(--dark-color);
+  padding: 10px 15px;
+  font-size: 1em;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-dropbtn:hover,
+.category-dropbtn:focus {
+  color: var(--primary-color);
+}
+
+.category-dropbtn i {
+  font-size: 0.8em; /* Ukuran ikon panah */
+  transition: transform 0.3s ease;
+}
+
+.category-dropdown-content {
+  display: none; /* Sembunyikan secara default */
+  position: absolute;
+  background-color: var(--white-color);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  padding: 10px 0;
+  top: 100%; /* Posisikan di bawah tombol */
+  left: 0;
+}
+
+.category-dropdown-content a {
+  color: var(--dark-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.category-dropdown-content a:hover {
+  background-color: #f2f2f2;
+  color: var(--primary-color);
+}
+
+.category-dropdown-content.show {
+  display: block; /* Tampilkan saat class 'show' aktif */
+}
+
+/* Rotasi ikon panah saat dropdown terbuka */
+.category-dropdown .category-dropbtn .fa-chevron-down {
+  transform: rotate(180deg);
+}
+.category-dropdown .category-dropbtn.active .fa-chevron-down {
+  transform: rotate(0deg);
+}
+
+/* Hapus gaya untuk nav-sub-category yang tidak lagi digunakan */
+.nav-sub-category {
+  display: none; /* Sembunyikan sepenuhnya karena sudah dipindahkan ke dropdown */
+}
+
+/* Penyesuaian untuk header-center-group agar Kategori dan Search Bar sejajar */
+.main-header.after-login .header-center-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+/* Media Queries untuk responsivitas */
+@media (max-width: 992px) {
+  .main-header.after-login .header-top-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-header.after-login .logo {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .header-center-group {
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Izinkan wrap untuk item di tengah */
+  }
+
+  .category-dropdown {
+    flex-basis: 100%; /* Kategori dropdown ambil satu baris penuh */
+    text-align: center;
+  }
+
+  .category-dropdown-content {
+    left: 50%; /* Pusatkan dropdown */
+    transform: translateX(-50%);
+    min-width: 90%; /* Lebar dropdown di mobile */
+  }
+
+  .search-bar-after {
+    max-width: 90%; /* Batasi lebar search bar di mobile */
+    margin-top: 10px; /* Jarak dari kategori dropdown */
+  }
+
+  .user-actions {
+    flex-basis: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .user-avatar span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar-after {
+    max-width: 100%;
+  }
+}
+
+/* General Body and Container Styles (ensure these are present or adjust as needed) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Example padding */
+}
+
+/* Main Header Styles (adjust existing ones if necessary) */
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0; /* Adjust as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between logo and category */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28af60; /* Green color for logo */
+  text-decoration: none;
+}
+
+/* Primary Nav Links (Kategori) */
+.primary-nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.primary-nav-links ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between text and icon */
+}
+
+.primary-nav-links ul li a .fas.fa-chevron-down {
+  font-size: 12px; /* Smaller size for the dropdown icon */
+  color: #666;
+}
+
+/* Search Bar Styles */
+.search-bar-before {
+  flex-grow: 1; /* Allows search bar to take available space */
+  max-width: 500px; /* Max width for search bar */
+  position: relative;
+  margin: 0 20px; /* Margin around search bar */
+}
+
+.search-bar-before input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px; /* Space for icon */
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar-before .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  cursor: pointer;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-masuk {
+  background-color: #fff;
+  color: #28af60;
+  border: 1px solid #28af60;
+}
+
+.btn-daftar {
+  background-color: #28af60;
+  color: #fff;
+}
+
+/* NEW: Secondary Navigation Bar Styles */
+.secondary-nav-bar {
+  background-color: #f2f2f2; /* Warna abu-abu yang diinginkan */
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0; /* Garis tipis di atasnya */
+}
+
+.secondary-nav-bar .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* Mengatur item dari kiri */
+  gap: 30px; /* Jarak antar item navigasi */
+}
+
+.secondary-nav-bar .container ul li a {
+  text-decoration: none;
+  color: #666; /* Warna teks abu-abu yang lebih gelap */
+  font-size: 13px; /* Ukuran teks lebih kecil */
+  white-space: nowrap; /* Mencegah teks patah ke baris baru */
+  padding: 5px 0; /* Sedikit padding vertikal untuk area klik */
+  transition: color 0.3s ease;
+}
+
+.secondary-nav-bar .container ul li a:hover {
+  color: #28af60; /* Efek hover saat disentuh */
+}
+
+/* Hero Section Styles (contoh, sesuaikan jika sudah ada) */
+.hero-section {
+  background-image: url("https://via.placeholder.com/1500x500?text=Hero+Image"); /* Ganti dengan gambar Anda */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  z-index: 1; /* Pastikan di atas bar navigasi */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Overlay gelap */
+  z-index: -1;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .btn-donasi,
+.hero-buttons .btn-telusuri,
+.hero-buttons .btn-jasa {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-donasi {
+  background-color: #28af60;
+  color: #fff;
+}
+
+.btn-donasi:hover {
+  background-color: #229954;
+}
+
+.btn-telusuri {
+  background-color: #fff;
+  color: #28af60;
+  border: 1px solid #28af60;
+}
+
+.btn-telusuri:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-jasa {
+  background-color: #fff;
+  color: #28af60;
+  border: 1px solid #28af60;
+}
+
+.btn-jasa:hover {
+  background-color: #f0f0f0;
+}
+
+/* Rekomendasi Terbaru, Fitur Unggulan, Testimoni, Footer dll. (Tambahkan/sesuaikan gaya yang sudah ada) */
+.rekomendasi-terbaru,
+.fitur-unggulan,
+.apa-kata-mereka,
+.jaringan-kami,
+.temui-komunitas {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.product-card .status {
+  font-weight: bold;
+  color: #28af60;
+}
+
+.product-card.placeholder {
+  background-color: #f0f0f0;
+  border: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 16px;
+  height: 250px; /* Menyesuaikan tinggi dengan card lain */
+}
+
+.btn-lihat-semua,
+.btn-gabung-sekarang {
+  background-color: #28af60;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-lihat-semua:hover,
+.btn-gabung-sekarang:hover {
+  background-color: #229954;
+}
+
+.fitur-grid,
+.testimoni-grid,
+.komunitas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.fitur-item,
+.testimoni-card,
+.komunitas-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.fitur-item i {
+  font-size: 40px;
+  color: #28af60;
+  margin-bottom: 15px;
+}
+
+.fitur-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.fitur-item p {
+  font-size: 15px;
+  color: #666;
+}
+
+.testimoni-card .avatar {
+  width: 60px;
+  height: 60px;
+  background-color: #28af60;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+.testimoni-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.testimoni-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.map-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.komunitas-card .avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #28af60;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0 20px;
+}
+
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #28af60;
+}
+
+.footer-col p,
+.footer-col ul {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #28af60;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #28af60;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #555;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+  .main-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar-before {
+    width: 100%;
+    margin: 15px 0;
+    max-width: none;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .secondary-nav-bar .container ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-buttons button {
+    margin: 0;
+    width: 100%;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-col {
+    min-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+}
+/* Existing styles (ensure these are present and correctly defined) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28af60;
+  text-decoration: none;
+}
+
+/* Primary Nav Links (Kategori) - Modified for dropdown */
+.primary-nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.primary-nav-links .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.primary-nav-links .dropbtn {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0; /* Adjust padding for click area */
+}
+
+.primary-nav-links .dropbtn .fas.fa-chevron-down {
+  font-size: 12px;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.primary-nav-links .dropdown.active .dropbtn .fas.fa-chevron-down {
+  transform: rotate(180deg); /* Rotate arrow when dropdown is active */
+}
+
+.primary-nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Ensure it's above other content */
+  border-radius: 5px;
+  padding: 5px 0;
+  left: 0; /* Align with the 'Kategori' text */
+  top: 100%; /* Position below the button */
+  border: 1px solid #eee;
+}
+
+.primary-nav-links .dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.primary-nav-links .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #28af60;
+}
+
+.primary-nav-links .dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Search Bar Styles */
+.search-bar-before {
+  flex-grow: 1;
+  max-width: 500px;
+  position: relative;
+  margin: 0 20px;
+}
+
+.search-bar-before input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar-before .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  cursor: pointer;
+}
+
+/* Auth Buttons / User Profile Nav */
+.auth-buttons {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 15px;
+}
+
+.auth-buttons .btn-masuk,
+.auth-buttons .btn-daftar {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-masuk {
+  background-color: #fff;
+  color: #28af60;
+  border: 1px solid #28af60;
+}
+
+.btn-daftar {
+  background-color: #28af60;
+  color: #fff;
+}
+
+/* User profile specific styles (for after login) */
+.user-profile-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative; /* For dropdown */
+}
+
+.user-profile-nav .cart-icon,
+.user-profile-nav .notification-icon {
+  color: #666;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.user-avatar-dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px; /* Space for hidden arrow */
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd; /* subtle border */
+}
+
+.user-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.user-avatar-dropdown::after {
+  content: "\f078"; /* Font Awesome chevron-down icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.user-avatar-dropdown.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 5px 0;
+  right: 0; /* Align to the right of the avatar */
+  top: 100%;
+  border: 1px solid #eee;
+  margin-top: 10px; /* Space from the user name/avatar */
+}
+
+.user-avatar-dropdown.active .user-dropdown-content {
+  display: block;
+}
+
+.user-dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.user-dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #28af60;
+}
+
+/* Secondary Navigation Bar Styles */
+.secondary-nav-bar {
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.secondary-nav-bar .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.secondary-nav-bar .container ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 13px;
+  white-space: nowrap;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.secondary-nav-bar .container ul li a:hover,
+.secondary-nav-bar .container ul li a.active {
+  /* Style for active link */
+  color: #28af60;
+  font-weight: bold; /* Make active link bold */
+}
+
+/* NEW: Donasi Page Specific Styles */
+
+.donasi-page {
+  background-color: #f9f9f9;
+  padding-bottom: 50px; /* Add some space at the bottom */
+}
+
+.page-header-section {
+  background-color: #f2f2f2; /* Light gray background */
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-header-section h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.page-header-section p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 15px;
+  text-align: left; /* Align breadcrumb to left within container */
+  padding-left: 20px; /* Adjust as needed for container alignment */
+}
+
+.breadcrumb a {
+  color: #999;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  margin: 0 5px;
+}
+
+.donasi-filter-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.donasi-filter-bar input {
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.btn-search-donasi {
+  background-color: #28af60;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-search-donasi:hover {
+  background-color: #229954;
+}
+
+/* Donasi Items Grid */
+.donasi-items-section {
+  padding: 40px 0;
+}
+
+.donasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding-top: 20px;
+}
+
+.donasi-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: relative; /* For the status badge */
+  transition: transform 0.2s ease-in-out;
+}
+
+.donasi-card:hover {
+  transform: translateY(-5px);
+}
+
+.donasi-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.donasi-card-content {
+  padding: 15px;
+}
+
+.donasi-status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #28af60; /* Green for Gratis */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* Example for other statuses if needed */
+/* .donasi-status.terjual { background-color: #f44336; } */
+/* .donasi-status.pending { background-color: #ff9800; } */
+
+.donasi-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.donasi-card .donasi-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.donasi-card .donasi-location,
+.donasi-card .donasi-time {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.donasi-card .donasi-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.donasi-card .donasi-tag {
+  background-color: #e0e0e0;
+  color: #555;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.donasi-card .donasi-tag.individual {
+  background-color: #e6f7ff; /* Light blue */
+  color: #1890ff;
+}
+
+.donasi-card .donasi-tag.organisasi {
+  background-color: #fff0f6; /* Light pink */
+  color: #eb2f96;
+}
+
+.donasi-card .donasi-likes {
+  color: #999;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.donasi-card .donasi-likes .far.fa-heart:hover {
+  color: #e74c3c; /* Red on hover */
+}
+
+.btn-ambil-donasi {
+  background-color: #28af60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ambil-donasi:hover {
+  background-color: #229954;
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-load-more {
+  background-color: #f0f0f0;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-load-more:hover {
+  background-color: #e0e0e0;
+  color: #333;
+  border-color: #ccc;
+}
+
+/* Existing Responsive Adjustments (ensure these are correctly placed) */
+@media (max-width: 768px) {
+  .main-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar-before {
+    width: 100%;
+    margin: 15px 0;
+    max-width: none;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .secondary-nav-bar .container ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .donasi-filter-bar input {
+    width: 80%; /* Make input wider on smaller screens */
+  }
+
+  .page-header-section h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .primary-nav-links .dropdown-content {
+    min-width: 100%; /* Full width dropdown on small screens */
+  }
+  .user-dropdown-content {
+    min-width: 100%;
+  }
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Background color of the page */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28af60; /* Green color for logo */
+  text-decoration: none;
+}
+
+/* Primary Nav Links (Kategori) - Modified for dropdown */
+.primary-nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.primary-nav-links .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.primary-nav-links .dropbtn {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+.primary-nav-links .dropbtn .fas.fa-chevron-down {
+  font-size: 12px;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.primary-nav-links .dropdown.active .dropbtn .fas.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.primary-nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 5px 0;
+  left: 0;
+  top: 100%;
+  border: 1px solid #eee;
+}
+
+.primary-nav-links .dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.primary-nav-links .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #28af60;
+}
+
+.primary-nav-links .dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Search Bar Styles (header) */
+.search-bar-before {
+  flex-grow: 1;
+  max-width: 500px;
+  position: relative;
+  margin: 0 20px;
+}
+
+.search-bar-before input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px; /* Space for search icon */
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar-before .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  cursor: pointer;
+}
+
+/* Auth Buttons / User Profile Nav */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* User profile specific styles (for after login) */
+.user-profile-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.user-profile-nav .cart-icon,
+.user-profile-nav .notification-icon {
+  color: #666;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.user-avatar-dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px; /* Space for hidden arrow */
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.user-avatar-dropdown::after {
+  content: "\f078"; /* Font Awesome chevron-down icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.user-avatar-dropdown.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 5px 0;
+  right: 0;
+  top: 100%;
+  border: 1px solid #eee;
+  margin-top: 10px;
+}
+
+.user-avatar-dropdown.active .user-dropdown-content {
+  display: block;
+}
+
+.user-dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.user-dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #28af60;
+}
+
+/* Secondary Navigation Bar Styles */
+.secondary-nav-bar {
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.secondary-nav-bar .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.secondary-nav-bar .container ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 13px;
+  white-space: nowrap;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.secondary-nav-bar .container ul li a:hover,
+.secondary-nav-bar .container ul li a.active {
+  color: #28af60;
+  font-weight: bold;
+}
+
+/* Donasi Page Specific Styles */
+
+.donasi-page {
+  background-color: #f9f9f9;
+  padding-bottom: 50px;
+}
+
+.page-header-section {
+  background-color: #fff; /* White background for header section */
+  padding: 20px 0;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-header-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #999;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  margin: 0 5px;
+}
+
+.page-header-section h1 {
+  font-size: 28px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.page-header-section p {
+  font-size: 15px;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.donasi-options-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.donasi-sort-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-by {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  appearance: none; /* Remove default dropdown arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 30px; /* Space for the custom arrow */
+}
+
+.display-mode button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.display-mode button.active {
+  background-color: #28af60;
+  color: #fff;
+  border-color: #28af60;
+}
+
+.display-mode button:hover:not(.active) {
+  background-color: #e0e0e0;
+}
+
+/* Donasi Items Grid */
+.donasi-items-section {
+  padding: 40px 0;
+}
+
+.donasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding-top: 20px;
+}
+
+/* List View Layout for Donasi Grid */
+.donasi-grid.list-layout {
+  grid-template-columns: 1fr; /* Single column for list view */
+  gap: 15px; /* Adjust gap for list view */
+}
+
+.donasi-grid.list-layout .donasi-card {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for list view */
+  align-items: center;
+  padding: 15px;
+}
+
+.donasi-grid.list-layout .donasi-card img {
+  width: 150px; /* Smaller image in list view */
+  height: 100px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.donasi-grid.list-layout .donasi-card-content {
+  flex-grow: 1;
+  padding: 0; /* Remove padding as it's handled by card padding */
+}
+
+.donasi-grid.list-layout .donasi-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.donasi-grid.list-layout .donasi-card .donasi-desc,
+.donasi-grid.list-layout .donasi-card .donasi-location,
+.donasi-grid.list-layout .donasi-card .donasi-time {
+  margin-bottom: 3px;
+  font-size: 13px;
+}
+
+.donasi-grid.list-layout .donasi-meta {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.donasi-grid.list-layout .btn-ambil-donasi {
+  width: auto;
+  align-self: flex-end; /* Align button to the right */
+  margin-left: auto; /* Push button to the right */
+  padding: 8px 15px; /* Adjust padding for list view */
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Background color of the page */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28af60; /* Green color for logo */
+  text-decoration: none;
+}
+
+/* Primary Nav Links (Kategori) - Modified for dropdown */
+.primary-nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.primary-nav-links .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.primary-nav-links .dropbtn {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+.primary-nav-links .dropbtn .fas.fa-chevron-down {
+  font-size: 12px;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.primary-nav-links .dropdown.active .dropbtn .fas.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.primary-nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 5px 0;
+  left: 0;
+  top: 100%;
+  border: 1px solid #eee;
+}
+
+.primary-nav-links .dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.primary-nav-links .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #28af60;
+}
+
+.primary-nav-links .dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Search Bar Styles (header) */
+.search-bar-before {
+  flex-grow: 1;
+  max-width: 500px;
+  position: relative;
+  margin: 0 20px;
+}
+
+.search-bar-before input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px; /* Space for search icon */
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar-before .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  cursor: pointer;
+}
+
+/* Auth Buttons / User Profile Nav */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* User profile specific styles (for after login) */
+.user-profile-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.user-profile-nav .cart-icon,
+.user-profile-nav .notification-icon {
+  color: #666;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.user-avatar-dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px; /* Space for hidden arrow */
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.user-avatar-dropdown::after {
+  content: "\f078"; /* Font Awesome chevron-down icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.user-avatar-dropdown.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 5px 0;
+  right: 0;
+  top: 100%;
+  border: 1px solid #eee;
+  margin-top: 10px;
+}
+
+.user-avatar-dropdown.active .user-dropdown-content {
+  display: block;
+}
+
+.user-dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.user-dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #28af60;
+}
+
+/* Secondary Navigation Bar Styles */
+.secondary-nav-bar {
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.secondary-nav-bar .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.secondary-nav-bar .container ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 13px;
+  white-space: nowrap;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.secondary-nav-bar .container ul li a:hover,
+.secondary-nav-bar .container ul li a.active {
+  color: #28af60;
+  font-weight: bold;
+}
+
+/* Donasi Page Specific Styles */
+
+.donasi-page {
+  background-color: #f9f9f9;
+  padding-bottom: 50px;
+}
+
+.page-header-section {
+  background-color: #fff; /* White background for header section */
+  padding: 20px 0;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-header-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #999;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  margin: 0 5px;
+}
+
+.page-header-section h1 {
+  font-size: 28px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.page-header-section p {
+  font-size: 15px;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.donasi-options-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.donasi-sort-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-by {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  appearance: none; /* Remove default dropdown arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 30px; /* Space for the custom arrow */
+}
+
+.display-mode button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.display-mode button.active {
+  background-color: #28af60;
+  color: #fff;
+  border-color: #28af60;
+}
+
+.display-mode button:hover:not(.active) {
+  background-color: #e0e0e0;
+}
+
+/* Donasi Items Grid */
+.donasi-items-section {
+  padding: 40px 0;
+}
+
+.donasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding-top: 20px;
+}
+
+/* List View Layout for Donasi Grid */
+.donasi-grid.list-layout {
+  grid-template-columns: 1fr; /* Single column for list view */
+  gap: 15px; /* Adjust gap for list view */
+}
+
+.donasi-grid.list-layout .donasi-card {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for list view */
+  align-items: flex-start; /* Align items to the start */
+  padding: 15px;
+}
+
+.donasi-grid.list-layout .donasi-card img {
+  width: 150px; /* Smaller image in list view */
+  height: 100px;
+  margin-right: 15px;
+  border-radius: 5px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.donasi-grid.list-layout .donasi-card-content {
+  flex-grow: 1;
+  padding: 0; /* Remove padding as it's handled by card padding */
+}
+
+.donasi-grid.list-layout .donasi-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 5px; /* Adjust margin */
+}
+
+.donasi-grid.list-layout .donasi-status {
+  position: static; /* Remove absolute positioning */
+  display: inline-block; /* Make it an inline block */
+  margin-bottom: 5px; /* Space below status */
+  transform: none; /* Remove transform */
+}
+
+.donasi-grid.list-layout .donasi-card .donasi-condition,
+.donasi-grid.list-layout .donasi-card .donasi-location,
+.donasi-grid.list-layout .donasi-card .donasi-time {
+  margin-bottom: 3px;
+  font-size: 13px;
+}
+
+.donasi-grid.list-layout .donasi-meta {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px; /* Adjust margin */
+  margin-bottom: 8px; /* Adjust margin */
+  width: 100%;
+}
+
+.donasi-grid.list-layout .donasi-verification {
+  margin-bottom: 10px; /* Space below verification */
+  align-self: flex-start; /* Align to the left in list view */
+}
+
+.donasi-grid.list-layout .btn-ambil-donasi {
+  width: auto;
+  align-self: flex-end; /* Align button to the right */
+  margin-left: auto; /* Push button to the right */
+  padding: 8px 15px; /* Adjust padding for list view */
+}
+
+/* Card Styles (default is grid view) */
+.donasi-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.donasi-card:hover {
+  transform: translateY(-5px);
+}
+
+.donasi-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.donasi-card-content {
+  padding: 15px;
+}
+
+/* New: Info Tags (DONASI, ORGANISASI/INDIVIDU) */
+.donasi-info-tags {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  z-index: 1;
+}
+
+.donasi-tag {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.donasi-tag.type-donasi {
+  /* Style for "DONASI" tag */
+  background-color: #28af60; /* Green */
+  color: #fff;
+}
+
+.donasi-tag.type-organisasi {
+  /* Style for "ORGANISASI" tag */
+  background-color: #b73e3e; /* Light blue, matching Figma */
+  color: #ffffff; /* Darker blue */
+  border: 1px solid #bae7ff;
+}
+
+.donasi-tag.type-individu {
+  /* Style for "INDIVIDU" tag */
+  background-color: #ef4444; /* Light pink, matching Figma */
+  color: #ffffff; /* Darker pink */
+  border: 1px solid #ffcde1;
+}
+
+.donasi-status.gratis {
+  /* Existing style, ensure it does not conflict with new info tags */
+  /* Remove absolute positioning if info-tags take its place */
+  /* For now, let's keep it as an inline element within content */
+  display: inline-block;
+  background-color: #28af60;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px; /* Space below status */
+  /* If you want it absolute like the previous version, uncomment below and adjust top/right */
+  /* position: absolute; top: 10px; right: 10px; */
+}
+
+.donasi-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 5px; /* Adjusted margin */
+}
+
+/* New: Kondisi Barang */
+.donasi-condition {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.donasi-card .donasi-location,
+.donasi-card .donasi-time {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.donasi-card .donasi-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Adjusted margin */
+}
+
+.donasi-card .donatur-name {
+  font-size: 13px;
+  color: #777;
+  white-space: nowrap; /* Prevent wrapping for donor name */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.donasi-card .donasi-likes {
+  color: #999;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.donasi-card .donasi-likes .far.fa-heart:hover {
+  color: #e74c3c;
+}
+
+/* New: Status Verifikasi */
+.donasi-verification {
+  display: inline-block;
+  background-color: #f0f0f0; /* Default background for unverified */
+  color: #888;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 15px; /* Space above button */
+  border: 1px solid #ddd;
+}
+
+.donasi-verification.verified {
+  background-color: #e6f7f0; /* Light green for verified */
+  color: #28af60; /* Darker green */
+  border: 1px solid #aedff7; /* Example border color, adjust as needed */
+}
+
+.btn-ambil-donasi {
+  background-color: #28af60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ambil-donasi:hover {
+  background-color: #229954;
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-load-more {
+  background-color: #f0f0f0;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-load-more:hover {
+  background-color: #e0e0e0;
+  color: #333;
+  border-color: #ccc;
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.main-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: #28af60;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-col p,
+.footer-col ul {
+  color: #ccc;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-col ul li .fas,
+.footer-col ul li .fab {
+  margin-right: 10px;
+  color: #28af60;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #28af60;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .main-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar-before {
+    width: 100%;
+    margin: 15px 0;
+    max-width: none;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .secondary-nav-bar .container ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .donasi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .donasi-grid.list-layout .donasi-card {
+    flex-direction: column; /* Stack vertically in list mode on small screens */
+    align-items: flex-start;
+  }
+
+  .donasi-grid.list-layout .donasi-card img {
+    width: 100%;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .donasi-grid.list-layout .donasi-info-tags {
+    position: static; /* Remove absolute positioning in list view on small screens */
+    margin-bottom: 10px;
+  }
+
+  .donasi-grid.list-layout .btn-ambil-donasi {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .donasi-options-bar {
+    justify-content: center; /* Center filter/sort on smaller screens */
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header-section h1 {
+    font-size: 24px;
+  }
+
+  .footer-col {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .primary-nav-links .dropdown-content {
+    min-width: 100%;
+  }
+  .user-dropdown-content {
+    min-width: 100%;
+  }
+  .donasi-card-content {
+    padding: 10px;
+  }
+  .btn-ambil-donasi {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Background color of the page */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28af60; /* Green color for logo */
+  text-decoration: none;
+}
+
+/* Primary Nav Links (Kategori) - Modified for dropdown */
+.primary-nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.primary-nav-links .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.primary-nav-links .dropbtn {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+.primary-nav-links .dropbtn .fas.fa-chevron-down {
+  font-size: 12px;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.primary-nav-links .dropdown.active .dropbtn .fas.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.primary-nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 5px 0;
+  left: 0;
+  top: 100%;
+  border: 1px solid #eee;
+}
+
+.primary-nav-links .dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.primary-nav-links .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #28af60;
+}
+
+.primary-nav-links .dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Search Bar Styles (header) */
+.search-bar-before {
+  flex-grow: 1;
+  max-width: 500px;
+  position: relative;
+  margin: 0 20px;
+}
+
+.search-bar-before input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px; /* Space for search icon */
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar-before .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  cursor: pointer;
+}
+
+/* Auth Buttons / User Profile Nav */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* User profile specific styles (for after login) */
+.user-profile-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.user-profile-nav .cart-icon,
+.user-profile-nav .notification-icon {
+  color: #666;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.user-avatar-dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px; /* Space for hidden arrow */
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.user-avatar-dropdown::after {
+  content: "\f078"; /* Font Awesome chevron-down icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.user-avatar-dropdown.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 5px 0;
+  right: 0;
+  top: 100%;
+  border: 1px solid #eee;
+  margin-top: 10px;
+}
+
+.user-avatar-dropdown.active .user-dropdown-content {
+  display: block;
+}
+
+.user-dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.user-dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #28af60;
+}
+
+/* Secondary Navigation Bar Styles */
+.secondary-nav-bar {
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.secondary-nav-bar .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.secondary-nav-bar .container ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 13px;
+  white-space: nowrap;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.secondary-nav-bar .container ul li a:hover,
+.secondary-nav-bar .container ul li a.active {
+  color: #28af60;
+  font-weight: bold;
+}
+
+/* Donasi Page Specific Styles */
+
+.donasi-page {
+  background-color: #f9f9f9;
+  padding-bottom: 50px;
+}
+
+.page-header-section {
+  background-color: #fff; /* White background for header section */
+  padding: 20px 0;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-header-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #999;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  margin: 0 5px;
+}
+
+.page-header-section h1 {
+  font-size: 28px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.page-header-section p {
+  font-size: 15px;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.donasi-options-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.donasi-sort-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-by {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  appearance: none; /* Remove default dropdown arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 30px; /* Space for the custom arrow */
+}
+
+.display-mode button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.display-mode button.active {
+  background-color: #28af60;
+  color: #fff;
+  border-color: #28af60;
+}
+
+.display-mode button:hover:not(.active) {
+  background-color: #e0e0e0;
+}
+
+/* Donasi Items Grid */
+.donasi-items-section {
+  padding: 40px 0;
+}
+
+.donasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding-top: 20px;
+}
+
+/* List View Layout for Donasi Grid */
+.donasi-grid.list-layout {
+  grid-template-columns: 1fr; /* Single column for list view */
+  gap: 15px; /* Adjust gap for list view */
+}
+
+.donasi-grid.list-layout .donasi-card {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for list view */
+  align-items: flex-start; /* Align items to the start */
+  padding: 15px;
+}
+
+.donasi-grid.list-layout .donasi-card img {
+  width: 150px; /* Smaller image in list view */
+  height: 100px;
+  margin-right: 15px;
+  border-radius: 5px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.donasi-grid.list-layout .donasi-card-content {
+  flex-grow: 1;
+  padding: 0; /* Remove padding as it's handled by card padding */
+}
+
+.donasi-grid.list-layout .donasi-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 5px; /* Adjust margin */
+}
+
+.donasi-grid.list-layout .donasi-status {
+  position: static; /* Remove absolute positioning */
+  display: inline-block; /* Make it an inline block */
+  margin-bottom: 5px; /* Space below status */
+  transform: none; /* Remove transform */
+}
+
+.donasi-grid.list-layout .donasi-card .donasi-condition,
+.donasi-grid.list-layout .donasi-card .donasi-location,
+.donasi-grid.list-layout .donasi-card .donasi-time {
+  margin-bottom: 3px;
+  font-size: 13px;
+}
+
+.donasi-grid.list-layout .donasi-meta {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px; /* Adjust margin */
+  margin-bottom: 8px; /* Adjust margin */
+  width: 100%;
+}
+
+.donasi-grid.list-layout .donasi-verification {
+  margin-bottom: 10px; /* Space below verification */
+  align-self: flex-start; /* Align to the left in list view */
+}
+
+.donasi-grid.list-layout .btn-ambil-donasi {
+  width: auto;
+  align-self: flex-end; /* Align button to the right */
+  margin-left: auto; /* Push button to the right */
+  padding: 8px 15px; /* Adjust padding for list view */
+}
+
+/* Card Styles (default is grid view) */
+.donasi-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.donasi-card:hover {
+  transform: translateY(-5px);
+}
+
+.donasi-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.donasi-card-content {
+  padding: 15px;
+}
+
+/* New: Info Tags (DONASI, ORGANISASI/INDIVIDU) */
+.donasi-info-tags {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  z-index: 1;
+}
+
+.donasi-tag {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.donasi-tag.type-donasi {
+  /* Style for "DONASI" tag */
+  background-color: #28af60; /* Green */
+  color: #fff;
+}
+
+.donasi-tag.type-organisasi {
+  /* Style for "ORGANISASI" tag */
+  background-color: #e6f7ff; /* Light blue, matching Figma */
+  color: #1890ff; /* Darker blue */
+  border: 1px solid #bae7ff;
+}
+
+.donasi-tag.type-individu {
+  /* Style for "INDIVIDU" tag */
+  background-color: #fff0f6; /* Light pink, matching Figma */
+  color: #eb2f96; /* Darker pink */
+  border: 1px solid #ffcde1;
+}
+
+.donasi-status.gratis {
+  /* Existing style, ensure it does not conflict with new info tags */
+  display: inline-block;
+  background-color: #28af60; /* Green */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px; /* Space below status */
+}
+
+.donasi-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 5px; /* Adjusted margin */
+}
+
+/* New: Kondisi Barang */
+.donasi-condition {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.donasi-card .donasi-location {
+  font-size: 14px; /* Updated font size to match Figma */
+  color: #666; /* Updated color to match Figma */
+  margin-bottom: 5px;
+}
+
+.donasi-card .donasi-time {
+  font-size: 14px; /* Updated font size to match Figma */
+  color: #666; /* Updated color to match Figma */
+  margin-bottom: 5px;
+}
+
+.donasi-card .donasi-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Adjusted margin */
+}
+
+.donasi-card .donatur-name {
+  font-size: 14px; /* Updated font size to match Figma */
+  color: #333; /* Updated color to match Figma */
+  white-space: nowrap; /* Prevent wrapping for donor name */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.donasi-card .donasi-likes {
+  color: #999;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.donasi-card .donasi-likes .far.fa-heart:hover {
+  color: #e74c3c;
+}
+
+/* New: Status Verifikasi */
+.donasi-verification {
+  display: inline-block;
+  background-color: #f0f0f0; /* Default background for unverified */
+  color: #888;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 15px; /* Space above button */
+  border: 1px solid #ddd;
+}
+
+.donasi-verification.verified {
+  background-color: #e6f7f0; /* Light green for verified */
+  color: #28af60; /* Darker green */
+  border: 1px solid #b7eb8f; /* Green border for verified, matching Figma */
+}
+
+.btn-ambil-donasi {
+  background-color: #28af60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ambil-donasi:hover {
+  background-color: #229954;
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-load-more {
+  background-color: #f0f0f0;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-load-more:hover {
+  background-color: #e0e0e0;
+  color: #333;
+  border-color: #ccc;
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.main-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: #28af60;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-col p,
+.footer-col ul {
+  color: #ccc;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-col ul li .fas,
+.footer-col ul li .fab {
+  margin-right: 10px;
+  color: #28af60;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #28af60;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .main-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar-before {
+    width: 100%;
+    margin: 15px 0;
+    max-width: none;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .secondary-nav-bar .container ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .donasi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .donasi-grid.list-layout .donasi-card {
+    flex-direction: column; /* Stack vertically in list mode on small screens */
+    align-items: flex-start;
+  }
+
+  .donasi-grid.list-layout .donasi-card img {
+    width: 100%;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .donasi-grid.list-layout .donasi-info-tags {
+    position: static; /* Remove absolute positioning in list view on small screens */
+    margin-bottom: 10px;
+  }
+
+  .donasi-grid.list-layout .btn-ambil-donasi {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .donasi-options-bar {
+    justify-content: center; /* Center filter/sort on smaller screens */
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header-section h1 {
+    font-size: 24px;
+  }
+
+  .footer-col {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .primary-nav-links .dropdown-content {
+    min-width: 100%;
+  }
+  .user-dropdown-content {
+    min-width: 100%;
+  }
+  .donasi-card-content {
+    padding: 10px;
+  }
+  .btn-ambil-donasi {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Background color of the page */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #28af60; /* Green color for logo */
+  text-decoration: none;
+}
+
+/* Primary Nav Links (Kategori) - Modified for dropdown */
+.primary-nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.primary-nav-links .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.primary-nav-links .dropbtn {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+.primary-nav-links .dropbtn .fas.fa-chevron-down {
+  font-size: 12px;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.primary-nav-links .dropdown.active .dropbtn .fas.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.primary-nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 5px 0;
+  left: 0;
+  top: 100%;
+  border: 1px solid #eee;
+}
+
+.primary-nav-links .dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.primary-nav-links .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #28af60;
+}
+
+.primary-nav-links .dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Search Bar Styles (header) */
+.search-bar-before {
+  flex-grow: 1;
+  max-width: 500px;
+  position: relative;
+  margin: 0 20px;
+}
+
+.search-bar-before input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px; /* Space for search icon */
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar-before .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  cursor: pointer;
+}
+
+/* Auth Buttons / User Profile Nav */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* User profile specific styles (for after login) */
+.user-profile-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.user-profile-nav .cart-icon,
+.user-profile-nav .notification-icon {
+  color: #666;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.user-avatar-dropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px; /* Space for hidden arrow */
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.user-avatar-dropdown::after {
+  content: "\f078"; /* Font Awesome chevron-down icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.user-avatar-dropdown.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 5px 0;
+  right: 0;
+  top: 100%;
+  border: 1px solid #eee;
+  margin-top: 10px;
+}
+
+.user-avatar-dropdown.active .user-dropdown-content {
+  display: block;
+}
+
+.user-dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.user-dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #28af60;
+}
+
+/* Secondary Navigation Bar Styles */
+.secondary-nav-bar {
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.secondary-nav-bar .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.secondary-nav-bar .container ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 13px;
+  white-space: nowrap;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.secondary-nav-bar .container ul li a:hover,
+.secondary-nav-bar .container ul li a.active {
+  color: #28af60;
+  font-weight: bold;
+}
+
+/* Donasi Page Specific Styles */
+
+.donasi-page {
+  background-color: #f9f9f9;
+  padding-bottom: 50px;
+}
+
+.page-header-section {
+  background-color: #fff; /* White background for header section */
+  padding: 20px 0;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-header-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #999;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  margin: 0 5px;
+}
+
+.page-header-section h1 {
+  font-size: 28px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.page-header-section p {
+  font-size: 15px;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.donasi-options-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.donasi-sort-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-by {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  appearance: none; /* Remove default dropdown arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 30px; /* Space for the custom arrow */
+}
+
+.display-mode button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.display-mode button.active {
+  background-color: #28af60;
+  color: #fff;
+  border-color: #28af60;
+}
+
+.display-mode button:hover:not(.active) {
+  background-color: #e0e0e0;
+}
+
+/* Donasi Items Grid */
+.donasi-items-section {
+  padding: 40px 0;
+}
+
+.donasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding-top: 20px;
+}
+
+/* List View Layout for Donasi Grid */
+.donasi-grid.list-layout {
+  grid-template-columns: 1fr; /* Single column for list view */
+  gap: 15px; /* Adjust gap for list view */
+}
+
+.donasi-grid.list-layout .donasi-card {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for list view */
+  align-items: flex-start; /* Align items to the start */
+  padding: 15px;
+}
+
+.donasi-grid.list-layout .donasi-card img {
+  width: 150px; /* Smaller image in list view */
+  height: 100px;
+  margin-right: 15px;
+  border-radius: 5px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.donasi-grid.list-layout .donasi-card-content {
+  flex-grow: 1;
+  padding: 0; /* Remove padding as it's handled by card padding */
+}
+
+.donasi-grid.list-layout .donasi-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 5px; /* Adjust margin */
+}
+
+.donasi-grid.list-layout .donasi-status {
+  position: static; /* Remove absolute positioning */
+  display: inline-block; /* Make it an inline block */
+  margin-bottom: 5px; /* Space below status */
+  transform: none; /* Remove transform */
+}
+
+.donasi-grid.list-layout .donasi-card .donasi-condition,
+.donasi-grid.list-layout .donasi-card .donasi-location,
+.donasi-grid.list-layout .donasi-card .donasi-time {
+  margin-bottom: 3px;
+  font-size: 13px;
+}
+
+.donasi-grid.list-layout .donasi-meta {
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px; /* Adjust margin */
+  margin-bottom: 8px; /* Adjust margin */
+  width: 100%;
+}
+
+.donasi-grid.list-layout .donasi-verification {
+  margin-bottom: 10px; /* Space below verification */
+  align-self: flex-start; /* Align to the left in list view */
+}
+
+.donasi-grid.list-layout .btn-ambil-donasi {
+  width: auto;
+  align-self: flex-end; /* Align button to the right */
+  margin-left: auto; /* Push button to the right */
+  padding: 8px 15px; /* Adjust padding for list view */
+}
+
+/* Card Styles (default is grid view) */
+.donasi-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.donasi-card:hover {
+  transform: translateY(-5px);
+}
+
+.donasi-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.donasi-card-content {
+  padding: 15px;
+}
+
+/* New: Info Tags (DONASI, ORGANISASI/INDIVIDU) */
+.donasi-info-tags {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  z-index: 1;
+}
+
+.donasi-tag {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.donasi-tag.type-donasi {
+  /* Style for "DONASI" tag */
+  background-color: #28af60; /* Green */
+  color: #fff;
+}
+
+.donasi-tag.type-organisasi {
+  /* Style for "ORGANISASI" tag */
+  background-color: #e6f7ff; /* Light blue, matching Figma */
+  color: #1890ff; /* Darker blue */
+  border: 1px solid #bae7ff;
+}
+
+.donasi-tag.type-individu {
+  /* Style for "INDIVIDU" tag */
+  background-color: #fff0f6; /* Light pink, matching Figma */
+  color: #eb2f96; /* Darker pink */
+  border: 1px solid #ffcde1;
+}
+
+.donasi-status.gratis {
+  /* Existing style, ensure it does not conflict with new info tags */
+  display: inline-block;
+  background-color: #28af60; /* Green */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px; /* Space below status */
+}
+
+.donasi-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 5px; /* Adjusted margin */
+}
+
+/* New: Kondisi Barang */
+.donasi-condition {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.donasi-card .donasi-location {
+  font-size: 14px; /* Updated font size to match Figma */
+  color: #666; /* Updated color to match Figma */
+  margin-bottom: 5px;
+}
+
+.donasi-card .donasi-time {
+  font-size: 14px; /* Updated font size to match Figma */
+  color: #666; /* Updated color to match Figma */
+  margin-bottom: 5px;
+}
+
+.donasi-card .donasi-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Adjusted margin */
+}
+
+.donasi-card .donatur-name {
+  font-size: 14px; /* Updated font size to match Figma */
+  color: #333; /* Updated color to match Figma */
+  white-space: nowrap; /* Prevent wrapping for donor name */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.donasi-card .donasi-likes {
+  color: #999;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.donasi-card .donasi-likes .far.fa-heart:hover {
+  color: #e74c3c;
+}
+
+/* New: Status Verifikasi */
+.donasi-verification {
+  display: inline-block;
+  background-color: #f0f0f0; /* Default background for unverified */
+  color: #888;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 15px; /* Space above button */
+  border: 1px solid #ddd;
+}
+
+.donasi-verification.verified {
+  background-color: #e6f7f0; /* Light green for verified */
+  color: #28af60; /* Darker green */
+  border: 1px solid #b7eb8f; /* Green border for verified, matching Figma */
+}
+
+.btn-ambil-donasi {
+  background-color: #28af60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ambil-donasi:hover {
+  background-color: #229954;
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-load-more {
+  background-color: #f0f0f0;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-load-more:hover {
+  background-color: #e0e0e0;
+  color: #333;
+  border-color: #ccc;
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.main-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: #28af60;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-col p,
+.footer-col ul {
+  color: #ccc;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-col ul li .fas,
+.footer-col ul li .fab {
+  margin-right: 10px;
+  color: #28af60;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #28af60;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .main-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar-before {
+    width: 100%;
+    margin: 15px 0;
+    max-width: none;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .secondary-nav-bar .container ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .donasi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .donasi-grid.list-layout .donasi-card {
+    flex-direction: column; /* Stack vertically in list mode on small screens */
+    align-items: flex-start;
+  }
+
+  .donasi-grid.list-layout .donasi-card img {
+    width: 100%;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .donasi-grid.list-layout .donasi-info-tags {
+    position: static; /* Remove absolute positioning in list view on small screens */
+    margin-bottom: 10px;
+  }
+
+  .donasi-grid.list-layout .btn-ambil-donasi {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .donasi-options-bar {
+    justify-content: center; /* Center filter/sort on smaller screens */
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header-section h1 {
+    font-size: 24px;
+  }
+
+  .footer-col {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .primary-nav-links .dropdown-content {
+    min-width: 100%;
+  }
+  .user-dropdown-content {
+    min-width: 100%;
+  }
+  .donasi-card-content {
+    padding: 10px;
+  }
+  .btn-ambil-donasi {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}

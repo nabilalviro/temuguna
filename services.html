@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jasa Perbaikan - TemuGuna</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header before-login">
+      <div class="container">
+        <div class="header-primary-row">
+          <a href="index.html" class="logo">TemuGuna</a>
+
+          <div class="category-and-search">
+            <a href="#" class="header-category-link">Kategori</a>
+            <div class="search-bar-before">
+              <input
+                type="text"
+                placeholder="Cari barang, jasa perbaikan, dan lainnya..."
+              />
+              <i class="fas fa-search search-icon"></i>
+            </div>
+          </div>
+
+          <div class="auth-buttons">
+            <a href="login.html" class="btn btn-secondary-outline">Masuk</a>
+            <a href="register.html" class="btn btn-primary">Daftar</a>
+          </div>
+        </div>
+
+        <nav class="nav-main-links">
+          <ul>
+            <li><a href="#">Semua Kategori</a></li>
+            <li><a href="upload-item.html">Donasi Barang</a></li>
+            <li><a href="products.html">Barang Dijual</a></li>
+            <li><a href="services.html">Jasa Perbaikan</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-page-section">
+        <div class="container">
+          <h1>Jasa Perbaikan</h1>
+          <p>
+            Temukan profesional terpercaya untuk perbaikan alat bantu dan
+            fasilitas.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container">
+          <div class="filter-and-sort">
+            <div class="filter-group">
+              <label for="service-category-filter">Kategori Jasa:</label>
+              <select id="service-category-filter">
+                <option value="">Semua</option>
+                <option value="perbaikan-kursi-roda">
+                  Perbaikan Kursi Roda
+                </option>
+                <option value="perbaikan-alat-dengar">
+                  Perbaikan Alat Bantu Dengar
+                </option>
+                <option value="terapi-wicara">Terapi Wicara</option>
+                <option value="terapi-okupasi">Terapi Okupasi</option>
+                <option value="modifikasi-rumah">
+                  Modifikasi Rumah Aksesibel
+                </option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="service-location-filter">Lokasi:</label>
+              <select id="service-location-filter">
+                <option value="">Semua</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="bandung">Bandung</option>
+                <option value="surabaya">Surabaya</option>
+                <option value="yogyakarta">Yogyakarta</option>
+              </select>
+            </div>
+          </div>
+          <div class="service-grid">
+            <div class="service-card">
+              <img
+                src="img/service-placeholder.jpg"
+                alt="Perbaikan Kursi Roda"
+              />
+              <div class="service-info">
+                <h3>Perbaikan Kursi Roda Profesional</h3>
+                <p class="service-provider">Oleh: Bengkel Mandiri Jaya</p>
+                <p class="service-location">
+                  <i class="fas fa-map-marker-alt"></i> Jakarta Pusat
+                </p>
+                <p class="service-description">
+                  Spesialis perbaikan kursi roda manual dan elektrik.
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-sm"
+                  >Hubungi Penyedia</a
+                >
+              </div>
+            </div>
+            <div class="service-card">
+              <img src="img/service-placeholder.jpg" alt="Terapi Wicara" />
+              <div class="service-info">
+                <h3>Sesi Terapi Wicara Anak</h3>
+                <p class="service-provider">Oleh: Klinik Sehati</p>
+                <p class="service-location">
+                  <i class="fas fa-map-marker-alt"></i> Bandung
+                </p>
+                <p class="service-description">
+                  Program terapi wicara individual untuk anak.
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-sm"
+                  >Hubungi Penyedia</a
+                >
+              </div>
+            </div>
+            <div class="service-card">
+              <img
+                src="img/service-placeholder.jpg"
+                alt="Perbaikan Alat Bantu Dengar"
+              />
+              <div class="service-info">
+                <h3>Servis Alat Bantu Dengar</h3>
+                <p class="service-provider">Oleh: Pusat Alat Dengar Sehat</p>
+                <p class="service-location">
+                  <i class="fas fa-map-marker-alt"></i> Surabaya
+                </p>
+                <p class="service-description">
+                  Perbaikan, kalibrasi, dan perawatan alat bantu dengar.
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-sm"
+                  >Hubungi Penyedia</a
+                >
+              </div>
+            </div>
+            <div class="service-card">
+              <img src="img/service-placeholder.jpg" alt="Terapi Okupasi" />
+              <div class="service-info">
+                <h3>Terapi Okupasi untuk Perkembangan Motorik</h3>
+                <p class="service-provider">Oleh: Yayasan Tumbuh Kembang</p>
+                <p class="service-location">
+                  <i class="fas fa-map-marker-alt"></i> Yogyakarta
+                </p>
+                <p class="service-description">
+                  Membantu anak mengembangkan keterampilan hidup sehari-hari.
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-sm"
+                  >Hubungi Penyedia</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Selanjutnya</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-section">
+          <h3>TemuGuna</h3>
+          <p>
+            Platform sosial yang berdedikasi membantu anak-anak berkebutuhan
+            khusus mendapatkan fasilitas dan dukungan yang mereka perlukan.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Tautan Cepat</h3>
+          <ul>
+            <li><a href="upload-item.html">Unggah Barang</a></li>
+            <li><a href="services.html">Jasa Perbaikan</a></li>
+            <li><a href="#">Daftarkan Jasa</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Hubungi Kami</h3>
+          <p><i class="fas fa-envelope"></i> info@temuguna.id</p>
+          <p><i class="fab fa-instagram"></i> @TemuGunaID</p>
+          <p><i class="fab fa-facebook-f"></i> TemuGuna Official</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TemuGuna. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+  </body>
+</html>
