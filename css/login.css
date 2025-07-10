@@ -36,12 +36,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 .login-illustration img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: block;
 }
 
@@ -244,8 +243,7 @@ body {
   }
 
   .login-illustration {
-    padding: 30px 20px;
-    order: -1;
+    display: none;
   }
 
   .login-form-section {

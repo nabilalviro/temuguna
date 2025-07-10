@@ -1,7 +1,7 @@
 /* Anda dapat mendefinisikan variabel warna di sini jika tidak ada di style.css
    atau pastikan style.css sudah memuatnya dan register.css dimuat setelahnya. */
 :root {
-  --primary-color: #4caf50; /* Hijau yang cocok dengan Figma */
+  --primary-color: #28af60; /* Hijau yang cocok dengan Figma */
   --dark-color: #212529;
   --text-muted: #6c757d;
   --light-bg: #e0f7fa; /* Warna latar ilustrasi */
@@ -10,7 +10,7 @@
   --link-color: #007bff; /* Biru default untuk tautan, bisa disesuaikan */
 }
 
-body {
+.register-page {
   font-family: "Inter", sans-serif;
   background-color: #f8f9fa;
   display: flex;
@@ -36,12 +36,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 .register-illustration img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: block;
 }
 
@@ -230,8 +229,7 @@ body {
   }
 
   .register-illustration {
-    padding: 30px 20px;
-    order: -1;
+    display: none;
   }
 
   .register-form-section {
