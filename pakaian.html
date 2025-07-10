@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TemuGuna: Berbagi Kebaikan, Perpanjang Manfaat</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header after-login">
+      <div class="container header-top-row">
+        <a href="index-after-login.html" class="logo">TemuGuna</a>
+        <div class="header-center-group">
+          <div class="category-dropdown">
+            <button class="category-dropbtn">
+              Kategori <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="category-dropdown-content">
+              <a href="kategori.html">Semua Kategori</a>
+
+              <a href="pakaian.html">Pakaian</a>
+              <a href="#">Elektronik</a>
+              <a href="#">Peralatan Rumah</a>
+              <a href="#">Buku & Edukasi</a>
+              <a href="#">Mainan & Hobi</a>
+              <a href="#">Perlengkapan Bayi</a>
+              <a href="#">Lainnya</a>
+            </div>
+          </div>
+
+          <div class="search-bar-after">
+            <input
+              type="text"
+              placeholder="Cari barang, jasa perbaikan, dan lainnya..."
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </div>
+        <div class="user-actions">
+            <a href="cart.html" class="icon-link"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+            <a href="notifications.html" class="icon-link"
+              ><i class="fas fa-bell"></i
+            ></a>
+            <a href="chat.html" class="icon-link"
+              ><i class="fas fa-comment-dots"></i
+            ></a>
+        
+            <div class="user-avatar-dropdown">
+              <img
+                src="https://via.placeholder.com/30"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <span class="user-name">Nabil Alviro</span>
+              <div class="dropdown-content user-dropdown-content">
+                <a href="#">Profil</a>
+                <a href="#">Unggah Barang</a>
+                <a href="#">Donasi Barang</a>
+                <a href="#">Keluar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="secondary-nav-bar">
+        <div class="container">
+          <ul>
+            <li><a href="upload-item.html" class="active">Donasi Barang</a></li>
+            <li><a href="#">Barang Dijual</a></li>
+            <li><a href="#">Jasa Perbaikan</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+    </header>
+    <main class="main-content-area-all-items">
+      <div class="back-link-container">
+        <a href="javascript:history.back()" class="back-link">
+          <i class="fas fa-arrow-left"></i> Kembali
+        </a>
+      </div>
+
+      <section class="all-items-section">
+        <div class="section-header-all-items">
+          <div>
+            <h1>Pakaian</h1>
+            <p class="item-count">
+              Menampilkan 1 barang dijual & 2 barang donasi tersedia
+            </p>
+          </div>
+          <div class="filters-and-sorts">
+            <div class="filter-dropdown">
+             <div class="filter-controls-header">
+    <div class="dropdown">
+        <button class="dropbtn gray-background">Semua <span class="arrow-down"></span></button>
+        <div class="dropdown-content">
+            <a href="#">Semua Barang</a>
+            <a href="#">Donasi</a>
+            <a href="#">Dijual</a>
+            <a href="#">Jasa Perbaikan</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn gray-background">Individu <span class="arrow-down"></span></button>
+        <div class="dropdown-content">
+      
+            <a href="#">Individu </a>
+            <a href="#">Individu Jasa</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn gray-background">Terbaru <span class="arrow-down"></span></button>
+        <div class="dropdown-content">
+            <a href="#">Paling Baru</a>
+            <a href="#">Terlama</a>
+            <a href="#">Harga Tertinggi</a>
+            <a href="#">Harga Terendah</a>
+            <a href="#">Rating Tertinggi</a>
+        </div>
+    </div>
+
+    <div class="view-icons">
+        <button class=></div>
+</div>
+ 
+
+        <div class="items-grid-container">
+          <div class="item-card">
+            <div class="item-image-wrapper">
+              <img
+                src="img/mouse-laptop-acer.jpg"
+                alt="Mouse Laptop Acer X418"
+                class="item-image"
+              />
+              <div class="item-tags-container">
+                <span class="item-tag type-dijual">Dijual</span>
+                <span class="item-tag owner-organisasi">Organisasi</span>
+              </div>
+              <div class="item-favorite-icon">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+            <div class="item-content">
+              <h3 class="item-title">Jaket Branded Second</h3>
+              <p class="item-price">
+                Rp150.000 <span class="original-price">Rp500.000</span>
+              </p>
+              <div class="item-rating"><i class="fas fa-star"></i> 4.8</div>
+              <p class="item-condition">Kondisi: Baik</p>
+              <p class="item-stock-sold">
+                Stok: 1 <span class="separator">&bull;</span> 222 terjual
+              </p>
+              <p class="item-location-time">
+                <i class="fas fa-map-marker-alt"></i> Gading Serpong
+                <span class="separator">&bull;</span> 5 Jam yang lalu
+              </p>
+              <p class="item-seller">Penjual: Komunitas Jaket Import</p>
+              <span class="item-verified-badge">Terverifikasi</span>
+              <a href="#" class="item-button-detail">Lihat Detail</a>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-image-wrapper">
+              <img
+                src="img/pakaian-anak-branded.jpg"
+                alt="Pakaian Anak Branded"
+                class="item-image"
+              />
+              <div class="item-tags-container">
+                <span class="item-tag type-donasi">Donasi</span>
+                <span class="item-tag owner-individu">Individu</span>
+              </div>
+              <div class="item-favorite-icon">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+            <div class="item-content">
+              <h3 class="item-title">Kaos Polos Anak-Anak</h3>
+              <p class="item-price">
+                GRATIS 
+              </p>
+              <div class="item-rating"></div>
+              <p class="item-condition">Kondisi: Baik</p>
+              
+            
+              <p class="item-location-time">
+                <i class="fas fa-map-marker-alt"></i> Lenteng Agung
+                <span class="separator">&bull;</span> 5 Jam yang lalu
+              </p>
+              <p class="item-seller">Donatur: Michelle Riswanto</p>
+           
+              <button class="item-button-take">Ambil Donasi</button>
+            </div>
+          </div>
+
+          <div class="item-card">
+            <div class="item-image-wrapper">
+              <img
+                src="img/jacket-branded.jpg"
+                alt="Jaket Branded Second"
+                class="item-image"
+              />
+              <div class="item-tags-container">
+                <span class="item-tag type-dijual">Dijual</span>
+                <span class="item-tag owner-individu">Individu</span>
+              </div>
+              <div class="item-favorite-icon">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+            <div class="item-content">
+              <h3 class="item-title">Baju Tidur</h3>
+              <p class="item-price">
+                GRATIS 
+              </p>
+           
+              <p class="item-condition">Kondisi:Sangat Baik</p>
+              
+              <p class="item-location-time">
+                <i class="fas fa-map-marker-alt"></i> Pasar Minggu
+                <span class="separator">&bull;</span> 5 Jam yang lalu
+              </p>
+              <p class="item-seller">Donatur: Yayasan Amal Peduli Kasih</p>
+              <span class="item-verified-badge">Terverifikasi</span>
+              <button class="item-button-take">Ambil Donasi</button>
+            </div>
+          </div>
+
+          </div>
+        </div>
+        <div class="load-more-container">
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>TemuGuna</h3>
+          <p>
+            Platform inovatif untuk menyumbangkan barang tak terpakai, menemukan
+            barang berguna, dan menghubungkan Anda dengan penyedia jasa
+            perbaikan profesional. Berbagi kebaikan, perbaiki kehidupan.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Tautan Cepat</h3>
+          <ul>
+            <li><a href="upload-item.html">Unggah Barang</a></li>
+            <li><a href="#">Jasa Perbaikan</a></li>
+            <li><a href="#">Daftarkan Jasa</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Hubungi Kami</h3>
+          <p><i class="fas fa-envelope"></i> info@temuguna.id</p>
+          <p><i class="fab fa-instagram"></i> @TemuGunaID</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025, PT. TemuGuna. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Dropdown Kategori di Header (jika belum ada di script.js)
+        const kategoriDropdownBtn = document.getElementById(
+          "kategoriDropdownBtn"
+        );
+        const kategoriDropdownContent = document.getElementById(
+          "kategoriDropdownContent"
+        );
+        if (kategoriDropdownBtn && kategoriDropdownContent) {
+          kategoriDropdownBtn.addEventListener("click", function () {
+            kategoriDropdownContent.classList.toggle("show");
+          });
+        }
+
+        // Dropdown Profil User di Header (jika belum ada di script.js)
+        const userProfileBtn = document.getElementById("userProfileBtn");
+        const userProfileDropdownContent = document.getElementById(
+          "userProfileDropdownContent"
+        );
+        if (userProfileBtn && userProfileDropdownContent) {
+          userProfileBtn.addEventListener("click", function () {
+            userProfileDropdownContent.classList.toggle("show");
+          });
+        }
+
+        // Close dropdowns when clicking outside
+        window.addEventListener("click", function (event) {
+          if (
+            kategoriDropdownBtn &&
+            !kategoriDropdownBtn.contains(event.target) &&
+            !kategoriDropdownContent.contains(event.target)
+          ) {
+            kategoriDropdownContent.classList.remove("show");
+          }
+          if (
+            userProfileBtn &&
+            !userProfileBtn.contains(event.target) &&
+            !userProfileDropdownContent.contains(event.target)
+          ) {
+            userProfileDropdownContent.classList.remove("show");
+          }
+          document
+            .querySelectorAll(".dropdown-content-filter")
+            .forEach((content) => {
+              const button = content.previousElementSibling;
+              if (
+                !button.contains(event.target) &&
+                !content.contains(event.target)
+              ) {
+                content.classList.remove("show");
+              }
+            });
+        });
+
+        // Logika untuk Dropdown Filter (Semua, Individu, Terbaru)
+        document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
+          const btn = dropdown.querySelector(".filter-btn");
+          const content = dropdown.querySelector(".dropdown-content-filter");
+          if (btn && content) {
+            btn.addEventListener("click", function (event) {
+              event.stopPropagation(); // Mencegah window click listener menutupnya langsung
+              content.classList.toggle("show");
+              // Tutup dropdown lain saat satu dibuka
+              document
+                .querySelectorAll(".dropdown-content-filter")
+                .forEach((otherContent) => {
+                  if (otherContent !== content) {
+                    otherContent.classList.remove("show");
+                  }
+                });
+            });
+
+            content.querySelectorAll("a").forEach((link) => {
+              link.addEventListener("click", function (event) {
+                event.preventDefault();
+                btn.textContent = link.textContent + " ";
+                const icon = document.createElement("i");
+                icon.classList.add("fas", "fa-chevron-down");
+                btn.appendChild(icon);
+                content.classList.remove("show");
+
+                // Implement filtering/sorting logic here based on link.dataset
+                // Contoh: console.log(link.dataset.filter || link.dataset.sort);
+                applyFiltersAndSorts(); // Panggil fungsi untuk menerapkan filter/sort
+              });
+            });
+          }
+        });
+
+        // JavaScript untuk toggle tampilan grid/list
+        const displayToggleBtns = document.querySelectorAll(
+          ".display-toggle-btn"
+        );
+        const itemsGridContainer = document.querySelector(
+          ".items-grid-container"
+        ); // Perubahan nama class
+
+        if (displayToggleBtns && itemsGridContainer) {
+          displayToggleBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              displayToggleBtns.forEach((b) => b.classList.remove("active"));
+              btn.classList.add("active");
+              const view = btn.dataset.view;
+              if (view === "list") {
+                itemsGridContainer.classList.add("list-view");
+              } else {
+                itemsGridContainer.classList.remove("list-view");
+              }
+            });
+          });
+        }
+
+        // Fungsi dummy untuk menerapkan filter dan sort
+        function applyFiltersAndSorts() {
+          // Di sini Anda akan menambahkan logika untuk:
+          // 1. Mengambil nilai dari setiap filter dropdown (itemTypeFilterBtn, sellerTypeFilterBtn, sortOptionBtn)
+          // 2. Mengambil data barang (dari array JavaScript atau AJAX call)
+          // 3. Memfilter dan mengurutkan data berdasarkan pilihan pengguna
+          // 4. Memperbarui tampilan .items-grid-container dengan hasil yang difilter/diurutkan
+          console.log("Applying filters and sorts...");
+          // Contoh:
+          const selectedItemType = document
+            .getElementById("itemTypeFilterBtn")
+            .textContent.trim()
+            .split(" ")[0];
+          const selectedSellerType = document
+            .getElementById("sellerTypeFilterBtn")
+            .textContent.trim()
+            .split(" ")[0];
+          const selectedSortOption = document
+            .getElementById("sortOptionBtn")
+            .textContent.trim()
+            .split(" ")[0];
+          console.log(
+            `Filter: ${selectedItemType}, Seller: ${selectedSellerType}, Sort: ${selectedSortOption}`
+          );
+
+          // Untuk saat ini, kita hanya bisa mengubah tampilan,
+          // filter sesungguhnya memerlukan JavaScript yang lebih kompleks
+          // untuk memanipulasi elemen DOM atau data.
+        }
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Dropdown Kategori
+        const categoryDropdown = document.querySelector(
+          ".primary-nav-links .dropdown"
+        );
+        const categoryDropbtn = document.querySelector(
+          ".primary-nav-links .dropbtn"
+        );
+
+        if (categoryDropbtn) {
+          categoryDropbtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            categoryDropdown.classList.toggle("active");
+          });
+        }
+
+        // Dropdown User Profile
+        const userAvatarDropdown = document.querySelector(
+          ".user-avatar-dropdown"
+        );
+        if (userAvatarDropdown) {
+          userAvatarDropdown.addEventListener("click", function (event) {
+            event.stopPropagation();
+            this.classList.toggle("active");
+          });
+        }
+
+        // Tutup semua dropdown jika klik di luar
+        window.addEventListener("click", function (event) {
+          if (
+            categoryDropdown &&
+            categoryDropdown.classList.contains("active") &&
+            !event.target.closest(".primary-nav-links .dropdown")
+          ) {
+            categoryDropdown.classList.remove("active");
+          }
+          if (
+            userAvatarDropdown &&
+            userAvatarDropdown.classList.contains("active") &&
+            !event.target.closest(".user-avatar-dropdown")
+          ) {
+            userAvatarDropdown.classList.remove("active");
+          }
+        });
+
+        // Display mode buttons for donasi page
+        const gridViewBtn = document.querySelector(".grid-view");
+        const listViewBtn = document.querySelector(".list-view");
+        const donasiGrid = document.querySelector(".donasi-grid");
+
+        if (gridViewBtn && listViewBtn && donasiGrid) {
+          gridViewBtn.addEventListener("click", function () {
+            donasiGrid.classList.remove("list-layout");
+            gridViewBtn.classList.add("active");
+            listViewBtn.classList.remove("active");
+          });
+
+          listViewBtn.addEventListener("click", function () {
+            donasiGrid.classList.add("list-layout");
+            listViewBtn.classList.add("active");
+            gridViewBtn.classList.remove("active");
+          });
+        }
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+    // Dapatkan semua elemen dropdown
+    var dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(function(dropdown) {
+        var dropbtn = dropdown.querySelector('.dropbtn');
+        var dropdownContent = dropdown.querySelector('.dropdown-content');
+
+        // Tambahkan event listener untuk tombol dropdown
+        dropbtn.addEventListener('click', function(event) {
+            event.stopPropagation(); // Mencegah event click menyebar ke window
+            
+            // Tutup dropdown lain yang mungkin sedang terbuka
+            dropdowns.forEach(function(otherDropdown) {
+                if (otherDropdown !== dropdown) {
+                    otherDropdown.querySelector('.dropdown-content').classList.remove('show');
+                }
+            });
+
+            // Toggle tampilan dropdown saat ini
+            dropdownContent.classList.toggle('show');
+        });
+    });
+
+    // Tutup dropdown jika mengklik di luar area dropdown manapun
+    window.addEventListener('click', function(event) {
+        dropdowns.forEach(function(dropdown) {
+            var dropdownContent = dropdown.querySelector('.dropdown-content');
+            if (dropdownContent.classList.contains('show') && !dropdown.contains(event.target)) {
+                dropdownContent.classList.remove('show');
+            }
+        });
+    });
+});
+       // Script untuk Kategori Dropdown
+  const categoryDropdown = document.querySelector('.category-dropdown');
+        if (categoryDropdown) {
+          const categoryDropbtn = categoryDropdown.querySelector('.category-dropbtn');
+          const categoryDropdownContent = categoryDropdown.querySelector('.category-dropdown-content');
+
+          categoryDropbtn.addEventListener('click', function(event) {
+            event.stopPropagation();
+            categoryDropdownContent.classList.toggle('show');
+          });
+
+          window.addEventListener('click', function(e) {
+            if (categoryDropdown && !categoryDropdown.contains(e.target)) {
+              categoryDropdownContent.classList.remove('show');
+            }
+          });
+        }
+          // Tutup dropdown jika klik di luar
+          window.addEventListener("click", function (e) {
+            if (userAvatarDropdown && !userAvatarDropdown.contains(e.target)) {
+              userAvatarDropdown
+                .querySelector(".dropdown-menu")
+                .classList.remove("show");
+            }
+          });
+        
+    </script>
+    
+  </body>
+</html>

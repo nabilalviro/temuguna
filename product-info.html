@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Barang - Kursi Roda Anak Ringan - TemuGuna</title>
+    <title>TemuGuna: Berbagi Kebaikan, Perpanjang Manfaat</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product-info.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -13,213 +14,328 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* CSS tambahan untuk halaman detail produk, jika ada */
+      .product-detail-container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .product-image-section {
+        flex: 1;
+        min-width: 300px;
+        text-align: center;
+      }
+      .product-image-section img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+      .product-info-section {
+        flex: 2;
+        min-width: 400px;
+      }
+      .product-info-section h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      .product-info-section .price {
+        font-size: 1.8em;
+        color: #28af60; /* Warna hijau TemuGuna */
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .product-info-section .original-price {
+        font-size: 1em;
+        color: #888;
+        text-decoration: line-through;
+        margin-left: 10px;
+      }
+      .product-info-section .details-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 15px;
+      }
+      .product-info-section .details-list li {
+        margin-bottom: 8px;
+        color: #555;
+      }
+      .product-info-section .btn-actions {
+        margin-top: 20px;
+      }
+      .product-info-section .btn-actions button {
+        background-color: #28af60; /* Warna hijau TemuGuna */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        margin-right: 10px;
+      }
+      .product-info-section .btn-actions button:hover {
+        opacity: 0.9;
+      }
+      .error-message {
+        text-align: center;
+        margin-top: 50px;
+        color: #d9534f;
+        font-size: 1.5em;
+      }
+    </style>
   </head>
   <body>
-    <header class="main-header before-login">
-      <div class="container">
-        <div class="header-primary-row">
-          <a href="index.html" class="logo">TemuGuna</a>
-
-          <div class="category-and-search">
-            <a href="#" class="header-category-link">Kategori</a>
-            <div class="search-bar-before">
-              <input
-                type="text"
-                placeholder="Cari barang, jasa perbaikan, dan lainnya..."
-              />
-              <i class="fas fa-search search-icon"></i>
+    <header class="main-header after-login">
+      <div class="container header-top-row">
+        <a href="index-after-login.html" class="logo">TemuGuna</a>
+        <div class="header-center-group">
+          <div class="category-dropdown">
+            <button class="category-dropbtn">
+              Kategori <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="category-dropdown-content">
+              <a href="#">Semua Kategori</a>
+              <a href="#">Pakaian</a>
+              <a href="#">Elektronik</a>
+              <a href="#">Peralatan Rumah</a>
+              <a href="#">Buku & Edukasi</a>
+              <a href="#">Mainan & Hobi</a>
+              <a href="#">Perlengkapan Bayi</a>
+              <a href="#">Lainnya</a>
             </div>
           </div>
 
-          <div class="auth-buttons">
-            <a href="login.html" class="btn btn-secondary-outline">Masuk</a>
-            <a href="register.html" class="btn btn-primary">Daftar</a>
+          <div class="search-bar-after">
+            <input
+              type="text"
+              placeholder="Cari barang, jasa perbaikan, dan lainnya..."
+            />
+            <i class="fas fa-search search-icon"></i>
           </div>
         </div>
 
-        <nav class="nav-main-links">
-          <ul>
-            <li><a href="#">Semua Kategori</a></li>
-            <li><a href="upload-item.html">Donasi Barang</a></li>
-            <li><a href="products.html">Barang Dijual</a></li>
-            <li><a href="services.html">Jasa Perbaikan</a></li>
-            <li><a href="about.html">Tentang Kami</a></li>
-          </ul>
-        </nav>
+        <div class="user-actions">
+          <a href="cart.html" class="icon-link">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+          <a href="notifications.html" class="icon-link">
+            <i class="fas fa-bell"></i>
+          </a>
+          <a href="chat.html" class="icon-link">
+            <i class="fas fa-comment-dots"></i>
+          </a>
+
+          <div class="user-avatar-dropdown">
+            <img
+              src="https://via.placeholder.com/30"
+              alt="User Avatar"
+              class="user-avatar"
+            />
+            <span class="user-name">Nabil Alviro</span>
+            <div class="dropdown-content user-dropdown-content">
+              <a href="#">Profil</a>
+              <a href="#">Unggah Barang</a>
+              <a href="#">Donasi Barang</a>
+              <a href="#">Keluar</a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <nav class="secondary-nav-bar">
+        <div class="container">
+          <ul>
+            <li><a href="upload-item.html">Donasi Barang</a></li>
+            <li><a href="jual.html" class="active">Barang Dijual</a></li>
+            <li><a href="#">Jasa Perbaikan</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <main class="page-detail-section">
-      <div class="container product-detail-grid">
-        <div class="product-gallery">
-          <img
-            src="img/product-info.png"
-            alt="Kursi Roda Anak Utama"
-            class="main-image"
-          />
-          <div class="thumbnail-images">
-            <img
-              src="img/item-placeholder.jpg"
-              alt="Thumbnail 1"
-              class="thumbnail"
-            />
-            <img
-              src="img/item-placeholder.jpg"
-              alt="Thumbnail 2"
-              class="thumbnail"
-            />
-            <img
-              src="img/item-placeholder.jpg"
-              alt="Thumbnail 3"
-              class="thumbnail"
-            />
-          </div>
-        </div>
-        <div class="product-details">
-          <h1 class="product-title">Kursi Roda Anak Ringan</h1>
-          <p class="product-category">Kategori: Alat Bantu Gerak</p>
-          <p class="product-location">
-            <i class="fas fa-map-marker-alt"></i> Lokasi: Jakarta Pusat
-          </p>
-          <p class="product-condition">
-            Kondisi:
-            <span class="badge badge-success">Bekas, Kondisi Baik</span>
-          </p>
-          <h2 class="product-price-info">Harga: Rp 500.000</h2>
+    <main class="product-detail-page">
+      <div class="container">
+        <a href="jual.html" class="back-link"
+          ><i class="fas fa-arrow-left"></i> Kembali</a
+        >
 
-          <div class="product-description-full">
-            <h3>Deskripsi Barang</h3>
-            <p>
-              Kursi roda anak dengan bobot ringan dan desain ergonomis, sangat
-              cocok untuk mobilitas sehari-hari anak usia 5-10 tahun. Terbuat
-              dari rangka aluminium berkualitas tinggi, sehingga kuat namun
-              mudah dibawa. Dilengkapi dengan rem tangan yang responsif dan ban
-              yang tahan lama. Ideal untuk penggunaan di dalam maupun luar
-              ruangan.
-            </p>
-            <p>
-              Kondisi barang terawat dengan baik, semua fungsi berjalan normal.
-              Tidak ada kerusakan mayor, hanya lecet minor pemakaian. Sudah
-              dibersihkan dan disterilkan.
-            </p>
+        <div class="product-detail-container">
+          <div class="product-images">
+            <div class="main-image-container">
+              <img
+                src="assets/images/product-main.jpg"
+                alt="Jaket Branded Second"
+                id="mainProductImage"
+              />
+            </div>
+            <div class="thumbnail-images">
+              <img
+                src="assets/images/thumb1.jpg"
+                alt="Thumbnail 1"
+                class="thumbnail active"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                src="assets/images/thumb2.jpg"
+                alt="Thumbnail 2"
+                class="thumbnail"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                src="assets/images/thumb3.jpg"
+                alt="Thumbnail 3"
+                class="thumbnail"
+                onclick="changeMainImage(this)"
+              />
+              <img
+                src="assets/images/thumb4.jpg"
+                alt="Thumbnail 4"
+                class="thumbnail"
+                onclick="changeMainImage(this)"
+              />
+            </div>
           </div>
 
-          <div class="contact-info">
-            <h3>Informasi Donatur</h3>
-            <p><i class="fas fa-user"></i> Nama Donatur: [Nama Donatur]</p>
-            <p>
-              <i class="fas fa-phone"></i> Telepon: 0812-XXXX-XXXX (Hubungi
-              untuk detail)
-            </p>
-            <p><i class="fas fa-envelope"></i> Email: [email protected]</p>
-          </div>
+          <div class="product-info">
+            <div class="product-tags">
+              <span class="tag dijual">Dijual</span>
+              <span class="tag organisasi">Organisasi</span>
+              <i class="far fa-heart fav-icon"></i>
+            </div>
+            <h1 class="product-title">Jaket Branded Second</h1>
+            <div class="product-price">
+              <span class="current-price">Rp150.000</span>
+              <span class="original-price">Rp500.000</span>
+            </div>
+            <div class="product-meta">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>4.8 (122 Ulasan)</span>
+              </div>
+              <span class="stock">Stock: 1</span>
+              <span class="sold">222 Terjual</span>
+            </div>
 
-          <button class="btn btn-primary btn-large">
-            Ajukan Permintaan Donasi
-          </button>
-          <button class="btn btn-secondary-outline btn-large">
-            Tambah ke Keranjang
-          </button>
+            <div class="action-buttons">
+              <button class="add-to-cart-btn">
+                <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+              </button>
+              <button class="share-btn">
+                <i class="fas fa-share-alt"></i>
+              </button>
+            </div>
+
+            <div class="seller-info">
+              <img
+                src="assets/images/seller-avatar.png"
+                alt="Komunitas Jaket Import"
+                class="seller-avatar"
+              />
+              <div class="seller-details">
+                <span class="seller-name">Komunitas Jaket Import</span>
+                <span class="verified-badge"
+                  ><i class="fas fa-check-circle"></i> Terverifikasi</span
+                >
+                <span class="transactions"
+                  >Rating: 4.7/5.0 dan 48 transaksi</span
+                >
+              </div>
+              <button class="chat-seller-btn">
+                <i class="fas fa-comment"></i> Chat Penjual
+              </button>
+            </div>
+
+            <div class="location-time">
+              <i class="fas fa-map-marker-alt"></i> Gading Serpong
+              <i class="fas fa-clock"></i> 5 Jam yang lalu
+            </div>
+
+            <div class="product-description">
+              <h2>Deskripsi:</h2>
+              <p>
+                Jaket branded second dalam kondisi baik. Masih hangat dan nyaman
+                dipakai. Cocok untuk musim hujan atau traveling ke daerah
+                pegunungan.
+              </p>
+              <ul>
+                <li><i class="fas fa-tag"></i> Brand: The North Face</li>
+                <li>
+                  <i class="fas fa-lightbulb"></i> Kondisi: Baik (85% seperti
+                  baru)
+                </li>
+                <li>
+                  <i class="fas fa-ruler-combined"></i> Ukuran: L (fit to XL)
+                </li>
+                <li><i class="fas fa-palette"></i> Warna: Navy Blue</li>
+                <li><i class="fas fa-water"></i> Material: Windproof</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-
-      <section class="content-section recommended-products">
-        <div class="container">
-          <h2>Barang Lain yang Mungkin Anda Suka</h2>
-          <div class="product-grid">
-            <div class="product-card">
-              <img
-                src="img/item-placeholder.jpg"
-                alt="Alat Bantu Dengar Digital"
-              />
-              <div class="product-info">
-                <h3>Alat Bantu Dengar Digital</h3>
-                <p class="product-category">Alat Bantu Dengar</p>
-                <p class="product-location">
-                  <i class="fas fa-map-marker-alt"></i> Bandung
-                </p>
-                <p class="product-description">
-                  Kondisi baru, belum pernah dipakai.
-                </p>
-                <span class="product-price">Rp 1.200.000</span>
-                <a href="product-info.html" class="btn btn-primary btn-sm"
-                  >Lihat Detail</a
-                >
-              </div>
-            </div>
-            <div class="product-card">
-              <img src="img/item-placeholder.jpg" alt="Set Mainan Edukasi" />
-              <div class="product-info">
-                <h3>Set Mainan Edukasi Sensorik</h3>
-                <p class="product-category">Mainan Edukasi</p>
-                <p class="product-location">
-                  <i class="fas fa-map-marker-alt"></i> Surabaya
-                </p>
-                <p class="product-description">
-                  Mengembangkan motorik halus dan kognitif.
-                </p>
-                <span class="product-price">Rp 150.000</span>
-                <a href="product-info.html" class="btn btn-primary btn-sm"
-                  >Lihat Detail</a
-                >
-              </div>
-            </div>
-            <div class="product-card">
-              <img src="img/item-placeholder.jpg" alt="Buku Braille Anak" />
-              <div class="product-info">
-                <h3>Buku Cerita Braille</h3>
-                <p class="product-category">Buku</p>
-                <p class="product-location">
-                  <i class="fas fa-map-marker-alt"></i> Yogyakarta
-                </p>
-                <p class="product-description">
-                  Koleksi buku cerita anak dalam huruf Braille.
-                </p>
-                <span class="product-price">Rp 75.000</span>
-                <a href="product-info.html" class="btn btn-primary btn-sm"
-                  >Lihat Detail</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="main-footer">
-      <div class="container footer-grid">
-        <div class="footer-section">
+      <div class="container footer-content">
+        <div class="footer-about">
           <h3>TemuGuna</h3>
           <p>
-            Platform sosial yang berdedikasi membantu anak-anak berkebutuhan
-            khusus mendapatkan fasilitas dan dukungan yang mereka perlukan.
+            Platform inovatif untuk menyumbangkan barang tak terpakai, menemukan
+            barang berguna, dan menghubungkan Anda dengan penyedia jasa
+            perbaikan profesional. Berbagi kebaikan, perbaiki kehidupan.
           </p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
         </div>
-        <div class="footer-section">
+        <div class="footer-links">
           <h3>Tautan Cepat</h3>
           <ul>
-            <li><a href="upload-item.html">Unggah Barang</a></li>
-            <li><a href="services.html">Jasa Perbaikan</a></li>
+            <li><a href="#">Unggah Barang</a></li>
+            <li><a href="#">Jasa Perbaikan</a></li>
             <li><a href="#">Daftarkan Jasa</a></li>
-            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="#">Tentang Kami</a></li>
           </ul>
         </div>
-        <div class="footer-section">
+        <div class="footer-contact">
           <h3>Hubungi Kami</h3>
           <p><i class="fas fa-envelope"></i> info@temuguna.id</p>
-          <p><i class="fab fa-instagram"></i> @TemuGunaID</p>
-          <p><i class="fab fa-facebook-f"></i> TemuGuna Official</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 TemuGuna. Semua hak dilindungi.</p>
+        <div class="container">
+          <p>&copy; 2025, PT. TemuGuna. Semua hak dilindungi.</p>
+        </div>
       </div>
     </footer>
+
+    <script>
+      function changeMainImage(thumbnail) {
+        const mainImage = document.getElementById("mainProductImage");
+        mainImage.src = thumbnail.src;
+
+        // Remove active class from all thumbnails
+        const thumbnails = document.querySelectorAll(
+          ".thumbnail-images .thumbnail"
+        );
+        thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+
+        // Add active class to the clicked thumbnail
+        thumbnail.classList.add("active");
+      }
+    </script>
   </body>
 </html>

@@ -678,7 +678,7 @@ ul {
 
 /* Jaringan Kami (Partners/Organizations) */
 .partners-section {
-  background-color: #f0f8ff; /* Consistent light blue background */
+  background-color: #ffffff; /* Consistent light blue background */
   padding: 80px 0;
 }
 
@@ -5846,4 +5846,1725 @@ body {
     font-size: 14px;
     padding: 8px 10px;
   }
+}
+/* Dropdown Content */
+.dropdown-content,
+.user-dropdown-content,
+.dropdown-content-filter {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px 0;
+  left: 0; /* Pastikan dropdown muncul di bawah tombol */
+}
+
+.dropdown-content.show,
+.user-dropdown-content.show,
+.dropdown-content-filter.show {
+  display: block;
+}
+
+.dropdown-content a,
+.user-dropdown-content a,
+.dropdown-content-filter a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover,
+.user-dropdown-content a:hover,
+.dropdown-content-filter a:hover {
+  background-color: #f1f1f1;
+}
+
+.search-bar {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: #28af60;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-link {
+  color: #333;
+  font-size: 20px;
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.main-navigation {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.main-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.main-navigation li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.main-navigation li a:hover,
+.main-navigation li a.active {
+  color: #28af60;
+  border-color: #28af60;
+}
+
+/* Main Content Area for All Items Page */
+.main-content-area-all-items {
+  padding: 20px;
+  max-width: 1200px; /* Lebar maksimal konten */
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.back-link-container {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #28af60;
+}
+
+.section-header-all-items {
+  justify-content: space-between;
+  align-items: flex-end; /* Align items to the bottom */
+  margin-bottom: 20px;
+}
+
+.section-header-all-items h1 {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.item-count {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.filters-and-sorts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Filter Dropdown (specific styles for this section) */
+.filter-dropdown .filter-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.filter-dropdown .dropdown-content-filter {
+  min-width: 120px;
+}
+
+.display-toggle-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Sesuaikan ukuran ikon */
+}
+
+.display-toggle-btn.active {
+  background-color: #28af60;
+  color: white;
+  border-color: #28af60;
+}
+
+/* Grid for all items */
+.items-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns grid */
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card styles (Unified for donasi and produk) */
+.item-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.item-image-wrapper {
+  width: 100%;
+  height: 200px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  color: #aaa;
+  overflow: hidden;
+  position: relative;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-tags-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  z-index: 2; /* Pastikan tag di atas gambar */
+}
+
+.item-tag {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.item-tag.type-donasi {
+  background-color: #28af60;
+} /* Hijau untuk Donasi */
+.item-tag.type-dijual {
+  background-color: #172636;
+} /* Biru untuk Dijual */
+.item-tag.owner-organisasi {
+  background-color: #eba747;
+} /* Oranye untuk Organisasi */
+.item-tag.owner-individu {
+  background-color: #ef4444;
+} /* Biru tua untuk Individu */
+
+.item-favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #ff6b6b; /* Warna merah untuk hati */
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7); /* Background putih transparan */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Pastikan ikon di atas gambar */
+  border: 1px solid #ff6b6b; /* Garis merah tipis */
+}
+
+.item-favorite-icon .fas.fa-heart {
+  /* Untuk hati yang terisi */
+  color: #ff6b6b;
+}
+.item-favorite-icon .far.fa-heart {
+  /* Untuk hati yang kosong (default) */
+  color: #ff6b6b; /* Tetap merah garisnya */
+}
+
+.item-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.item-title {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 5px; /* Kurangi margin */
+  color: #333;
+}
+
+.item-price {
+  font-size: 17px;
+  font-weight: bold;
+  color: #28af60; /* Hijau untuk harga utama */
+  margin-bottom: 5px;
+  display: flex; /* Untuk mensejajarkan harga dan potongan */
+  align-items: baseline;
+  gap: 8px;
+}
+
+.item-price .original-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through; /* Harga coret */
+  font-weight: normal;
+}
+
+.item-rating {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.item-rating i {
+  color: #ffc107; /* Warna bintang */
+  margin-right: 3px;
+}
+
+.item-condition {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.item-stock-sold {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.item-location-time {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.item-location-time i {
+  margin-right: 0; /* Sesuaikan karena sudah ada gap */
+}
+
+.separator {
+  margin: 0 5px;
+  color: #ccc;
+}
+
+.item-seller {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.item-verified-badge {
+  background-color: white;
+  color: #28af60;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 15px; /* Tingkatkan margin bawah */
+  align-self: flex-start; /* Agar badge tidak memenuhi lebar */
+}
+
+.item-button-detail,
+.item-button-take {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: auto; /* Push button to bottom */
+  transition: background-color 0.3s ease;
+  border: none; /* Pastikan tidak ada border default */
+  cursor: pointer;
+}
+
+.item-button-detail {
+  background-color: #f9fafb; /* Biru */
+  color: black;
+}
+
+.item-button-take {
+  background-color: #172636; /* Hijau */
+  color: white;
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.btn-load-more {
+  background-color: white;
+  color: #28af60;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-load-more:hover {
+  background-color: #228b4d;
+}
+
+/* List View styles for .items-grid-container */
+.items-grid-container.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.items-grid-container.list-view .item-card {
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.items-grid-container.list-view .item-image-wrapper {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.items-grid-container.list-view .item-content {
+  flex-grow: 1;
+  padding: 0;
+  /* Adjust specific elements for list view if needed */
+}
+
+.items-grid-container.list-view .item-title {
+  margin-bottom: 5px;
+}
+
+/* Footer Section (Keep as is, or adjust) */
+.main-footer {
+  background-color: #1f2937;
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #28af60;
+}
+
+.footer-col p,
+.footer-col ul {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li a {
+  color: #bbb;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a:hover {
+  color: #28af60;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #28af60;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #555;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Responsiveness (contoh sederhana) */
+@media (max-width: 768px) {
+  .header-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-bar {
+    width: 100%;
+    margin: 15px 0;
+  }
+  .kategori-dropdown {
+    margin-left: 0;
+    width: 100%;
+  }
+  .main-navigation ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .filters-and-sorts {
+    flex-wrap: wrap; /* Izinkan wrap pada layar kecil */
+    justify-content: center;
+  }
+  .item-card {
+    width: 100%; /* Kartu menjadi full width */
+  }
+  .items-grid-container {
+    grid-template-columns: 1fr; /* Satu kolom di layar kecil */
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-col {
+    min-width: unset;
+    width: 90%;
+    text-align: center;
+  }
+}
+/* Container untuk filter di header */
+.filter-controls-header {
+  display: flex;
+  gap: 10px; /* Memberi jarak antar dropdown */
+  align-items: center; /* Menyelaraskan secara vertikal */
+  margin-bottom: 20px;
+  justify-content: flex-end; /* Memposisikan ke kanan */
+  padding: 10px 0; /* Memberi sedikit padding */
+}
+
+/* Gaya dasar untuk setiap dropdown */
+.dropdown {
+  position: relative; /* Penting untuk memposisikan dropdown-content */
+  display: inline-block;
+}
+
+/* Gaya untuk tombol dropdown (Semua, Individu, Terbaru) */
+.dropbtn {
+  background-color: #e0e0e0; /* Latar belakang abu-abu seperti di Figma */
+  color: #555; /* Teks abu-abu */
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Sedikit melengkung di sudut */
+  display: flex; /* Untuk mensejajarkan teks dan panah */
+  align-items: center; /* Pusat vertikal */
+  justify-content: space-between; /* Untuk panah di ujung kanan */
+  min-width: 100px; /* Lebar minimal agar konsisten */
+  box-sizing: border-box; /* Pastikan padding termasuk dalam lebar */
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #d0d0d0; /* Efek hover/fokus yang sedikit lebih gelap */
+}
+
+/* Gaya untuk ikon panah ke bawah */
+.arrow-down {
+  border: solid #555;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin-left: 8px; /* Jarak antara teks dan panah */
+}
+
+/* Konten dropdown (pilihan yang muncul saat diklik) */
+.dropdown-content {
+  display: none; /* Sembunyikan secara default */
+  position: absolute; /* Posisikan relatif terhadap .dropdown */
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Pastikan di atas elemen lain */
+  border-radius: 5px;
+  top: 100%; /* Muncul tepat di bawah tombol */
+  left: 0; /* Sejajarkan dengan sisi kiri tombol */
+  margin-top: 5px; /* Sedikit jarak dari tombol */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /* Setiap item link menjadi blok penuh */
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1; /* Efek hover pada item dropdown */
+}
+
+/* Kelas yang akan ditambahkan oleh JavaScript untuk menampilkan dropdown */
+.dropdown-content.show {
+  display: block;
+}
+
+/* ========================================================== */
+/* 10. PRODUCT DETAIL PAGE STYLES              */
+/* ========================================================== */
+
+.product-detail-page {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  width: 100%; /* Agar mengambil lebar penuh parent (main-content-area) */
+  box-sizing: border-box;
+}
+
+.product-detail-page .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 25px; /* Jarak ke konten detail */
+  transition: color 0.3s ease;
+}
+
+.product-detail-page .back-link:hover {
+  color: #007bff;
+  text-decoration: none; /* Hilangkan underline saat hover */
+}
+
+.product-detail-page .back-link::before {
+  content: "←";
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.product-detail-container {
+  display: flex;
+  gap: 40px; /* Jarak antara gambar dan info */
+  flex-wrap: wrap; /* Agar responsif pada layar kecil */
+  align-items: flex-start; /* Agar elemen sejajar di atas */
+}
+
+/* Bagian Gambar Produk */
+.product-images {
+  flex: 1; /* Ambil ruang yang tersedia */
+  min-width: 300px; /* Lebar minimum untuk gambar */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Pusatkan gambar */
+}
+
+#main-product-image {
+  width: 100%;
+  max-width: 450px; /* Batasi ukuran gambar utama */
+  height: 350px; /* Tinggi tetap untuk gambar utama */
+  object-fit: contain; /* Penting untuk menjaga rasio aspek dan tidak terpotong */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #eee; /* Border opsional */
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; /* Memungkinkan scroll horizontal jika banyak thumbnail */
+  padding-bottom: 5px; /* Ruang untuk scrollbar */
+  justify-content: center; /* Pusatkan thumbnail */
+  max-width: 100%; /* Batasi lebar thumbnail container */
+}
+
+.thumbnail-images img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.thumbnail-images img:hover,
+.thumbnail-images img.active {
+  border-color: #28af60; /* Warna border saat hover/aktif */
+  transform: translateY(-2px); /* Efek sedikit terangkat */
+}
+
+/* Bagian Informasi Produk */
+.product-info {
+  flex: 2; /* Ambil lebih banyak ruang untuk info produk */
+  min-width: 350px; /* Lebar minimum untuk info */
+  display: flex;
+  flex-direction: column;
+}
+
+.product-tags-detail {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+/* Re-use .tag styles from previous CSS */
+.tag {
+  /* Styles for .tag already defined in style.css */
+  padding: 4px 10px; /* Sedikit lebih besar dari tag di kartu */
+  font-size: 0.9em;
+}
+
+.favorite-icon-detail {
+  font-size: 24px; /* Ukuran icon hati yang lebih besar */
+  color: #ccc;
+  cursor: pointer;
+  margin-left: auto; /* Dorong ke kanan */
+  transition: color 0.2s ease;
+}
+
+.favorite-icon-detail:hover {
+  color: #ff6347; /* Warna hati saat hover */
+}
+
+.favorite-icon-detail.fas {
+  /* Untuk hati yang terisi */
+  color: #ff6347;
+}
+
+.product-info h1 {
+  font-size: 2.2em; /* Judul produk lebih besar */
+  margin-bottom: 10px;
+  color: #333;
+  line-height: 1.2;
+}
+
+.price-rating-wrapper-detail {
+  display: flex;
+  align-items: baseline; /* Sejajarkan base harga dan rating */
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.product-info .price {
+  font-size: 2em;
+  color: #ff5722;
+  font-weight: bold;
+  margin: 0; /* Hapus margin default p */
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.product-info .price del {
+  font-size: 0.6em; /* Harga coret lebih kecil */
+  color: #999;
+  margin-left: 0; /* Hapus margin kiri default */
+}
+
+.product-info .rating {
+  font-size: 1.1em;
+  color: #ffa500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.product-info .rating i {
+  margin-right: 0; /* Hapus margin default ikon */
+  font-size: 1em; /* Ukuran ikon bintang */
+}
+
+.seller-info {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #333;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.seller-info .verified-tag {
+  margin-left: 0; /* Hapus margin kiri default */
+  font-size: 0.8em;
+  padding: 3px 6px;
+}
+
+.seller-info .seller-location {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 0;
+  margin-left: 0; /* Hapus margin kiri default */
+  flex-basis: 100%; /* Agar lokasi di baris baru jika perlu */
+}
+.seller-info .seller-location i {
+  margin-right: 5px;
+  font-size: 0.8em;
+}
+
+.product-description-section {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.product-description-section h3 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.product-description-section p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.product-detail-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.product-detail-list li {
+  display: flex;
+  align-items: flex-start; /* Sejajarkan di atas */
+  margin-bottom: 10px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.product-detail-list li i {
+  margin-right: 10px;
+  color: #28af60;
+  font-size: 1em;
+  flex-shrink: 0; /* Cegah ikon menyusut */
+  padding-top: 2px; /* Sesuaikan posisi vertikal ikon */
+}
+
+.product-meta-details {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  display: flex;
+  gap: 30px; /* Jarak antar 'Stok' dan 'Terjual' */
+  font-size: 1em;
+  color: #555;
+  flex-wrap: wrap;
+}
+
+.product-meta-details p {
+  margin: 0; /* Hapus margin default p */
+}
+
+.detail-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Untuk responsif */
+}
+
+.detail-buttons .action-button {
+  flex: 1; /* Agar tombol mengisi ruang yang tersedia */
+  min-width: 180px; /* Lebar minimum untuk tombol */
+  font-size: 1.1em;
+  padding: 12px 20px;
+}
+
+/* ========================================================== */
+/* MEDIA QUERIES UNTUK HALAMAN DETAIL PRODUK              */
+/* ========================================================== */
+@media (max-width: 768px) {
+  .product-detail-page {
+    padding: 20px;
+  }
+  .product-detail-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .product-images,
+  .product-info {
+    min-width: unset; /* Hapus min-width */
+    width: 100%;
+  }
+  #main-product-image {
+    height: 250px; /* Lebih kecil di mobile */
+  }
+  .product-info h1 {
+    font-size: 1.8em;
+  }
+  .product-info .price {
+    font-size: 1.6em;
+  }
+  .price-rating-wrapper-detail {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .seller-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .seller-info .verified-tag {
+    margin-left: 0;
+  }
+  .detail-buttons {
+    flex-direction: column;
+  }
+  .detail-buttons .action-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-page {
+    padding: 15px;
+  }
+  .product-info h1 {
+    font-size: 1.5em;
+  }
+  .product-info .price {
+    font-size: 1.3em;
+  }
+  .product-tags-detail {
+    flex-wrap: wrap;
+  }
+  .favorite-icon-detail {
+    margin-left: 0; /* Atau disesuaikan */
+    width: 100%;
+    text-align: right;
+  }
+  .thumbnail-images {
+    justify-content: flex-start; /* Agar tidak terlalu tertekan */
+  }
+}
+/* CSS Tambahan untuk halaman product-info.html */
+.product-detail-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Mengatur wrap untuk responsivitas */
+}
+
+.product-images {
+  flex: 1;
+  min-width: 300px; /* Minimum width untuk bagian gambar */
+}
+
+.main-image-container {
+  width: 100%;
+  height: 400px; /* Tinggi tetap untuk gambar utama */
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.main-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan gambar mengisi container tanpa terdistorsi */
+  border-radius: 8px;
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnail-images img {
+  width: 80px; /* Ukuran thumbnail */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail-images img.active,
+.thumbnail-images img:hover {
+  border-color: #28af60; /* Warna border saat aktif/hover */
+}
+
+.product-info {
+  flex: 1;
+  min-width: 400px; /* Minimum width untuk bagian info */
+  padding-left: 20px; /* Memberi sedikit padding dari gambar */
+}
+
+.product-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white;
+}
+
+.tag.dijual {
+  background-color: #007bff;
+} /* Contoh warna biru untuk Dijual */
+.tag.donasi {
+  background-color: #28af60;
+} /* Contoh warna hijau untuk Donasi */
+.tag.organisasi {
+  background-color: #6c757d;
+} /* Contoh warna abu-abu untuk Organisasi */
+.tag.individu {
+  background-color: #dc3545;
+} /* Contoh warna merah untuk Individu */
+.tag.pakaian {
+  background-color: #ffc107;
+} /* Contoh warna kuning untuk Pakaian */
+
+.product-title {
+  font-size: 2em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.product-meta .rating {
+  color: #ffc107; /* Warna bintang */
+  margin-right: 10px;
+}
+
+.product-price {
+  margin-bottom: 15px;
+}
+
+.current-price {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #dc3545; /* Warna merah untuk harga */
+  margin-right: 10px;
+}
+
+.original-price {
+  font-size: 1em;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.product-stock,
+.product-location-time {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.action-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button {
+  background-color: #28af60;
+  color: white;
+  border: none;
+}
+
+.primary-button:hover {
+  background-color: #229954;
+}
+
+.secondary-button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #555;
+}
+
+.secondary-button:hover {
+  background-color: #f0f0f0;
+}
+
+.seller-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+}
+
+.seller-details span {
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.seller-details .seller-name {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.chat-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.chat-button:hover {
+  background-color: #0056b3;
+}
+
+.product-description h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-description p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #444;
+}
+
+.product-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-description ul li {
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.product-description ul li i {
+  margin-right: 8px;
+  color: #28af60;
+}
+
+/* Modal (Lightbox) Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* style.css (general styles, assuming some are already defined from other pages) */
+:root {
+  --primary-color: #2baf60; /* Green from Figma */
+  --secondary-color: #ffc107; /* Yellowish */
+  --text-gray-700: #4a4a4a;
+  --text-gray-600: #6b7280;
+  --bg-footer: #29272b;
+  --red-price: #ef4444; /* Red for current price */
+  --gray-strike: #9ca3af; /* Gray for struck-through price */
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* As seen in Figma */
+  margin: 0;
+  background-color: #f9fafb; /* Light background color */
+}
+
+/* Header, Navigation Bar styles (similar to your existing pages) */
+.top-nav {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Category Dropdown */
+.category-dropdown {
+  position: relative;
+  margin-left: 20px;
+}
+
+.category-dropdown .dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.category-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.category-dropdown .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.category-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Search Bar */
+.search-bar {
+  flex-grow: 1;
+  margin: 0 20px;
+  display: flex;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  border: none;
+  padding: 10px;
+  flex-grow: 1;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* User Actions */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.secondary-nav {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  gap: 20px;
+}
+
+.secondary-nav a {
+  text-decoration: none;
+  color: var(--text-gray-700);
+  padding: 8px 0;
+}
+
+/* product-info.css (specific styles for product detail page) */
+.product-detail-page {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+  margin-bottom: 20px;
+}
+
+.back-link a {
+  text-decoration: none;
+  color: var(--text-gray-700);
+  font-weight: 500;
+}
+
+.product-container {
+  display: flex;
+  gap: 40px;
+}
+
+.product-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 500px; /* Adjust as needed */
+  height: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer; /* To indicate it's clickable for larger view */
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.thumbnail-images img {
+  width: 80px; /* Adjust thumbnail size */
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.thumbnail-images img.active,
+.thumbnail-images img:hover {
+  border-color: var(--primary-color);
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.product-tags .tag {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.product-tags .tag.dijual {
+  background-color: #ffc107; /* Secondary color or specific color for "Dijual" */
+}
+
+.product-tags .tag.pakaian {
+  background-color: #6b7280; /* Example color for "Pakaian" */
+}
+
+.product-tags .tag.organisasi {
+  background-color: #2baf60; /* Primary color or specific color for "Organisasi" */
+}
+
+.product-name {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--text-gray-700);
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: var(--text-gray-600);
+}
+
+.product-rating .stars {
+  color: #facc15; /* Yellow for stars */
+}
+
+.product-price {
+  margin-bottom: 15px;
+}
+
+.product-price .current-price {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--red-price); /* Red color for current price */
+  margin-right: 10px;
+}
+
+.product-price .original-price {
+  font-size: 18px;
+  color: var(--gray-strike); /* Gray color for original price */
+  text-decoration: line-through;
+}
+
+.product-stock,
+.product-location-time {
+  font-size: 16px;
+  color: var(--text-gray-600);
+  margin-bottom: 8px;
+}
+
+.product-stock .stock-quantity {
+  font-weight: bold;
+}
+
+.product-location-time .location {
+  margin-right: 10px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.product-actions .add-to-cart {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-actions .favorite-btn,
+.product-actions .share-btn {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* You'll need actual icon implementations for love and share, e.g., FontAwesome */
+.product-actions .love-icon,
+.product-actions .share-icon {
+  width: 20px; /* Placeholder for icon size */
+  height: 20px;
+  background-color: #9ca3af; /* Placeholder color for icons */
+  mask: url("path/to/love-icon.svg") no-repeat center / contain; /* Use SVG masks for icons */
+  -webkit-mask: url("path/to/love-icon.svg") no-repeat center / contain;
+}
+
+.seller-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 20px;
+}
+
+.seller-info .seller-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.seller-info .seller-name {
+  font-weight: bold;
+  color: var(--text-gray-700);
+}
+
+.seller-info .verified {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.seller-info .chat-seller {
+  background-color: #3b82f6; /* Blue for chat button */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.product-description {
+  margin-top: 30px;
+  line-height: 1.6;
+  color: var(--text-gray-700);
+}
+
+.product-description h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--text-gray-700);
+}
+
+.product-description ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+.product-description ul li {
+  margin-bottom: 5px;
+  padding-left: 20px; /* Indent list items */
+  position: relative;
+}
+
+.product-description ul li::before {
+  content: "•"; /* Custom bullet point */
+  color: var(--primary-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Footer Styles (similar to your existing pages) */
+footer {
+  background-color: var(--bg-footer);
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-color);
+  flex-basis: 100%; /* Take full width on small screens */
+  margin-bottom: 20px;
+}
+
+.footer-content p {
+  max-width: 400px;
+  line-height: 1.8;
+}
+
+.quick-links,
+.contact-us {
+  flex: 1;
+  min-width: 200px;
+}
+
+.quick-links h4,
+.contact-us h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links ul li {
+  margin-bottom: 10px;
+}
+
+.quick-links ul li a,
+.contact-us p {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
 }
