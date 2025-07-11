@@ -1,0 +1,5 @@
+fastapi[all]
+uvicorn
+sqlalchemy
+passlib[bcrypt]  # Untuk hashing password
+python-dotenv    # Untuk membaca file .envP

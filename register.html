@@ -30,14 +30,15 @@
         </div>
         <form class="register-form" id="registerForm">
           <div class="form-group">
-            <label for="email">Email atau Nomor HP</label>
+            <label for="identifier">Email atau Nomor HP</label>
             <input
-              type="email"
-              id="email"
-              name="email"
+              type="text"
+              id="identifier"
+              name="identifier"
               placeholder="Masukkan email atau nomor telepon Anda"
               required
             />
+            <div id="identifierError" class="error-message"></div>
           </div>
           <div class="form-group">
             <label for="password">Password</label>
@@ -51,6 +52,16 @@
               />
               <i class="fas fa-eye password-toggle"></i>
             </div>
+            <div id="passwordError" class="error-message"></div>
+            <ul class="password-requirements">
+              <li id="lengthReq">Minimal 8 karakter</li>
+              <li id="uppercaseReq">Setidaknya satu huruf kapital</li>
+              <li id="lowercaseReq">Setidaknya satu huruf kecil</li>
+              <li id="numberReq">Setidaknya satu angka</li>
+              <li id="specialCharReq">
+                Setidaknya satu karakter spesial (!@#$%^&*)
+              </li>
+            </ul>
           </div>
           <button type="submit" class="btn btn-primary">Daftar</button>
         </form>
@@ -76,43 +87,6 @@
       </div>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Password toggle functionality
-        const passwordToggle = document.querySelector(".password-toggle");
-        const passwordInput = document.getElementById("password");
-
-        if (passwordToggle && passwordInput) {
-          passwordToggle.addEventListener("click", function () {
-            const type =
-              passwordInput.getAttribute("type") === "password"
-                ? "text"
-                : "password";
-            passwordInput.setAttribute("type", type);
-            this.classList.toggle("fa-eye");
-            this.classList.toggle("fa-eye-slash");
-          });
-        }
-
-        // Register form submission functionality
-        const registerForm = document.getElementById("registerForm");
-        if (registerForm) {
-          registerForm.addEventListener("submit", function (event) {
-            event.preventDefault(); // Mencegah submit form secara default
-
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-
-            // Simulasi validasi: Cukup cek apakah field tidak kosong
-            if (email && password) {
-              alert("Pendaftaran berhasil! Silakan masuk dengan akun Anda.");
-              window.location.href = "login.html"; // Redirect ke halaman login
-            } else {
-              alert("Email dan password tidak boleh kosong.");
-            }
-          });
-        }
-      });
-    </script>
+    <script src="js/register.js"></script>
   </body>
 </html>
