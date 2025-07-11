@@ -68,7 +68,7 @@
                 <span class="dropdown-useremail">nabilalviro@gmail.com</span>
                 <div class="dropdown-divider"></div>
                 <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
-                <a href="upload-item.html"
+                <a href="unggah-barang.html"
                 href="#" class="ikon-plus"><i class="fas fa-plus"></i>Unggah Barang</a
                 >
                 <a href="index.html" class="logout"
@@ -81,7 +81,7 @@
       <nav class="secondary-nav-bar">
         <div class="container">
           <ul>
-            <li><a href="upload-item.html" class="active">Donasi Barang</a></li>
+            <li><a href="donasi.html" class="active">Donasi Barang</a></li>
             <li><a href="jual.html">Barang Dijual</a></li>
             <li><a href="#">Jasa Perbaikan</a></li>
           </ul>
@@ -298,6 +298,67 @@
       <div id="footer-placeholder"></div>
     <script src="js/load-footer.js"></script> 
     <script src="js/semua-barang.js"></script>
+    <script>
+  
+    // Dropdown untuk User Avatar
+    document.addEventListener("DOMContentLoaded", function () {
+      const userAvatarDropdown = document.querySelector(
+        ".user-avatar-dropdown"
+      );
+      if (userAvatarDropdown) {
+        userAvatarDropdown.addEventListener("click", function (event) {
+          // Menghentikan propagasi event agar tidak langsung menutup jika klik di dalam dropdown
+          event.stopPropagation();
+          this.querySelector(".dropdown-menu").classList.toggle("show");
+        });
+// Script untuk Kategori Dropdown
+const categoryDropdown = document.querySelector('.category-dropdown');
+      if (categoryDropdown) {
+        const categoryDropbtn = categoryDropdown.querySelector('.category-dropbtn');
+        const categoryDropdownContent = categoryDropdown.querySelector('.category-dropdown-content');
+
+        categoryDropbtn.addEventListener('click', function(event) {
+          event.stopPropagation();
+          categoryDropdownContent.classList.toggle('show');
+        });
+
+        window.addEventListener('click', function(e) {
+          if (categoryDropdown && !categoryDropdown.contains(e.target)) {
+            categoryDropdownContent.classList.remove('show');
+          }
+        });
+      }
+        // Tutup dropdown jika klik di luar
+        window.addEventListener("click", function (e) {
+          if (userAvatarDropdown && !userAvatarDropdown.contains(e.target)) {
+            userAvatarDropdown
+              .querySelector(".dropdown-menu")
+              .classList.remove("show");
+          }
+        });
+      }
+
+      // Script untuk mengambil dan menampilkan nama pengguna (contoh sederhana)
+      // Di aplikasi nyata, nama pengguna akan diambil dari sesi atau API
+      const usernameDisplayElement =
+        document.getElementById("username-display");
+      const dropdownUsername = document.querySelector(".dropdown-username");
+      if (usernameDisplayElement) {
+        const storedUserName = "Nabil Alviro"; // Contoh: Anda bisa ambil dari localStorage atau API
+        usernameDisplayElement.textContent = storedUserName;
+        if (dropdownUsername) {
+          dropdownUsername.textContent = storedUserName;
+        }
+      }
+    });
+     
+
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+    </script>
     </body>
   </html>
   
