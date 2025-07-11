@@ -100,10 +100,21 @@
             
            
 
-            <div class="form-group">
-                <select id="item-condition" class="form-select" required>
-                    <option value="" disabled selected>Donasi</option>
-                    <option value="baru">Dijual</option>
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label class="form-label">Tipe Unggahan</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="upload-type" value="donasi" checked>
+                            Donasi
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="upload-type" value="dijual">
+                            Dijual
+                        </label>
+                    </div>
+                </div>
+
                 </select>
             </div>
 
@@ -286,6 +297,69 @@
                 priceGroup.style.display = 'none';
             }
         });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Toggles the dropdown menu
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            if (dropdownToggle && dropdownMenu) {
+                dropdownToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    dropdownMenu.classList.toggle('show');
+                });
+
+                // Close the dropdown if the user clicks outside of it
+                window.addEventListener('click', (e) => {
+                    if (!e.target.closest('.dropdown')) {
+                        dropdownMenu.classList.remove('show');
+                    }
+                });
+            }
+
+            // Dapatkan elemen-elemen yang dibutuhkan
+            const priceGroup = document.getElementById('price-group');
+            const uploadTypeRadios = document.querySelectorAll('input[name="upload-type"]');
+            const priceInput = document.getElementById('item-price');
+
+            // Fungsi untuk menampilkan atau menyembunyikan input harga
+            const togglePriceInput = (selectedValue) => {
+                if (selectedValue === 'dijual') {
+                    priceGroup.style.display = 'block';
+                    priceInput.required = true;
+                } else {
+                    priceGroup.style.display = 'none';
+                    priceInput.required = false;
+                }
+            };
+            
+            // Tambahkan event listener untuk setiap radio button
+            uploadTypeRadios.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    togglePriceInput(e.target.value);
+                });
+            });
+
+            // Jalankan fungsi saat halaman pertama kali dimuat
+            const initialSelected = document.querySelector('input[name="upload-type"]:checked').value;
+            togglePriceInput(initialSelected);
+        });
+        const updateFormLayout = (selectedValue) => {
+    if (selectedValue === 'dijual') {
+        // Mengubah teks judul header menjadi "Jual Barang"
+        formTitle.textContent = 'Jual Barang';
+        
+        // Mengubah teks sub-judul
+        formSubtitle.textContent = 'Isi formulir di bawah ini untuk mengunggah barang Anda.';
+        
+        // ... (kode lainnya untuk menampilkan/menyembunyikan input) ...
+        
+        // Mengubah warna header dengan mengganti kelas CSS
+        formHeaderBox.classList.remove('donasi-header-box');
+        formHeaderBox.classList.add('dijual-header-box');
+
+    } else {
+        // ... (kode untuk tampilan "Donasi") ...
+    }
+};
 </script>
 </body>
 </html>
