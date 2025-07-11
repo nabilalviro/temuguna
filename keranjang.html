@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - TemuGuna: Berbagi Kebaikan</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header after-login">
+      <div class="container header-top-row">
+        <a href="index-after-login.html" class="logo">TemuGuna</a>
+        <div class="header-center-group">
+          <div class="category-dropdown">
+            <button class="category-dropbtn">
+              Kategori <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="category-dropdown-content">
+              <a href="kategori.html">Semua Kategori</a>
+
+              <a href="pakaian.html">Pakaian</a>
+              <a href="#">Elektronik</a>
+              <a href="#">Peralatan Rumah</a>
+              <a href="#">Buku & Edukasi</a>
+              <a href="#">Mainan & Hobi</a>
+              <a href="#">Perlengkapan Bayi</a>
+              <a href="#">Lainnya</a>
+            </div>
+          </div>
+          <div class="search-bar-after">
+            <input
+              type="text"
+              placeholder="Cari barang, jasa perbaikan, dan lainnya..."
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </div>
+
+        <div class="user-actions">
+          <a href="keranjang.html" class="icon-link"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <a href="notifications.html" class="icon-link"
+            ><i class="fas fa-bell"></i
+          ></a>
+          <a href="chat.html" class="icon-link"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <div class="user-avatar-dropdown">
+            <img
+              src="https://www.svgrepo.com/download/390671/profile-user-avatar-man-person.svg"
+              alt="User Avatar"
+              class="user-avatar"
+            />
+
+            <span class="user-name">Nabil Alviro</span>
+
+            <div class="dropdown-menu">
+              <span class="dropdown-username">Nabil Alviro</span>
+              <span class="dropdown-useremail">nabilalviro@gmail.com</span>
+              <div class="dropdown-divider"></div>
+              <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+              <a href="semua-barang.html" href="#" class="ikon-plus"
+                ><i class="fas fa-plus"></i>Unggah Barang</a
+              >
+              <a href="index.html" class="logout"
+                ><i class="fas fa-sign-out-alt"></i> Keluar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="secondary-nav-bar">
+        <div class="container">
+          <ul>
+            <li><a href="semua-barang.html">Donasi Barang</a></li>
+            <li><a href="jual.html">Barang Dijual</a></li>
+            <li><a href="#">Jasa Perbaikan</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
+<main id="cart-container" class="cart-layout-container hidden">
+  <h1 class="cart-title">Keranjang Anda</h1>
+
+  <div class="cart-items-list">
+    <div class="cart-item donation-item">
+      <img
+        src="https://via.placeholder.com/100"
+        alt="Buku Cerita Anak"
+        class="item-image"
+      />
+      <div class="item-details">
+        <h3>Buku Cerita Anak</h3>
+        <p>
+          Kumpulan 5 buku cerita dongeng klasik, cocok untuk anak usia 7-10
+          tahun.
+        </p>
+        <span class="item-type">Donasi</span>
+      </div>
+      <button class="delete-btn" data-item-type="donation">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </div>
+
+    <div class="cart-item sale-item" data-price="150000">
+      <img
+        src="https://via.placeholder.com/100"
+        alt="Meja Belajar Kayu"
+        class="item-image"
+      />
+      <div class="item-details">
+        <h3>Meja Belajar Kayu</h3>
+        <p>Meja belajar minimalis dari kayu jati belanda.</p>
+        <span class="item-price">Rp150.000</span>
+        <div class="quantity-controls">
+          <button class="quantity-btn quantity-minus">-</button>
+          <span class="quantity-display">1</span>
+          <button class="quantity-btn quantity-plus">+</button>
+        </div>
+      </div>
+      <button class="delete-btn" data-item-type="sale">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="cart-summary">
+    <div class="summary-row total-row">
+      <span>Total Barang Dijual:</span>
+      <span class="total-price-value" data-price="150000">Rp150.000</span>
+    </div>
+    <div class="summary-row">
+      <span>Jumlah Barang Donasi:</span>
+      <span>1 Item</span>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-column-left">
+      <h3 class="footer-title footer-logo">TemuGuna</h3>
+      <p>
+        Platform inovatif untuk menyumbangkan barang tak terpakai, menemukan
+        barang berguna, dan menghubungkan Anda dengan penyedia jasa perbaikan
+        profesional. Berbagi kebaikan, perbaiki kehidupan.
+      </p>
+    </div>
+
+    <div class="footer-column-center">
+      <h3 class="footer-title">Tautan Cepat</h3>
+      <ul>
+        <li><a href="#">Unggah Barang</a></li>
+        <li><a href="#">Jasa Perbaikan</a></li>
+        <li><a href="#">Daftarkan Jasa</a></li>
+        <li><a href="#">Tentang Kami</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column-right">
+      <h3 class="footer-title">Hubungi Kami</h3>
+      <p class="contact-email">info@temuguna.id</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025, PT. TemuGuna. Semua hak dilindungi.</p>
+  </div>
+</footer>

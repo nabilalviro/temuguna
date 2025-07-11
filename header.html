@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - TemuGuna: Berbagi Kebaikan</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header after-login">
+      <div class="container header-top-row">
+        <a href="index-after-login.html" class="logo">TemuGuna</a>
+        <div class="header-center-group">
+          <div class="category-dropdown">
+            <button class="category-dropbtn">
+              Kategori <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="category-dropdown-content">
+              <a href="kategori.html">Semua Kategori</a>
+
+              <a href="pakaian.html">Pakaian</a>
+              <a href="#">Elektronik</a>
+              <a href="#">Peralatan Rumah</a>
+              <a href="#">Buku & Edukasi</a>
+              <a href="#">Mainan & Hobi</a>
+              <a href="#">Perlengkapan Bayi</a>
+              <a href="#">Lainnya</a>
+            </div>
+          </div>
+          <div class="search-bar-after">
+            <input
+              type="text"
+              placeholder="Cari barang, jasa perbaikan, dan lainnya..."
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </div>
+
+        <div class="user-actions">
+          <a href="cart.html" class="icon-link"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <a href="notifications.html" class="icon-link"
+            ><i class="fas fa-bell"></i
+          ></a>
+          <a href="chat.html" class="icon-link"
+            ><i class="fas fa-comment-dots"></i
+          ></a>
+          <div class="user-avatar-dropdown">
+            <img
+              src="https://www.svgrepo.com/download/390671/profile-user-avatar-man-person.svg"
+              alt="User Avatar"
+              class="user-avatar"
+            />
+
+            <span class="user-name">Nabil Alviro</span>
+
+            <div class="dropdown-menu">
+              <span class="dropdown-username">Nabil Alviro</span>
+              <span class="dropdown-useremail">nabilalviro@gmail.com</span>
+              <div class="dropdown-divider"></div>
+              <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+              <a href="upload-item.html"
+                ><i class="fas fa-upload"></i> Unggah Barang</a
+              >
+              <a href="index.html" class="logout"
+                ><i class="fas fa-sign-out-alt"></i> Keluar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="secondary-nav-bar">
+        <div class="container">
+          <ul>
+            <li><a href="upload-item.html">Donasi Barang</a></li>
+            <li><a href="jual.html">Barang Dijual</a></li>
+            <li><a href="#">Jasa Perbaikan</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
+<script>
+    
+    // Dropdown untuk User Avatar
+    document.addEventListener("DOMContentLoaded", function () {
+      const userAvatarDropdown = document.querySelector(
+        ".user-avatar-dropdown"
+      );
+      if (userAvatarDropdown) {
+        userAvatarDropdown.addEventListener("click", function (event) {
+          // Menghentikan propagasi event agar tidak langsung menutup jika klik di dalam dropdown
+          event.stopPropagation();
+          this.querySelector(".dropdown-menu").classList.toggle("show");
+        });
+// Script untuk Kategori Dropdown
+const categoryDropdown = document.querySelector('.category-dropdown');
+      if (categoryDropdown) {
+        const categoryDropbtn = categoryDropdown.querySelector('.category-dropbtn');
+        const categoryDropdownContent = categoryDropdown.querySelector('.category-dropdown-content');
+
+        categoryDropbtn.addEventListener('click', function(event) {
+          event.stopPropagation();
+          categoryDropdownContent.classList.toggle('show');
+        });
+
+        window.addEventListener('click', function(e) {
+          if (categoryDropdown && !categoryDropdown.contains(e.target)) {
+            categoryDropdownContent.classList.remove('show');
+          }
+        });
+      }
+        // Tutup dropdown jika klik di luar
+        window.addEventListener("click", function (e) {
+          if (userAvatarDropdown && !userAvatarDropdown.contains(e.target)) {
+            userAvatarDropdown
+              .querySelector(".dropdown-menu")
+              .classList.remove("show");
+          }
+        });
+      }
+
+      // Script untuk mengambil dan menampilkan nama pengguna (contoh sederhana)
+      // Di aplikasi nyata, nama pengguna akan diambil dari sesi atau API
+      const usernameDisplayElement =
+        document.getElementById("username-display");
+      const dropdownUsername = document.querySelector(".dropdown-username");
+      if (usernameDisplayElement) {
+        const storedUserName = "Nabil Alviro"; // Contoh: Anda bisa ambil dari localStorage atau API
+        usernameDisplayElement.textContent = storedUserName;
+        if (dropdownUsername) {
+          dropdownUsername.textContent = storedUserName;
+        }
+      }
+    });
+
+    
+  </script>
+</body>
+</html>

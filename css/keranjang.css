@@ -1,0 +1,145 @@
+/* Gaya untuk Keranjang (Cart) */
+.cart-layout-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px var(--shadow-light);
+  border: 1px solid var(--primary-blue);
+}
+
+.cart-layout-container.hidden {
+  display: none;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Gaya untuk setiap item di keranjang */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  position: relative;
+  box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+.item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.item-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.item-details h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.item-details p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+.donation-item .item-type {
+  color: var(--green-text);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.sale-item .item-price {
+  font-weight: bold;
+  color: var(--orange-price);
+  font-size: 1.1rem;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: var(--red-icon);
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Kontrol jumlah barang untuk item penjualan */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+.quantity-controls button {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.quantity-controls button:hover {
+  background-color: #e9e9e9;
+}
+
+.quantity-display {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Ringkasan belanja */
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.summary-row.total-row {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.total-price-value {
+  color: var(--orange-price);
+}

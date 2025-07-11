@@ -52,31 +52,37 @@
               ><i class="fas fa-bell"></i
             ></a>
             <a href="chat.html" class="icon-link"
-              ><i class="fas fa-comment-dots"></i
+              ><i class="fas fa-envelope"></i
             ></a>
         
             <div class="user-avatar-dropdown">
               <img
-                src="https://via.placeholder.com/30"
+                src="https://www.svgrepo.com/download/390671/profile-user-avatar-man-person.svg"
                 alt="User Avatar"
                 class="user-avatar"
               />
               <span class="user-name">Nabil Alviro</span>
-              <div class="dropdown-content user-dropdown-content">
-                <a href="#">Profil</a>
-                <a href="#">Unggah Barang</a>
-                <a href="#">Donasi Barang</a>
-                <a href="#">Keluar</a>
+
+              <div class="dropdown-menu">
+                <span class="dropdown-username">Nabil Alviro</span>
+                <span class="dropdown-useremail">nabilalviro@gmail.com</span>
+                <div class="dropdown-divider"></div>
+                <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+                <a href="semua-barang.html"
+                href="#" class="ikon-plus"><i class="fas fa-plus"></i>Unggah Barang</a
+                >
+                <a href="index.html" class="logout"
+                  ><i class="fas fa-sign-out-alt"></i> Keluar</a
+                >
               </div>
             </div>
           </div>
         </div>
-      </div>
       <nav class="secondary-nav-bar">
         <div class="container">
           <ul>
-            <li><a href="upload-item.html" class="active">Donasi Barang</a></li>
-            <li><a href="#">Barang Dijual</a></li>
+            <li><a href="semua-barang.html" class="active">Donasi Barang</a></li>
+            <li><a href="jual.html">Barang Dijual</a></li>
             <li><a href="#">Jasa Perbaikan</a></li>
           </ul>
         </div>
@@ -140,7 +146,7 @@
           <div class="item-card">
             <div class="item-image-wrapper">
               <img
-                src="img/mouse-laptop-acer.jpg"
+                src="img/jaketbrand.png"
                 alt="Mouse Laptop Acer X418"
                 class="item-image"
               />
@@ -175,7 +181,7 @@
           <div class="item-card">
             <div class="item-image-wrapper">
               <img
-                src="img/pakaian-anak-branded.jpg"
+                src="img/bajukaosanak.png"
                 alt="Pakaian Anak Branded"
                 class="item-image"
               />
@@ -209,7 +215,7 @@
           <div class="item-card">
             <div class="item-image-wrapper">
               <img
-                src="img/jacket-branded.jpg"
+                src="img/bajubekascowo.png"
                 alt="Jaket Branded Second"
                 class="item-image"
               />
@@ -246,39 +252,40 @@
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer>
       <div class="footer-container">
-        <div class="footer-col">
-          <h3>TemuGuna</h3>
-          <p>
-            Platform inovatif untuk menyumbangkan barang tak terpakai, menemukan
-            barang berguna, dan menghubungkan Anda dengan penyedia jasa
-            perbaikan profesional. Berbagi kebaikan, perbaiki kehidupan.
-          </p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+          <div class="footer-column-left">
+              <h3 class="footer-title footer-logo">TemuGuna</h3>
+              <p>
+                  Platform inovatif untuk menyumbangkan barang tak terpakai, menemukan barang berguna, dan menghubungkan Anda dengan penyedia jasa perbaikan profesional. Berbagi kebaikan, perbaiki kehidupan.
+              </p>
           </div>
-        </div>
-        <div class="footer-col">
-          <h3>Tautan Cepat</h3>
-          <ul>
-            <li><a href="upload-item.html">Unggah Barang</a></li>
-            <li><a href="#">Jasa Perbaikan</a></li>
-            <li><a href="#">Daftarkan Jasa</a></li>
-            <li><a href="#">Tentang Kami</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Hubungi Kami</h3>
-          <p><i class="fas fa-envelope"></i> info@temuguna.id</p>
-          <p><i class="fab fa-instagram"></i> @TemuGunaID</p>
-        </div>
+  
+          <div class="footer-column-center">
+              <h3 class="footer-title">Tautan Cepat</h3>
+              <ul>
+                  <li><a href="#">Unggah Barang</a></li>
+                  <li><a href="#">Jasa Perbaikan</a></li>
+                  <li><a href="#">Daftarkan Jasa</a></li>
+                  <li><a href="#">Tentang Kami</a></li>
+              </ul>
+          </div>
+  
+          <div class="footer-column-right">
+              <h3 class="footer-title">Hubungi Kami</h3>
+              <p class="contact-email">
+                  info@temuguna.id
+              </p>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </div>
+          </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025, PT. TemuGuna. Semua hak dilindungi.</p>
+          <p>© 2025, PT. TemuGuna. Semua hak dilindungi.</p>
       </div>
-    </footer>
+  </footer>
 
     <script src="script.js"></script>
     <script>
@@ -547,6 +554,54 @@
                 .classList.remove("show");
             }
           });
+          const usernameDisplayElement =
+        document.getElementById("username-display");
+      const dropdownUsername = document.querySelector(".dropdown-username");
+      if (usernameDisplayElement) {
+        const storedUserName = "Nabil Alviro"; // Contoh: Anda bisa ambil dari localStorage atau API
+        usernameDisplayElement.textContent = storedUserName;
+        if (dropdownUsername) {
+          dropdownUsername.textContent = storedUserName;
+        }
+      }
+     
+
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+    // Ambil elemen select berdasarkan kelas atau tag-nya
+    const sortDropdown = document.querySelector('.sort-by select');
+
+    // Tambahkan event listener untuk mendeteksi perubahan
+    sortDropdown.addEventListener('change', function(event) {
+        // Dapatkan nilai (value) dari opsi yang dipilih
+        const selectedValue = event.target.value;
+
+        // Tampilkan nilai di konsol untuk verifikasi
+        console.log("Opsi yang dipilih:", selectedValue);
+
+        // --- Di sini adalah tempat untuk menambahkan logika Anda ---
+        // Anda bisa memuat ulang produk, mengurutkan, atau menyaring data
+        // berdasarkan `selectedValue`.
+
+        // Contoh sederhana:
+        if (selectedValue === 'terbaru') {
+            alert('Mengurutkan berdasarkan Terbaru');
+            // Panggil fungsi untuk mengurutkan produk secara terbaru
+            // misalnya: urutkanProduk('terbaru');
+        } else if (selectedValue === 'harga-rendah') {
+            alert('Mengurutkan berdasarkan Harga Terendah');
+            // Panggil fungsi untuk mengurutkan produk dari harga terendah
+            // misalnya: urutkanProduk('harga-rendah');
+        } else {
+            alert('Menampilkan semua produk');
+            // Panggil fungsi untuk menampilkan semua produk
+            // misalnya: tampilkanSemuaProduk();
+        }
+    });
+      
         
     </script>
     
