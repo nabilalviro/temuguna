@@ -165,13 +165,30 @@
 
                 
                     
-                <div class="button-group">
+                <form>
                     <button type="submit" class="btn submit-btn">Unggah Barang</button>
-                </div>
-            </form>
+                </form>
         </section>
         
     </main>
+    <div id="upload-confirmation" class="confirmation-popup" style="display: none;">
+        <div class="confirmation-content">
+            <i class="fas fa-check-circle confirmation-icon"></i>
+            <h2>Unggahan Berhasil!</h2>
+            <p>Barang Anda telah berhasil diunggah. Anda akan diarahkan kembali ke halaman utama.</p>
+        </div>
+    </div>
+    <div id="donasi-form" class="form-content">
+        <div class="form-header-box donasi-header-box">
+            </div>
+        <form id="upload-form-donasi"> </form>
+    </div>
+    
+    <div id="jual-form" class="form-content" style="display: none;">
+        <div class="form-header-box jual-header-box">
+            </div>
+        <form id="upload-form-jual"> </form>
+    </div>
 <footer>
     <div class="footer-container">
         <div class="footer-column-left">
@@ -360,6 +377,120 @@
         // ... (kode untuk tampilan "Donasi") ...
     }
 };
+    document.addEventListener('DOMContentLoaded', () => {
+        // Mendapatkan referensi ke form dan popup konfirmasi
+        const donasiTab = document.getElementById('donasi-tab');
+        const jualTab = document.getElementById('jual-tab');
+        const donasiForm = document.getElementById('donasi-form');
+        const jualForm = document.getElementById('jual-form');
+        const uploadConfirmation = document.getElementById('upload-confirmation');
+        
+        // --- LOGIKA TAB SEPERTI SEBELUMNYA ---
+        donasiTab.addEventListener('click', () => {
+            donasiTab.classList.add('active');
+            jualTab.classList.remove('active');
+            donasiForm.style.display = 'block';
+            jualForm.style.display = 'none';
+        });
+
+        jualTab.addEventListener('click', () => {
+            jualTab.classList.add('active');
+            donasiTab.classList.remove('active');
+            jualForm.style.display = 'block';
+            donasiForm.style.display = 'none';
+        });
+
+        // --- LOGIKA FORM SUBMISSION BARU ---
+        // Mendapatkan semua form di halaman (jika Anda memiliki lebih dari satu)
+        const forms = document.querySelectorAll('form');
+        
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                // 1. Mencegah form untuk submit dan me-reload halaman
+                e.preventDefault();
+                
+                // 2. Simulasi proses unggah berhasil (ganti dengan kode unggah ke backend Anda)
+                console.log('Form disubmit, simulasi unggahan...');
+                
+                // 3. Tampilkan pesan konfirmasi
+                uploadConfirmation.style.display = 'flex';
+                
+                // 4. Atur timer untuk mengalihkan halaman setelah 3 detik (3000 milidetik)
+                setTimeout(() => {
+                    // Mengalihkan halaman ke index-after-login.html
+                    window.location.href = 'index-after-login.html';
+                }, 3000);
+            });
+        });
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        // Mendapatkan referensi ke form dan popup konfirmasi
+        const donasiTab = document.getElementById('donasi-tab');
+        const jualTab = document.getElementById('jual-tab');
+        const donasiFormContent = document.getElementById('donasi-form');
+        const jualFormContent = document.getElementById('jual-form');
+        const uploadConfirmation = document.getElementById('upload-confirmation');
+
+        // Mendapatkan referensi ke kedua formulir
+        const donasiForm = document.getElementById('upload-form-donasi');
+        const jualForm = document.getElementById('upload-form-jual');
+
+        // --- LOGIKA TAB ---
+        donasiTab.addEventListener('click', () => {
+            donasiTab.classList.add('active');
+            jualTab.classList.remove('active');
+            donasiFormContent.style.display = 'block';
+            jualFormContent.style.display = 'none';
+        });
+
+        jualTab.addEventListener('click', () => {
+            jualTab.classList.add('active');
+            donasiTab.classList.remove('active');
+            jualFormContent.style.display = 'block';
+            donasiFormContent.style.display = 'none';
+        });
+
+        // --- LOGIKA UNGGAH (FORM SUBMISSION) ---
+        // Tambahkan event listener untuk formulir Donasi
+        if (donasiForm) {
+            donasiForm.addEventListener('submit', (e) => {
+                // Mencegah form dari submit
+                e.preventDefault();
+                console.log('Form Donasi disubmit'); // Cek di konsol jika ini berjalan
+
+                // Tampilkan popup konfirmasi
+                if (uploadConfirmation) {
+                    uploadConfirmation.style.display = 'flex';
+                    
+                    // Tunggu 3 detik lalu alihkan ke halaman utama
+                    setTimeout(() => {
+                        window.location.href = 'index-after-login.html';
+                    }, 3000);
+                }
+            });
+        }
+
+        // Tambahkan event listener untuk formulir Jual
+        if (jualForm) {
+            jualForm.addEventListener('submit', (e) => {
+                // Mencegah form dari submit
+                e.preventDefault();
+                console.log('Form Jual disubmit'); // Cek di konsol jika ini berjalan
+
+                // Tampilkan popup konfirmasi
+                if (uploadConfirmation) {
+                    uploadConfirmation.style.display = 'flex';
+
+                    // Tunggu 3 detik lalu alihkan ke halaman utama
+                    setTimeout(() => {
+                        window.location.href = 'index-after-login.html';
+                    }, 3000);
+                }
+            });
+        }
+    });
+
+
 </script>
 </body>
 </html>
