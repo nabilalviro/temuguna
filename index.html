@@ -39,16 +39,17 @@
           <div class="search-bar-after">
             <input
               type="text"
+              id="main-search-input"
               placeholder="Cari barang, jasa perbaikan, dan lainnya..."
             />
-            <i class="fas fa-search search-icon"></i>
+            <i class="fas fa-search search-icon" id="main-search-button"></i>
           </div>
         </div>
         <div class="user-actions">
           <a href="cart.html" class="icon-link"
             ><i class="fas fa-shopping-cart"></i
           ></a>
-          <div class="auth-buttons">
+          <div class="auth-buttons" id="authButtonsContainer">
             <a href="login.html" class="btn btn-secondary-outline">Masuk</a>
             <a href="register.html" class="btn btn-primary">Daftar</a>
           </div>
@@ -337,40 +338,8 @@
     </main>
 
 
-    <footer>
-      <div class="footer-container">
-          <div class="footer-column-left">
-              <h3 class="footer-title footer-logo">TemuGuna</h3>
-              <p>
-                  Platform inovatif untuk menyumbangkan barang tak terpakai, menemukan barang berguna, dan menghubungkan Anda dengan penyedia jasa perbaikan profesional. Berbagi kebaikan, perbaiki kehidupan.
-              </p>
-          </div>
-  
-          <div class="footer-column-center">
-              <h3 class="footer-title">Tautan Cepat</h3>
-              <ul>
-                  <li><a href="#">Unggah Barang</a></li>
-                  <li><a href="#">Jasa Perbaikan</a></li>
-                  <li><a href="#">Daftarkan Jasa</a></li>
-                  <li><a href="#">Tentang Kami</a></li>
-              </ul>
-          </div>
-  
-          <div class="footer-column-right">
-              <h3 class="footer-title">Hubungi Kami</h3>
-              <p class="contact-email">
-                  info@temuguna.id
-              </p>
-              <div class="social-links">
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-              </div>
-          </div>
-      </div>
-      <div class="footer-bottom">
-          <p>© 2025, PT. TemuGuna. Semua hak dilindungi.</p>
-      </div>
-  </footer>
+    <div id="footer-placeholder"></div>
+    <script src="js/load-footer.js"></script> 
   </body>
 </html>
 
