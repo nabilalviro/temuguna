@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TemuGuna: Berbagi Kebaikan, Perpanjang Manfaat</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header after-login">
+      <div class="container header-top-row">
+        <a href="index-after-login.html" class="logo">TemuGuna</a>
+        <div class="header-center-group">
+          <div class="category-dropdown">
+            <button class="category-dropbtn">
+              Kategori <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="category-dropdown-content">
+              <a href="kategori.html">Semua Kategori</a>
+
+              <a href="pakaian.html">Pakaian</a>
+              <a href="#">Elektronik</a>
+              <a href="#">Peralatan Rumah</a>
+              <a href="#">Buku & Edukasi</a>
+              <a href="#">Mainan & Hobi</a>
+              <a href="#">Perlengkapan Bayi</a>
+              <a href="#">Lainnya</a>
+            </div>
+          </div>
+
+          <div class="search-bar-after">
+            <input
+              type="text"
+              placeholder="Cari barang, jasa perbaikan, dan lainnya..."
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </div>
+        <div class="user-actions">
+          <a href="keranjang.html" class="icon-link"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <a href="notifications.html" class="icon-link"
+            ><i class="fas fa-bell"></i
+          ></a>
+          <a href="chat.html" class="icon-link"
+            ><i class="fas fa-envelope"></i
+          ></a>
+
+          <div class="user-avatar-dropdown">
+            <img
+              src="https://www.svgrepo.com/download/390671/profile-user-avatar-man-person.svg"
+              alt="User Avatar"
+              class="user-avatar"
+            />
+            <span class="user-name">Nabil Alviro</span>
+
+            <div class="dropdown-menu">
+              <span class="dropdown-username">Nabil Alviro</span>
+              <span class="dropdown-useremail">nabilalviro@gmail.com</span>
+              <div class="dropdown-divider"></div>
+              <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+              <a href="semua-barang.html" href="#" class="ikon-plus"
+                ><i class="fas fa-plus"></i>Unggah Barang</a
+              >
+              <a href="index.html" class="logout"
+                ><i class="fas fa-sign-out-alt"></i> Keluar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="secondary-nav-bar">
+        <div class="container">
+          <ul>
+            <li><a href="semua-barang.html"class="active">Donasi Barang</a></li>
+            <li><a href="jual.html" >Barang Dijual</a></li>
+            <li><a href="#">Jasa Perbaikan</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main-content-layout">
+        
+        
+        <section class="form-section">
+            <div id="donasi-header-box">
+                <i class="fas fa-box-open header-icon"></i>
+                <h1 class="form-title">Donasi Barang</h1>
+                <p class="form-subtitle">Isi formulir di bawah ini untuk menyumbangkan barang Anda.</p>
+            </div>
+            
+           
+
+            <div class="form-group">
+                <select id="item-condition" class="form-select" required>
+                    <option value="" disabled selected>Donasi</option>
+                    <option value="baru">Dijual</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="price-group">
+                <label for="item-price" class="form-label">Nama Barang</label>
+                <input type="text" id="item-price" class="form-input" placeholder="Contoh: Baju layak pakai" required>
+            </div>
+                <div class="form-group">
+                    <label for="item-description" class="form-label">Deskripsi Barang</label>
+                    <textarea id="item-description" class="form-textarea" placeholder="Jelaskan kondisi dan detail barang Anda" rows="4" required></textarea>
+                </div>
+                
+               
+
+                <div class="form-group">
+                    <label for="item-condition" class="form-label">Kondisi Barang</label>
+                    <select id="item-condition" class="form-select" required>
+                        <option value="" disabled selected>Pilih kondisi</option>
+                        <option value="baru">Belum pernah dipakai</option>
+                        <option value="bekas-seperti-baru">Baik</option>
+                        <option value="bekas-baik">Cukup Baik</option>
+                        <option value="perlu-perbaikan">Perlu Perbaikan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-category" class="form-label">Kategori Barang</label>
+                    <select id="item-category" class="form-select" required>
+                        <option value="" disabled selected>Pilih kategori</option>
+                        <option value="pakaian">Pakaian</option>
+                        <option value="elektronik">Elektronik</option>
+                        <option value="peralatan-rumah">Peralatan Rumah</option>
+                        <option value="buku-edukasi">Buku & Edukasi</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="item-images" class="form-label">Unggah Gambar (Opsional)</label>
+                    <div class="file-upload-area">
+                        <label for="file-input" class="file-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Seret & letakkan gambar di sini atau <span>klik untuk unggah</span></p>
+                        </label>
+                        <input type="file" id="file-input" multiple accept="image/*" class="file-input">
+                    </div>
+                </div>
+
+                
+                    
+                <div class="button-group">
+                    <button type="submit" class="btn submit-btn">Unggah Barang</button>
+                </div>
+            </form>
+        </section>
+        
+    </main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-column-left">
+            <h3 class="footer-title footer-logo">TemuGuna</h3>
+            <p>
+                Platform inovatif untuk menyumbangkan barang tak terpakai, menemukan barang berguna, dan menghubungkan Anda dengan penyedia jasa perbaikan profesional. Berbagi kebaikan, perbaiki kehidupan.
+            </p>
+        </div>
+
+        <div class="footer-column-center">
+            <h3 class="footer-title">Tautan Cepat</h3>
+            <ul>
+                <li><a href="#">Unggah Barang</a></li>
+                <li><a href="#">Jasa Perbaikan</a></li>
+                <li><a href="#">Daftarkan Jasa</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column-right">
+            <h3 class="footer-title">Hubungi Kami</h3>
+            <p class="contact-email">
+                info@temuguna.id
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025, PT. TemuGuna. Semua hak dilindungi.</p>
+    </div>
+</footer>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Toggles the dropdown menu
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Toggles the dropdown menu
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            dropdownToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('show');
+            });
+
+            // Close the dropdown if the user clicks outside of it
+            window.addEventListener('click', (e) => {
+                if (!e.target.closest('.dropdown')) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+
+            // Show/hide price field based on radio button selection
+            const priceGroup = document.getElementById('price-group');
+            const uploadTypeRadios = document.querySelectorAll('input[name="upload-type"]');
+            
+            uploadTypeRadios.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    if (e.target.value === 'dijual') {
+                        priceGroup.style.display = 'block';
+                        priceGroup.querySelector('input').required = true;
+                    } else {
+                        priceGroup.style.display = 'none';
+                        priceGroup.querySelector('input').required = false;
+                    }
+                });
+            });
+            // Initial state check
+            if (document.querySelector('input[name="upload-type"]:checked').value !== 'dijual') {
+                priceGroup.style.display = 'none';
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Toggles the dropdown menu
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            dropdownToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('show');
+            });
+
+            // Close the dropdown if the user clicks outside of it
+            window.addEventListener('click', (e) => {
+                if (!e.target.closest('.dropdown')) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+
+            // Show/hide price field based on radio button selection
+            const priceGroup = document.getElementById('price-group');
+            const uploadTypeRadios = document.querySelectorAll('input[name="upload-type"]');
+            
+            uploadTypeRadios.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    if (e.target.value === 'dijual') {
+                        priceGroup.style.display = 'block';
+                        priceGroup.querySelector('input').required = true;
+                    } else {
+                        priceGroup.style.display = 'none';
+                        priceGroup.querySelector('input').required = false;
+                    }
+                });
+            });
+            // Initial state check
+            if (document.querySelector('input[name="upload-type"]:checked').value !== 'dijual') {
+                priceGroup.style.display = 'none';
+            }
+        });
+</script>
+</body>
+</html>

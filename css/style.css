@@ -6624,3 +6624,1475 @@ a:hover {
   align-items: center;
   gap: 10px;
 }
+
+/* --- Gaya Unggah Form --- */
+.upload-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px var(--shadow-light);
+  border: 1px solid var(--primary-blue);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+}
+
+.radio-label input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--primary-blue);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.radio-label input[type="radio"]:checked {
+  background-color: var(--primary-blue);
+}
+
+.radio-label input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.file-upload-area {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-upload-area:hover {
+  border-color: var(--primary-blue);
+  background-color: #f0f8ff;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.file-label i {
+  font-size: 3rem;
+  color: #b0b0b0;
+}
+
+.file-label p {
+  margin: 0;
+  color: #888;
+}
+
+.file-label span {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.file-input {
+  display: none;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 30px;
+}
+
+.submit-btn:hover {
+  background-color: #239e9f;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* --- Gaya Header & Dropdown Profil --- */
+.main-header {
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.header-center-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar-after {
+  position: relative;
+  flex-grow: 1;
+}
+
+.search-bar-after input {
+  width: 450px;
+  padding: 10px 40px 10px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon-link {
+  color: var(--text-color);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-blue);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  color: #555;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 250px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  z-index: 1000;
+  display: none;
+  padding: 10px 0;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.dropdown-item i {
+  margin-right: 10px;
+  color: #888;
+}
+
+.dropdown-email {
+  display: block;
+  padding: 0 20px 10px;
+  color: #888;
+  font-size: 12px;
+}
+
+.dropdown hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 5px 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active-link {
+  background-color: #f0f0f0;
+}
+
+/* --- Gaya Layout Utama 2 Kolom --- */
+.main-content-layout {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* --- Gaya Sidebar --- */
+.sidebar {
+  width: 300px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  flex-shrink: 0; /* agar sidebar tidak menyusut */
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.sidebar-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-blue);
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.profile-email {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #f1f1f1;
+  color: var(--text-color);
+}
+
+.nav-item.active-link {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+
+.nav-item.active-link i {
+  color: #fff;
+}
+
+.nav-item i {
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+  width: 20px; /* Untuk menyamakan jarak ikon */
+  text-align: center;
+}
+
+/* --- Gaya Form Unggah Barang --- */
+.form-section {
+  flex-grow: 1;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 40px;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+}
+
+.form-subtitle {
+  color: var(--secondary-text-color);
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+}
+
+.radio-label input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--primary-blue);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.radio-label input[type="radio"]:checked {
+  background-color: var(--primary-blue);
+}
+
+.radio-label input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.file-upload-area {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-upload-area:hover {
+  border-color: var(--primary-blue);
+  background-color: #f0f8ff;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.file-label i {
+  font-size: 3rem;
+  color: #b0b0b0;
+}
+
+.file-label p {
+  margin: 0;
+  color: #888;
+}
+
+.file-label span {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.file-input {
+  display: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-btn {
+  background-color: #ddd;
+  color: var(--text-color);
+}
+
+.cancel-btn:hover {
+  background-color: #ccc;
+}
+
+.submit-btn {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #239e9f;
+}
+/* --- Gaya Header & Dropdown Profil --- */
+.main-header {
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.header-center-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar-after {
+  position: relative;
+  flex-grow: 1;
+}
+
+.search-bar-after input {
+  width: 450px;
+  padding: 10px 40px 10px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon-link {
+  color: var(--text-color);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-blue);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  color: #555;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 250px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  z-index: 1000;
+  display: none;
+  padding: 10px 0;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.dropdown-item i {
+  margin-right: 10px;
+  color: #888;
+}
+
+.dropdown-email {
+  display: block;
+  padding: 0 20px 10px;
+  color: #888;
+  font-size: 12px;
+}
+
+.dropdown hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 5px 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active-link {
+  background-color: #f0f0f0;
+}
+
+/* --- Gaya Layout Utama 2 Kolom --- */
+.main-content-layout {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* --- Gaya Sidebar --- */
+.sidebar {
+  width: 300px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  flex-shrink: 0; /* agar sidebar tidak menyusut */
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.sidebar-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-blue);
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.profile-email {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #f1f1f1;
+  color: var(--text-color);
+}
+
+.nav-item.active-link {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+
+.nav-item.active-link i {
+  color: #fff;
+}
+
+.nav-item i {
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+  width: 20px; /* Untuk menyamakan jarak ikon */
+  text-align: center;
+}
+
+/* --- Gaya Form Unggah Barang --- */
+.form-section {
+  flex-grow: 1;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 40px;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+}
+
+.form-subtitle {
+  color: var(--secondary-text-color);
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+}
+
+.radio-label input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--primary-blue);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.radio-label input[type="radio"]:checked {
+  background-color: var(--primary-blue);
+}
+
+.radio-label input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.file-upload-area {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-upload-area:hover {
+  border-color: var(--primary-blue);
+  background-color: #f0f8ff;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.file-label i {
+  font-size: 3rem;
+  color: #b0b0b0;
+}
+
+.file-label p {
+  margin: 0;
+  color: #888;
+}
+
+.file-label span {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.file-input {
+  display: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-btn {
+  background-color: #ddd;
+  color: var(--text-color);
+}
+
+.cancel-btn:hover {
+  background-color: #ccc;
+}
+
+.submit-btn {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #239e9f;
+}
+/* --- Responsif untuk Layar Kecil --- */
+@media (max-width: 768px) {
+  .main-content-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .header-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .header-center-group {
+    width: 100%;
+  }
+
+  .search-bar-after input {
+    width: 100%;
+  }
+
+  .header-icons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+/* --- Tambahkan kode ini di bagian bawah file style.css yang sudah ada --- */
+
+#donasi-header-box {
+  background: linear-gradient(
+    135deg,
+    #eba747,
+    #28af60
+  ); /* Gradien warna dari desain Figma */
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  margin: -40px -40px 30px -40px; /* Menutupi area padding dari form-section */
+  box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#donasi-header-box .form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+#donasi-header-box .form-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+}
+
+#donasi-header-box .header-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- Pastikan kode di bawah ini sudah ada, jika belum, tambahkan juga --- */
+
+/* Variabel Warna dan Gaya Dasar */
+:root {
+  --primary-blue: #28afb0;
+  --secondary-blue: #3498db;
+  --text-color: #333;
+  --secondary-text-color: #555;
+  --background-color: #f9f9fb;
+  --border-color: #e0e0e0;
+  --card-bg: #fff;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --red-icon: #c9302c;
+  --orange-price: #ff6b00;
+  --green-text: #28a745;
+  --footer-bg: #29374b;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* --- Gaya Header & Dropdown Profil --- */
+.main-header {
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.header-center-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar-after {
+  position: relative;
+  flex-grow: 1;
+}
+
+.search-bar-after input {
+  width: 450px;
+  padding: 10px 40px 10px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon-link {
+  color: var(--text-color);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-blue);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  color: #555;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 250px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  z-index: 1000;
+  display: none;
+  padding: 10px 0;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.dropdown-item i {
+  margin-right: 10px;
+  color: #888;
+}
+
+.dropdown-email {
+  display: block;
+  padding: 0 20px 10px;
+  color: #888;
+  font-size: 12px;
+}
+
+.dropdown hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 5px 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active-link {
+  background-color: #f0f0f0;
+}
+
+/* --- Gaya Layout Utama 2 Kolom --- */
+.main-content-layout {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* --- Gaya Sidebar --- */
+.sidebar {
+  width: 300px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.sidebar-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-blue);
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.profile-email {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #f1f1f1;
+  color: var(--text-color);
+}
+
+.nav-item.active-link {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+
+.nav-item.active-link i {
+  color: #fff;
+}
+
+.nav-item i {
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* --- Gaya Form Unggah Barang --- */
+.form-section {
+  flex-grow: 1;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 40px;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+}
+
+.form-subtitle {
+  color: var(--secondary-text-color);
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+}
+
+.radio-label input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--primary-blue);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.radio-label input[type="radio"]:checked {
+  background-color: var(--primary-blue);
+}
+
+.radio-label input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.file-upload-area {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-upload-area:hover {
+  border-color: var(--primary-blue);
+  background-color: #f0f8ff;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.file-label i {
+  font-size: 3rem;
+  color: #b0b0b0;
+}
+
+.file-label p {
+  margin: 0;
+  color: #888;
+}
+
+.file-label span {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.file-input {
+  display: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-btn {
+  background-color: #ddd;
+  color: var(--text-color);
+}
+
+.cancel-btn:hover {
+  background-color: #ccc;
+}
+
+.submit-btn {
+  background-color: #28af60;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #239e9f;
+}
